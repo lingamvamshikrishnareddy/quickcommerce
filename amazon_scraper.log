@@ -1,0 +1,4 @@
+2025-01-11 11:20:58,237 - __main__ - ERROR - Categories file not found: categories.json
+2025-01-11 11:20:58,238 - root - ERROR - Scraping failed: [Errno 2] No such file or directory: 'categories.json'
+2025-01-11 11:21:22,930 - __main__ - ERROR - Categories file not found: categories.json
+2025-01-11 11:21:22,931 - root - ERROR - Scraping failed: [Errno 2] No such file or directory: 'categories.json'

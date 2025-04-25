@@ -1,0 +1,337 @@
+
+{
+    "main_categories": [
+      {
+        "title": "Grocery & Food",
+        "items": [
+          {
+            "name": "Fruits & Vegetables",
+            "subcategories": ["Fresh Fruits", "Fresh Vegetables", "Organic Produce", "Exotic Fruits", "Herbs & Seasonings"],
+            "brands": ["Fresho", "Organic India", "24 Mantra Organic", "Local Farmers", "Namdhari's"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Dairy Products",
+            "subcategories": ["Milk", "Curd", "Paneer", "Butter", "Ghee", "Cheese", "Milk Powder"],
+            "brands": ["Amul", "Mother Dairy", "Nestle", "Britannia", "Gowardhan", "Nandini"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Meat & Seafood",
+            "subcategories": ["Chicken", "Mutton", "Fish", "Eggs", "Seafood"],
+            "brands": ["Licious", "FreshToHome", "TenderCuts", "BigBasket Fresho Meats"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Bakery & Breakfast",
+            "subcategories": ["Bread", "Breakfast Cereals", "Cakes", "Pastries", "Buns & Rolls"],
+            "brands": ["Britannia", "English Oven", "Harvest Gold", "Modern", "Perfect"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Pantry Staples",
+            "subcategories": ["Rice", "Dal & Pulses", "Atta & Flours", "Oils & Ghee", "Spices & Masalas"],
+            "brands": ["Tata Sampann", "Fortune", "Aashirvaad", "MDH", "Everest", "India Gate"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Canned & Jarred Food",
+            "subcategories": ["Canned Vegetables", "Jarred Sauces", "Pickles", "Olives & Jalapenos"],
+            "brands": ["Del Monte", "American Garden", "Mother's Recipe"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Dried Fruits, Nuts & Seeds",
+            "subcategories": ["Almonds", "Cashews", "Raisins", "Chia Seeds", "Flax Seeds"],
+            "brands": ["Happilo", "Nutraj", "Farmley"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Frozen Foods",
+            "subcategories": ["Frozen Vegetables", "Frozen Snacks", "Ice Creams", "Ready-to-Cook"],
+            "brands": ["McCain", "ITC", "Sumeru"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Jams, Honey & Spreads",
+            "subcategories": ["Fruit Jams", "Honey", "Nut Butter", "Chocolate Spreads", "Marmalades"],
+            "brands": ["Kissan", "Dabur", "Nutella"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Pasta & Noodles",
+            "subcategories": ["Spaghetti", "Macaroni", "Instant Noodles", "Rice Noodles", "Pasta Sauces"],
+            "brands": ["Barilla", "Maggi", "Weikfield"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Ready-to-Eat & Cook",
+            "subcategories": ["Instant Mixes", "Microwave Meals", "Frozen Snacks", "Pre-Made Curries"],
+            "brands": ["MTR", "ITC Kitchens of India", "Haldiram's"],
+            "image": "/api/placeholder/200/200"
+          }
+        ]
+      },
+      {
+        "title": "Home & Living",
+        "items": [
+          {
+            "name": "Kitchen Appliances",
+            "subcategories": ["Mixers & Grinders", "Refrigerators", "Microwaves", "Dishwashers", "Water Purifiers"],
+            "brands": ["Philips", "Prestige", "Bajaj", "Butterfly", "Pigeon"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Home Decor",
+            "subcategories": ["Wall Art", "Cushions", "Lighting", "Vases", "Mirrors"],
+            "brands": ["Home Centre", "D'Decor", "Urban Ladder", "Fab India"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Furniture",
+            "subcategories": ["Sofas", "Beds", "Dining Sets", "Wardrobes", "Study Tables"],
+            "brands": ["Godrej Interio", "Nilkamal", "Durian", "Pepperfry"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Vacuum, Cleaning & Ironing",
+            "subcategories": ["Vacuum Cleaners", "Brooms & Mops", "Steam Irons", "Laundry Care"],
+            "brands": ["Philips", "Eureka Forbes", "Prestige"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Water Purifiers",
+            "subcategories": ["RO Purifiers", "UV Purifiers", "Gravity-Based Purifiers", "Filter Cartridges"],
+            "brands": ["Kent", "Aquaguard", "Pureit"],
+            "image": "/api/placeholder/200/200"
+          }
+        ]
+      },
+      {
+        "title": "Electronics & Tech",
+        "items": [
+          {
+            "name": "Computers & Laptops",
+            "subcategories": ["Laptops", "Desktop PCs", "All-in-One PCs", "Gaming PCs"],
+            "brands": ["HP", "Dell", "Lenovo", "Apple", "Acer", "ASUS"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Mobile Phones",
+            "subcategories": ["Smartphones", "Basic Phones", "Tablets", "Accessories"],
+            "brands": ["Samsung", "Apple", "OnePlus", "Xiaomi", "Vivo", "OPPO"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "TV & Home Theater",
+            "subcategories": ["Smart TVs", "Sound Bars", "Home Theater Systems", "Streaming Devices"],
+            "brands": ["Samsung", "LG", "Sony", "Mi", "OnePlus"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Computer Accessories",
+            "subcategories": ["Mouse and Keyboard", "USB Adapters", "Extensions"],
+            "brands": ["Generic"],
+            "image": "/api/placeholder/200/200"
+          }
+        ]
+      },
+      {
+        "title": "Health & Beauty",
+        "items": [
+          {
+            "name": "Personal Care",
+            "subcategories": ["Bath & Body", "Hair Care", "Skin Care", "Oral Care", "Feminine Hygiene"],
+            "brands": ["Himalaya", "Patanjali", "Dabur", "Forest Essentials", "Biotique", "Mamaearth"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Beauty & Makeup",
+            "subcategories": ["Face", "Eyes", "Lips", "Nails", "Makeup Tools"],
+            "brands": ["Lakme", "Maybelline", "L'Oreal", "MAC", "Sugar"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Health Care",
+            "subcategories": ["Medicines", "First Aid", "Health Monitors", "Supplements", "Ayurvedic"],
+            "brands": ["Zandu", "Baidyanath", "Dr. Morepen", "Himalaya Healthcare"],
+            "image": "/api/placeholder/200/200"
+          }
+        ]
+      },
+      {
+        "title": "Pet Supplies",
+        "items": [
+          {
+            "name": "Dog Supplies",
+            "subcategories": ["Dog Food", "Dog Treats", "Dog Toys", "Dog Grooming", "Dog Accessories"],
+            "brands": ["Pedigree", "Royal Canin", "Drools", "Kong", "Bark Butler"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Cat Supplies",
+            "subcategories": ["Cat Food", "Cat Litter", "Cat Toys", "Cat Grooming", "Cat Furniture"],
+            "brands": ["Whiskas", "Me-O", "Farmina", "Trixie", "Cat's Eye"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Pet Food",
+            "subcategories": ["Dry Food", "Wet Food", "Treats", "Health Supplements"],
+            "brands": ["Pedigree", "Royal Canin", "Drools", "Whiskas", "Me-O"],
+            "image": "/api/placeholder/200/200"
+          }
+        ]
+      },
+      {
+        "title": "Home & Personal Care",
+        "items": [
+          {
+            "name": "Washing & Laundry",
+            "subcategories": ["Detergent Powder", "Liquid Detergents", "Fabric Softeners", "Washing Machines"],
+            "brands": ["Surf Excel", "Ariel", "Tide", "Bosch", "LG"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Hand Care & Intimate Hygiene",
+            "subcategories": ["Handwash", "Hand Sanitizers", "Sanitary Pads", "Menstrual Cups", "Intimate Wash"],
+            "brands": ["Dettol", "Savlon", "Whisper", "Stayfree", "Sirona"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Shaving & Grooming",
+            "subcategories": ["Shaving Creams", "Razors & Blades", "Beard Care", "Waxing Strips", "Aftershaves"],
+            "brands": ["Gillette", "Bombay Shaving Company", "Philips", "Veet"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Dishwashing Supplies",
+            "subcategories": ["Dishwashing Bars", "Liquid Dishwashers", "Scrub Pads"],
+            "brands": ["Vim", "Pril", "Scotch-Brite"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Household Cleaning",
+            "subcategories": ["Bathroom Cleaners", "Floor Cleaners", "Glass Cleaners", "Laundry Care", "Matches & Lighters"],
+            "brands": ["Harpic", "Lizol", "Colin", "Good Knight"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Pooja Supplies",
+            "subcategories": ["Incense Sticks", "Diyas & Lamps", "Camphor", "Prayer Mats"],
+            "brands": ["Cycle Agarbatti", "Mangal Deep", "Patanjali"],
+            "image": "/api/placeholder/200/200"
+          }
+        ]
+      },
+      {
+        "title": "Jewelry",
+        "items": [
+          {
+            "name": "Women's Jewelry",
+            "subcategories": ["Anklets", "Bangles & Bracelets", "Earrings", "Necklaces", "Rings", "Toe Rings", "Pendants"],
+            "brands": ["Tanishq", "Kalyan Jewellers", "PC Jeweller"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Men's Jewelry",
+            "subcategories": ["Rings", "Chains", "Bracelets", "Pendants"],
+            "brands": ["Malabar Gold", "Senco Gold", "PC Jeweller"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Kids' Jewelry",
+            "subcategories": ["Anklets", "Bracelets", "Earrings", "Necklaces"],
+            "brands": ["Senco Gold", "Tanishq"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Gemstones & Accessories",
+            "subcategories": ["Loose Gemstones", "Diamonds", "Mangal Sutras & Tanmaniyas", "Brooches & Pins", "Hair Accessories"],
+            "brands": ["GIA Certified", "PC Jeweller", "BlueStone"],
+            "image": "/api/placeholder/200/200"
+          }
+        ]
+      },
+      {
+        "title": "Musical Instruments",
+        "items": [
+          {
+            "name": "Percussion Instruments",
+            "subcategories": ["Drums", "Tabla", "Cajon", "Djembe"],
+            "brands": ["Roland", "Pearl", "Remo"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "String Instruments",
+            "subcategories": ["Guitars", "Violins", "Ukuleles", "Bass Guitars"],
+            "brands": ["Yamaha", "Fender", "Ibanez"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Keyboards & Pianos",
+            "subcategories": ["Digital Keyboards", "Electric Pianos", "Synthesizers"],
+            "brands": ["Casio", "Yamaha", "Korg"],
+            "image": "/api/placeholder/200/200"
+          },
+          {
+            "name": "Audio Equipment",
+            "subcategories": ["Microphones", "Speakers", "Mixers"],
+            "brands": ["Shure", "Sennheiser", "Behringer"],
+            "image": "/api/placeholder/200/200"
+          }
+        ]
+      },
+      
+      {
+        "title": "Baby Products",
+        "items": [
+          {
+            "name": "Baby Care",
+            "subcategories": [
+              "Baby & Toddler Toys",
+              "Baby Carriers",
+              "Nursing & Feeding",
+              "Soothers & Teethers",
+              "Baby Shoes",
+              "Maternity & Nappy Changing",
+              "Nursery",
+              "Strollers & Prams",
+              "Car Seats for Babies",
+              "Carry Cots"
+            ],
+            "brands": [
+              "Johnson's Baby",
+              "Pampers",
+              "Huggies",
+              "Chicco",
+              "Mee Mee"
+            ],
+            "image": "/api/placeholder/200/200"
+          }
+        ]
+      },
+      {
+        "title": "Automotive",
+        "items": [
+          {
+            "name": "Cars & Motorbike",
+            "subcategories": [
+              "Car Microfiber Cloth",
+              "Air Fresheners",
+              "Bike Helmet",
+              "Full Face Helmet",
+              "Car Body Cover",
+              "Car Wash Shampoo",
+              "Bike Covers",
+              "Gloves",
+              "Neck Rest",
+              "Back Rest Pillow",
+              "Car Mats"
+            ],
+            "brands": ["Generic"],
+            "image": "/api/placeholder/200/200"
+          }
+        ]
+      }
+    ]
+  }

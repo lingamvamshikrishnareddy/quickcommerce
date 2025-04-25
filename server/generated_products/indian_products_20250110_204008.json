@@ -1,0 +1,2775 @@
+{
+  "products": [
+    {
+      "product_id": "PROD14679493",
+      "product_name": "Organic India Fresh Fruits",
+      "current_price": 5650.73,
+      "original_price": 6530.29,
+      "quantity_value": 100,
+      "quantity_unit": "liters",
+      "category": "Grocery & Food",
+      "subcategory": "Fruits & Vegetables",
+      "brand": "Organic India",
+      "description": "Soluta corporis sit nisi sit.\nLibero assumenda unde id placeat quisquam. Veniam accusamus voluptatem exercitationem voluptas quaerat.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "1 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Organic India Fruits & Vegetables - Variant 1",
+          "price": 5453.37,
+          "sku": "SKU48953579",
+          "quantity": 54,
+          "unit": "liters",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 126,
+        "protein": 0,
+        "carbohydrates": 39,
+        "fat": 23
+      },
+      "tags": [
+        "provident",
+        "alias",
+        "saepe"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD38329521",
+      "product_name": "24 Mantra Organic Organic Produce",
+      "current_price": 5961.5,
+      "original_price": 7168.78,
+      "quantity_value": 50,
+      "quantity_unit": "grams",
+      "category": "Grocery & Food",
+      "subcategory": "Fruits & Vegetables",
+      "brand": "24 Mantra Organic",
+      "description": "Quia voluptate iusto eveniet eum. Repellat ut vitae vel sequi.\nOdit ad repellendus placeat ipsa reiciendis. Eos labore incidunt maxime quae est maiores.",
+      "emergency_level": "Low",
+      "stock_status": "Out of Stock",
+      "delivery_time": "1 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg"
+      ],
+      "variants": [
+        {
+          "name": "24 Mantra Organic Fruits & Vegetables - Variant 1",
+          "price": 5940.5,
+          "sku": "SKU69930380",
+          "quantity": 12,
+          "unit": "grams",
+          "weight": null
+        },
+        {
+          "name": "24 Mantra Organic Fruits & Vegetables - Variant 2",
+          "price": 5801.53,
+          "sku": "SKU26367629",
+          "quantity": 67,
+          "unit": "grams",
+          "weight": null
+        },
+        {
+          "name": "24 Mantra Organic Fruits & Vegetables - Variant 3",
+          "price": 5400.63,
+          "sku": "SKU38082214",
+          "quantity": 45,
+          "unit": "grams",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 442,
+        "protein": 26,
+        "carbohydrates": 99,
+        "fat": 30
+      },
+      "tags": [
+        "expedita",
+        "earum",
+        "facere"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD99672597",
+      "product_name": "Tata Sampann Rice",
+      "current_price": 9604.54,
+      "original_price": 12146.36,
+      "quantity_value": 10,
+      "quantity_unit": "pcs",
+      "category": "Grocery & Food",
+      "subcategory": "Pantry Staples",
+      "brand": "Tata Sampann",
+      "description": "Officiis voluptatem sequi fuga minus. Velit autem cumque architecto.\nNobis ut sapiente inventore illo odit nesciunt. Voluptas repellendus culpa rem. Perferendis voluptatibus corrupti occaecati.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "7 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Tata Sampann Pantry Staples - Variant 1",
+          "price": 10069.61,
+          "sku": "SKU19036808",
+          "quantity": 34,
+          "unit": "pcs",
+          "weight": null
+        },
+        {
+          "name": "Tata Sampann Pantry Staples - Variant 2",
+          "price": 9788.96,
+          "sku": "SKU35465111",
+          "quantity": 53,
+          "unit": "pcs",
+          "weight": null
+        },
+        {
+          "name": "Tata Sampann Pantry Staples - Variant 3",
+          "price": 8974.32,
+          "sku": "SKU3206229",
+          "quantity": 64,
+          "unit": "pcs",
+          "weight": null
+        },
+        {
+          "name": "Tata Sampann Pantry Staples - Variant 4",
+          "price": 10190.2,
+          "sku": "SKU98816703",
+          "quantity": 75,
+          "unit": "pcs",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 386,
+        "protein": 14,
+        "carbohydrates": 46,
+        "fat": 17
+      },
+      "tags": [
+        "vel",
+        "inventore"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD52162489",
+      "product_name": "Organic India Fresh Vegetables",
+      "current_price": 1546.71,
+      "original_price": 1984.85,
+      "quantity_value": 5,
+      "quantity_unit": "liters",
+      "category": "Grocery & Food",
+      "subcategory": "Fruits & Vegetables",
+      "brand": "Organic India",
+      "description": "Minima corrupti corporis dolor molestias dignissimos. Molestias laboriosam in. Odio ad ad ex excepturi odit ad.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "7 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg",
+        "product_image_3.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Organic India Fruits & Vegetables - Variant 1",
+          "price": 1470.81,
+          "sku": "SKU39965455",
+          "quantity": 41,
+          "unit": "liters",
+          "weight": null
+        },
+        {
+          "name": "Organic India Fruits & Vegetables - Variant 2",
+          "price": 1527.87,
+          "sku": "SKU67494869",
+          "quantity": 74,
+          "unit": "liters",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 155,
+        "protein": 9,
+        "carbohydrates": 26,
+        "fat": 29
+      },
+      "tags": [
+        "sed",
+        "nostrum"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD98001296",
+      "product_name": "Organic India Fresh Fruits",
+      "current_price": 5182.7,
+      "original_price": 5803.82,
+      "quantity_value": 5,
+      "quantity_unit": "pcs",
+      "category": "Grocery & Food",
+      "subcategory": "Fruits & Vegetables",
+      "brand": "Organic India",
+      "description": "Ea labore consectetur laudantium repellat atque. Et voluptate molestiae aut suscipit. Dignissimos aliquam corporis commodi ipsa quibusdam.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "5 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg",
+        "product_image_3.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Organic India Fruits & Vegetables - Variant 1",
+          "price": 5305.96,
+          "sku": "SKU89163425",
+          "quantity": 16,
+          "unit": "pcs",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 351,
+        "protein": 21,
+        "carbohydrates": 50,
+        "fat": 32
+      },
+      "tags": [
+        "nostrum",
+        "quasi",
+        "adipisci"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD57269123",
+      "product_name": "Nestle Butter",
+      "current_price": 495.96,
+      "original_price": 574.25,
+      "quantity_value": 2,
+      "quantity_unit": "pcs",
+      "category": "Grocery & Food",
+      "subcategory": "Dairy Products",
+      "brand": "Nestle",
+      "description": "Quos alias non nostrum eius accusamus nemo. Expedita minus nobis alias fugit ea assumenda.\nQuod necessitatibus odit. Nobis quasi dolorum hic dolores iure dicta aut. Esse eveniet cupiditate.",
+      "emergency_level": "High",
+      "stock_status": "In Stock",
+      "delivery_time": "6 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Nestle Dairy Products - Variant 1",
+          "price": 516.33,
+          "sku": "SKU11495445",
+          "quantity": 28,
+          "unit": "pcs",
+          "weight": null
+        },
+        {
+          "name": "Nestle Dairy Products - Variant 2",
+          "price": 511.9,
+          "sku": "SKU27475728",
+          "quantity": 19,
+          "unit": "pcs",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 305,
+        "protein": 28,
+        "carbohydrates": 86,
+        "fat": 37
+      },
+      "tags": [
+        "cupiditate",
+        "quas"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD67897496",
+      "product_name": "Organic India Fresh Fruits",
+      "current_price": 4996.63,
+      "original_price": 5635.16,
+      "quantity_value": 10,
+      "quantity_unit": "grams",
+      "category": "Grocery & Food",
+      "subcategory": "Fruits & Vegetables",
+      "brand": "Organic India",
+      "description": "Rem adipisci praesentium dicta perferendis dolore earum dolorum. Tempora deleniti eius nemo magnam. Unde a voluptas atque.\nQuos temporibus adipisci culpa. Reiciendis ea voluptate saepe.",
+      "emergency_level": "Low",
+      "stock_status": "Out of Stock",
+      "delivery_time": "2 days",
+      "images": [
+        "product_image_0.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Organic India Fruits & Vegetables - Variant 1",
+          "price": 4535.11,
+          "sku": "SKU23922286",
+          "quantity": 19,
+          "unit": "grams",
+          "weight": null
+        },
+        {
+          "name": "Organic India Fruits & Vegetables - Variant 2",
+          "price": 5376.23,
+          "sku": "SKU99609755",
+          "quantity": 92,
+          "unit": "grams",
+          "weight": null
+        },
+        {
+          "name": "Organic India Fruits & Vegetables - Variant 3",
+          "price": 5210.59,
+          "sku": "SKU59767673",
+          "quantity": 40,
+          "unit": "grams",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 213,
+        "protein": 17,
+        "carbohydrates": 95,
+        "fat": 11
+      },
+      "tags": [
+        "voluptatem",
+        "tenetur",
+        "eveniet"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD58755175",
+      "product_name": "Nestle Butter",
+      "current_price": 3813.48,
+      "original_price": 4570.06,
+      "quantity_value": 10,
+      "quantity_unit": "pcs",
+      "category": "Grocery & Food",
+      "subcategory": "Dairy Products",
+      "brand": "Nestle",
+      "description": "Officia illo sit debitis optio nulla. Assumenda expedita est.\nRepudiandae minima est ducimus quam. Placeat accusantium ex et ipsa. Dignissimos quidem facilis accusantium ipsa earum.",
+      "emergency_level": "High",
+      "stock_status": "In Stock",
+      "delivery_time": "7 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Nestle Dairy Products - Variant 1",
+          "price": 3579.17,
+          "sku": "SKU71136607",
+          "quantity": 14,
+          "unit": "pcs",
+          "weight": null
+        },
+        {
+          "name": "Nestle Dairy Products - Variant 2",
+          "price": 3874.28,
+          "sku": "SKU93706077",
+          "quantity": 77,
+          "unit": "pcs",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 395,
+        "protein": 18,
+        "carbohydrates": 6,
+        "fat": 0
+      },
+      "tags": [
+        "quisquam",
+        "sequi",
+        "hic"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD34872200",
+      "product_name": "Britannia Curd",
+      "current_price": 9218.48,
+      "original_price": 10517.81,
+      "quantity_value": 10,
+      "quantity_unit": "ml",
+      "category": "Grocery & Food",
+      "subcategory": "Dairy Products",
+      "brand": "Britannia",
+      "description": "Soluta voluptate sequi fugit aperiam. Fuga debitis fugiat voluptates.",
+      "emergency_level": "High",
+      "stock_status": "In Stock",
+      "delivery_time": "1 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Britannia Dairy Products - Variant 1",
+          "price": 8699.24,
+          "sku": "SKU41211385",
+          "quantity": 18,
+          "unit": "ml",
+          "weight": null
+        },
+        {
+          "name": "Britannia Dairy Products - Variant 2",
+          "price": 8304.76,
+          "sku": "SKU92517950",
+          "quantity": 88,
+          "unit": "ml",
+          "weight": null
+        },
+        {
+          "name": "Britannia Dairy Products - Variant 3",
+          "price": 8301.56,
+          "sku": "SKU78080389",
+          "quantity": 92,
+          "unit": "ml",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 383,
+        "protein": 13,
+        "carbohydrates": 91,
+        "fat": 43
+      },
+      "tags": [
+        "optio",
+        "quod",
+        "aut",
+        "et",
+        "expedita"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD68880231",
+      "product_name": "Britannia Ghee",
+      "current_price": 2019.91,
+      "original_price": 2357.72,
+      "quantity_value": 10,
+      "quantity_unit": "grams",
+      "category": "Grocery & Food",
+      "subcategory": "Dairy Products",
+      "brand": "Britannia",
+      "description": "Vel minima maxime voluptatibus quisquam. Voluptatem corrupti nam illo sapiente.\nError accusamus veritatis consequatur reiciendis est. Doloremque tempore nesciunt quisquam quia.",
+      "emergency_level": "High",
+      "stock_status": "Out of Stock",
+      "delivery_time": "4 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg",
+        "product_image_3.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Britannia Dairy Products - Variant 1",
+          "price": 2202.71,
+          "sku": "SKU62244660",
+          "quantity": 74,
+          "unit": "grams",
+          "weight": null
+        },
+        {
+          "name": "Britannia Dairy Products - Variant 2",
+          "price": 1921.35,
+          "sku": "SKU28223646",
+          "quantity": 23,
+          "unit": "grams",
+          "weight": null
+        },
+        {
+          "name": "Britannia Dairy Products - Variant 3",
+          "price": 2208.24,
+          "sku": "SKU15066721",
+          "quantity": 28,
+          "unit": "grams",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 103,
+        "protein": 10,
+        "carbohydrates": 4,
+        "fat": 11
+      },
+      "tags": [
+        "labore",
+        "in",
+        "delectus",
+        "iste",
+        "omnis"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD25882949",
+      "product_name": "Organic India Fresh Vegetables",
+      "current_price": 7764.43,
+      "original_price": 8797.07,
+      "quantity_value": 2,
+      "quantity_unit": "grams",
+      "category": "Grocery & Food",
+      "subcategory": "Fruits & Vegetables",
+      "brand": "Organic India",
+      "description": "Magnam dolorem itaque. Consectetur tenetur eos perferendis.\nDelectus nulla minus recusandae.\nTotam ab earum ducimus et ullam amet. Adipisci nam expedita voluptatem quos cupiditate quibusdam.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "3 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Organic India Fruits & Vegetables - Variant 1",
+          "price": 8331.02,
+          "sku": "SKU72201899",
+          "quantity": 27,
+          "unit": "grams",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 106,
+        "protein": 2,
+        "carbohydrates": 50,
+        "fat": 23
+      },
+      "tags": [
+        "error",
+        "nam"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD1488979",
+      "product_name": "Organic India Fresh Vegetables",
+      "current_price": 687.32,
+      "original_price": 843.64,
+      "quantity_value": 2,
+      "quantity_unit": "liters",
+      "category": "Grocery & Food",
+      "subcategory": "Fruits & Vegetables",
+      "brand": "Organic India",
+      "description": "Adipisci totam praesentium minima. Similique consectetur ex sed quidem rerum.\nMagnam ab minus esse. Saepe facilis aperiam ab.\nIpsum repudiandae mollitia necessitatibus.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "6 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Organic India Fruits & Vegetables - Variant 1",
+          "price": 721.66,
+          "sku": "SKU66507646",
+          "quantity": 67,
+          "unit": "liters",
+          "weight": null
+        },
+        {
+          "name": "Organic India Fruits & Vegetables - Variant 2",
+          "price": 711.15,
+          "sku": "SKU50681920",
+          "quantity": 17,
+          "unit": "liters",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 136,
+        "protein": 30,
+        "carbohydrates": 81,
+        "fat": 44
+      },
+      "tags": [
+        "a",
+        "aperiam",
+        "nemo",
+        "nobis",
+        "fuga"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD8932256",
+      "product_name": "Organic India Fresh Vegetables",
+      "current_price": 946.95,
+      "original_price": 1196.08,
+      "quantity_value": 1,
+      "quantity_unit": "grams",
+      "category": "Grocery & Food",
+      "subcategory": "Fruits & Vegetables",
+      "brand": "Organic India",
+      "description": "Impedit quo corrupti numquam repellat dolores iure. Incidunt numquam vel doloremque aperiam est.\nSoluta deleniti minima nisi tempore. Velit aspernatur est.",
+      "emergency_level": "Low",
+      "stock_status": "Out of Stock",
+      "delivery_time": "4 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg",
+        "product_image_3.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Organic India Fruits & Vegetables - Variant 1",
+          "price": 934.8,
+          "sku": "SKU95835916",
+          "quantity": 91,
+          "unit": "grams",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 330,
+        "protein": 3,
+        "carbohydrates": 18,
+        "fat": 41
+      },
+      "tags": [
+        "nihil",
+        "incidunt",
+        "praesentium",
+        "temporibus",
+        "eius"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD67937394",
+      "product_name": "Nestle Butter",
+      "current_price": 8798.54,
+      "original_price": 10217.89,
+      "quantity_value": 50,
+      "quantity_unit": "pcs",
+      "category": "Grocery & Food",
+      "subcategory": "Dairy Products",
+      "brand": "Nestle",
+      "description": "Natus nemo dolor aut atque nisi quidem. A ratione ipsa illo.\nBeatae vero facilis nihil suscipit facere.",
+      "emergency_level": "High",
+      "stock_status": "In Stock",
+      "delivery_time": "7 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg",
+        "product_image_3.jpg",
+        "product_image_4.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Nestle Dairy Products - Variant 1",
+          "price": 9592.69,
+          "sku": "SKU23755096",
+          "quantity": 24,
+          "unit": "pcs",
+          "weight": null
+        },
+        {
+          "name": "Nestle Dairy Products - Variant 2",
+          "price": 9495.65,
+          "sku": "SKU66355438",
+          "quantity": 89,
+          "unit": "pcs",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 180,
+        "protein": 26,
+        "carbohydrates": 61,
+        "fat": 25
+      },
+      "tags": [
+        "quis",
+        "autem",
+        "sequi",
+        "nisi",
+        "sit"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD61832420",
+      "product_name": "Fortune Atta & Flours",
+      "current_price": 1678.52,
+      "original_price": 2169.66,
+      "quantity_value": 25,
+      "quantity_unit": "grams",
+      "category": "Grocery & Food",
+      "subcategory": "Pantry Staples",
+      "brand": "Fortune",
+      "description": "Minima minus earum officiis fugit doloribus eius debitis. Magni nesciunt officia fugit quibusdam esse.\nMaxime eum occaecati iusto similique tenetur. Consequatur ut distinctio officiis.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "6 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg",
+        "product_image_3.jpg",
+        "product_image_4.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Fortune Pantry Staples - Variant 1",
+          "price": 1532.05,
+          "sku": "SKU48281453",
+          "quantity": 87,
+          "unit": "grams",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 70,
+        "protein": 21,
+        "carbohydrates": 64,
+        "fat": 11
+      },
+      "tags": [
+        "recusandae",
+        "odio",
+        "ratione",
+        "saepe",
+        "debitis"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD30487359",
+      "product_name": "Fresho Organic Produce",
+      "current_price": 2434.95,
+      "original_price": 3140.22,
+      "quantity_value": 2,
+      "quantity_unit": "kg",
+      "category": "Grocery & Food",
+      "subcategory": "Fruits & Vegetables",
+      "brand": "Fresho",
+      "description": "Dolore veritatis quam laborum saepe. Esse esse reprehenderit accusamus dolorem deserunt. Tempore ipsa cupiditate doloribus ullam.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "5 days",
+      "images": [
+        "product_image_0.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Fresho Fruits & Vegetables - Variant 1",
+          "price": 2293.02,
+          "sku": "SKU47609370",
+          "quantity": 100,
+          "unit": "kg",
+          "weight": null
+        },
+        {
+          "name": "Fresho Fruits & Vegetables - Variant 2",
+          "price": 2592.98,
+          "sku": "SKU65452937",
+          "quantity": 5,
+          "unit": "kg",
+          "weight": null
+        },
+        {
+          "name": "Fresho Fruits & Vegetables - Variant 3",
+          "price": 2335.76,
+          "sku": "SKU54468762",
+          "quantity": 28,
+          "unit": "kg",
+          "weight": null
+        },
+        {
+          "name": "Fresho Fruits & Vegetables - Variant 4",
+          "price": 2583.53,
+          "sku": "SKU13989167",
+          "quantity": 15,
+          "unit": "kg",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 105,
+        "protein": 19,
+        "carbohydrates": 95,
+        "fat": 35
+      },
+      "tags": [
+        "ab",
+        "temporibus",
+        "laudantium",
+        "temporibus"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD82868894",
+      "product_name": "Nestle Ghee",
+      "current_price": 2782.83,
+      "original_price": 3197.12,
+      "quantity_value": 2,
+      "quantity_unit": "grams",
+      "category": "Grocery & Food",
+      "subcategory": "Dairy Products",
+      "brand": "Nestle",
+      "description": "Corporis mollitia reprehenderit. Unde molestiae rem molestiae eveniet maxime. Quos aliquam aliquid inventore eum facilis id. At neque omnis modi.",
+      "emergency_level": "High",
+      "stock_status": "In Stock",
+      "delivery_time": "1 days",
+      "images": [
+        "product_image_0.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Nestle Dairy Products - Variant 1",
+          "price": 2650.39,
+          "sku": "SKU34125950",
+          "quantity": 96,
+          "unit": "grams",
+          "weight": null
+        },
+        {
+          "name": "Nestle Dairy Products - Variant 2",
+          "price": 2808.92,
+          "sku": "SKU73019420",
+          "quantity": 85,
+          "unit": "grams",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 323,
+        "protein": 29,
+        "carbohydrates": 41,
+        "fat": 10
+      },
+      "tags": [
+        "odio",
+        "velit",
+        "facilis"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD89123939",
+      "product_name": "Britannia Paneer",
+      "current_price": 1634.0,
+      "original_price": 2003.69,
+      "quantity_value": 5,
+      "quantity_unit": "pcs",
+      "category": "Grocery & Food",
+      "subcategory": "Dairy Products",
+      "brand": "Britannia",
+      "description": "Ut et maxime laudantium dolorem eius. Et natus ea itaque modi nostrum voluptas.\nSint quasi voluptatem nobis maxime culpa voluptatum. Maxime beatae vero quibusdam.",
+      "emergency_level": "High",
+      "stock_status": "In Stock",
+      "delivery_time": "4 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Britannia Dairy Products - Variant 1",
+          "price": 1739.81,
+          "sku": "SKU20265067",
+          "quantity": 26,
+          "unit": "pcs",
+          "weight": null
+        },
+        {
+          "name": "Britannia Dairy Products - Variant 2",
+          "price": 1507.51,
+          "sku": "SKU49632875",
+          "quantity": 20,
+          "unit": "pcs",
+          "weight": null
+        },
+        {
+          "name": "Britannia Dairy Products - Variant 3",
+          "price": 1661.59,
+          "sku": "SKU31080470",
+          "quantity": 35,
+          "unit": "pcs",
+          "weight": null
+        },
+        {
+          "name": "Britannia Dairy Products - Variant 4",
+          "price": 1554.65,
+          "sku": "SKU67200302",
+          "quantity": 91,
+          "unit": "pcs",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 373,
+        "protein": 21,
+        "carbohydrates": 6,
+        "fat": 15
+      },
+      "tags": [
+        "similique",
+        "fuga"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD72363279",
+      "product_name": "Aashirvaad Atta & Flours",
+      "current_price": 5758.83,
+      "original_price": 6753.06,
+      "quantity_value": 50,
+      "quantity_unit": "pcs",
+      "category": "Grocery & Food",
+      "subcategory": "Pantry Staples",
+      "brand": "Aashirvaad",
+      "description": "Fuga quaerat neque eum consequuntur eaque. Alias magni laboriosam totam repudiandae excepturi. Rem ad voluptatum.\nRepellat commodi odio perferendis reprehenderit veniam.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "4 days",
+      "images": [
+        "product_image_0.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Aashirvaad Pantry Staples - Variant 1",
+          "price": 5522.42,
+          "sku": "SKU7400067",
+          "quantity": 42,
+          "unit": "pcs",
+          "weight": null
+        },
+        {
+          "name": "Aashirvaad Pantry Staples - Variant 2",
+          "price": 6115.03,
+          "sku": "SKU82230050",
+          "quantity": 59,
+          "unit": "pcs",
+          "weight": null
+        },
+        {
+          "name": "Aashirvaad Pantry Staples - Variant 3",
+          "price": 5705.45,
+          "sku": "SKU43146146",
+          "quantity": 73,
+          "unit": "pcs",
+          "weight": null
+        },
+        {
+          "name": "Aashirvaad Pantry Staples - Variant 4",
+          "price": 5996.48,
+          "sku": "SKU6214094",
+          "quantity": 60,
+          "unit": "pcs",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 271,
+        "protein": 3,
+        "carbohydrates": 2,
+        "fat": 25
+      },
+      "tags": [
+        "nulla",
+        "consectetur"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD51226758",
+      "product_name": "Fortune Rice",
+      "current_price": 8528.5,
+      "original_price": 10904.17,
+      "quantity_value": 25,
+      "quantity_unit": "grams",
+      "category": "Grocery & Food",
+      "subcategory": "Pantry Staples",
+      "brand": "Fortune",
+      "description": "Minus quas labore voluptatem deserunt nobis. Ex quasi architecto sequi amet enim.\nVeritatis sit soluta fuga labore quia. Fugiat quos ipsam vel. Sapiente temporibus mollitia. Dolore assumenda culpa.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "7 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg",
+        "product_image_3.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Fortune Pantry Staples - Variant 1",
+          "price": 8258.88,
+          "sku": "SKU25947968",
+          "quantity": 94,
+          "unit": "grams",
+          "weight": null
+        },
+        {
+          "name": "Fortune Pantry Staples - Variant 2",
+          "price": 8292.1,
+          "sku": "SKU16368057",
+          "quantity": 10,
+          "unit": "grams",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 204,
+        "protein": 7,
+        "carbohydrates": 58,
+        "fat": 49
+      },
+      "tags": [
+        "laboriosam",
+        "ipsa",
+        "impedit",
+        "assumenda",
+        "laudantium"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD72639088",
+      "product_name": "Tata Sampann Rice",
+      "current_price": 8991.26,
+      "original_price": 10562.98,
+      "quantity_value": 5,
+      "quantity_unit": "pcs",
+      "category": "Grocery & Food",
+      "subcategory": "Pantry Staples",
+      "brand": "Tata Sampann",
+      "description": "Porro neque cumque veniam velit. Neque iste impedit magnam.\nAccusantium excepturi excepturi odit. Repellat totam velit perspiciatis ipsum voluptate adipisci. Id commodi eligendi qui sapiente est.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "5 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg",
+        "product_image_3.jpg",
+        "product_image_4.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Tata Sampann Pantry Staples - Variant 1",
+          "price": 8494.45,
+          "sku": "SKU88248098",
+          "quantity": 31,
+          "unit": "pcs",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 240,
+        "protein": 16,
+        "carbohydrates": 65,
+        "fat": 33
+      },
+      "tags": [
+        "quae",
+        "ipsa",
+        "ratione",
+        "dicta"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD26113693",
+      "product_name": "Organic India Organic Produce",
+      "current_price": 2131.82,
+      "original_price": 2411.34,
+      "quantity_value": 1,
+      "quantity_unit": "kg",
+      "category": "Grocery & Food",
+      "subcategory": "Fruits & Vegetables",
+      "brand": "Organic India",
+      "description": "Delectus fugit iure expedita vitae mollitia. Odio numquam voluptate ipsum quaerat eaque perferendis. Laudantium earum delectus sunt dolorem.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "3 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Organic India Fruits & Vegetables - Variant 1",
+          "price": 1954.85,
+          "sku": "SKU37244443",
+          "quantity": 42,
+          "unit": "kg",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 388,
+        "protein": 27,
+        "carbohydrates": 100,
+        "fat": 29
+      },
+      "tags": [
+        "molestias",
+        "molestiae",
+        "repellat",
+        "similique",
+        "alias"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD2328627",
+      "product_name": "Organic India Organic Produce",
+      "current_price": 9966.32,
+      "original_price": 11868.74,
+      "quantity_value": 2,
+      "quantity_unit": "kg",
+      "category": "Grocery & Food",
+      "subcategory": "Fruits & Vegetables",
+      "brand": "Organic India",
+      "description": "Doloremque exercitationem eveniet deleniti. Aliquid dolor odio pariatur. Quia et illo necessitatibus dolores esse.",
+      "emergency_level": "Low",
+      "stock_status": "Out of Stock",
+      "delivery_time": "2 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg",
+        "product_image_3.jpg",
+        "product_image_4.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Organic India Fruits & Vegetables - Variant 1",
+          "price": 9048.58,
+          "sku": "SKU6307143",
+          "quantity": 92,
+          "unit": "kg",
+          "weight": null
+        },
+        {
+          "name": "Organic India Fruits & Vegetables - Variant 2",
+          "price": 9470.17,
+          "sku": "SKU67282016",
+          "quantity": 77,
+          "unit": "kg",
+          "weight": null
+        },
+        {
+          "name": "Organic India Fruits & Vegetables - Variant 3",
+          "price": 9701.76,
+          "sku": "SKU33622665",
+          "quantity": 10,
+          "unit": "kg",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 321,
+        "protein": 29,
+        "carbohydrates": 0,
+        "fat": 18
+      },
+      "tags": [
+        "beatae",
+        "eaque",
+        "esse",
+        "culpa",
+        "laboriosam"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD85130248",
+      "product_name": "Organic India Organic Produce",
+      "current_price": 9826.85,
+      "original_price": 10866.27,
+      "quantity_value": 25,
+      "quantity_unit": "grams",
+      "category": "Grocery & Food",
+      "subcategory": "Fruits & Vegetables",
+      "brand": "Organic India",
+      "description": "Autem totam libero consectetur doloremque. Omnis minus culpa.\nIusto nesciunt ad molestiae nulla. Fuga quos fuga.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "6 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg",
+        "product_image_3.jpg",
+        "product_image_4.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Organic India Fruits & Vegetables - Variant 1",
+          "price": 9661.04,
+          "sku": "SKU36147546",
+          "quantity": 90,
+          "unit": "grams",
+          "weight": null
+        },
+        {
+          "name": "Organic India Fruits & Vegetables - Variant 2",
+          "price": 10110.11,
+          "sku": "SKU96488662",
+          "quantity": 89,
+          "unit": "grams",
+          "weight": null
+        },
+        {
+          "name": "Organic India Fruits & Vegetables - Variant 3",
+          "price": 10506.05,
+          "sku": "SKU25831456",
+          "quantity": 19,
+          "unit": "grams",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 115,
+        "protein": 1,
+        "carbohydrates": 63,
+        "fat": 21
+      },
+      "tags": [
+        "sequi",
+        "culpa",
+        "suscipit",
+        "quibusdam",
+        "doloribus"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD12601140",
+      "product_name": "Amul Paneer",
+      "current_price": 8459.69,
+      "original_price": 10986.11,
+      "quantity_value": 10,
+      "quantity_unit": "kg",
+      "category": "Grocery & Food",
+      "subcategory": "Dairy Products",
+      "brand": "Amul",
+      "description": "Aliquid quam minima maxime non voluptate repudiandae. Harum voluptatem neque repellendus explicabo incidunt. Molestiae vel sequi enim sunt nisi iure.",
+      "emergency_level": "High",
+      "stock_status": "In Stock",
+      "delivery_time": "2 days",
+      "images": [
+        "product_image_0.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Amul Dairy Products - Variant 1",
+          "price": 7995.67,
+          "sku": "SKU73668742",
+          "quantity": 24,
+          "unit": "kg",
+          "weight": null
+        },
+        {
+          "name": "Amul Dairy Products - Variant 2",
+          "price": 7739.1,
+          "sku": "SKU58027119",
+          "quantity": 88,
+          "unit": "kg",
+          "weight": null
+        },
+        {
+          "name": "Amul Dairy Products - Variant 3",
+          "price": 7643.82,
+          "sku": "SKU19042861",
+          "quantity": 20,
+          "unit": "kg",
+          "weight": null
+        },
+        {
+          "name": "Amul Dairy Products - Variant 4",
+          "price": 8605.11,
+          "sku": "SKU88025752",
+          "quantity": 47,
+          "unit": "kg",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {
+        "calories": 439,
+        "protein": 10,
+        "carbohydrates": 2,
+        "fat": 39
+      },
+      "tags": [
+        "doloremque",
+        "minus",
+        "libero",
+        "rerum",
+        "labore"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD43009092",
+      "product_name": "Hidesign Jewelry",
+      "current_price": 5564.03,
+      "original_price": 6192.15,
+      "quantity_value": 100,
+      "quantity_unit": "liters",
+      "category": "Fashion",
+      "subcategory": "Accessories",
+      "brand": "Hidesign",
+      "description": "Debitis modi error exercitationem natus. Laborum voluptate consequatur quidem. Perspiciatis nemo id ipsa cumque quo debitis voluptatem.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "5 days",
+      "images": [
+        "product_image_0.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Hidesign Accessories - Variant 1",
+          "price": 6064.3,
+          "sku": "SKU24053256",
+          "quantity": 28,
+          "unit": "liters",
+          "weight": null
+        },
+        {
+          "name": "Hidesign Accessories - Variant 2",
+          "price": 5535.42,
+          "sku": "SKU57041396",
+          "quantity": 33,
+          "unit": "liters",
+          "weight": null
+        },
+        {
+          "name": "Hidesign Accessories - Variant 3",
+          "price": 5153.66,
+          "sku": "SKU92367476",
+          "quantity": 25,
+          "unit": "liters",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "dignissimos",
+        "est",
+        "placeat",
+        "quasi"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD76839891",
+      "product_name": "Hidesign Bags",
+      "current_price": 9494.24,
+      "original_price": 11363.69,
+      "quantity_value": 100,
+      "quantity_unit": "liters",
+      "category": "Fashion",
+      "subcategory": "Accessories",
+      "brand": "Hidesign",
+      "description": "Occaecati veniam nostrum molestias dolorem maxime optio. Sed illum ducimus quae aperiam sit. Dolore suscipit incidunt repellat facere. Est natus quidem consectetur similique inventore.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "4 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg",
+        "product_image_3.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Hidesign Accessories - Variant 1",
+          "price": 10060.37,
+          "sku": "SKU55959786",
+          "quantity": 76,
+          "unit": "liters",
+          "weight": null
+        },
+        {
+          "name": "Hidesign Accessories - Variant 2",
+          "price": 10087.69,
+          "sku": "SKU12878136",
+          "quantity": 4,
+          "unit": "liters",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "nisi",
+        "animi",
+        "non",
+        "dolores"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD49303000",
+      "product_name": "Nike Sports Shoes",
+      "current_price": 2138.09,
+      "original_price": 2691.62,
+      "quantity_value": 100,
+      "quantity_unit": "liters",
+      "category": "Fashion",
+      "subcategory": "Footwear",
+      "brand": "Nike",
+      "description": "Pariatur ad dolorem occaecati perspiciatis natus. Quia sit laborum aliquid expedita mollitia.\nOfficiis debitis ea dolorum. Provident tempore perferendis aut voluptatibus hic.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "4 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Nike Footwear - Variant 1",
+          "price": 2115.45,
+          "sku": "SKU62252375",
+          "quantity": 2,
+          "unit": "liters",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "enim",
+        "numquam"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD92273652",
+      "product_name": "Nike Sandals",
+      "current_price": 5502.35,
+      "original_price": 6953.28,
+      "quantity_value": 50,
+      "quantity_unit": "grams",
+      "category": "Fashion",
+      "subcategory": "Footwear",
+      "brand": "Nike",
+      "description": "Commodi repellat distinctio possimus. Quo qui cupiditate aspernatur distinctio dicta iusto. Facilis animi exercitationem saepe et minus similique. Totam veritatis nostrum odio doloribus.",
+      "emergency_level": "Low",
+      "stock_status": "Out of Stock",
+      "delivery_time": "4 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Nike Footwear - Variant 1",
+          "price": 5074.37,
+          "sku": "SKU88075585",
+          "quantity": 52,
+          "unit": "grams",
+          "weight": null
+        },
+        {
+          "name": "Nike Footwear - Variant 2",
+          "price": 5083.27,
+          "sku": "SKU37648927",
+          "quantity": 16,
+          "unit": "grams",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "repellat",
+        "explicabo"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD85524663",
+      "product_name": "Adidas Shoes",
+      "current_price": 4425.42,
+      "original_price": 5202.74,
+      "quantity_value": 10,
+      "quantity_unit": "ml",
+      "category": "Fashion",
+      "subcategory": "Footwear",
+      "brand": "Adidas",
+      "description": "Ab fugiat modi vitae laudantium sequi beatae. Eum ex nulla saepe animi quam cum.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "3 days",
+      "images": [
+        "product_image_0.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Adidas Footwear - Variant 1",
+          "price": 4757.4,
+          "sku": "SKU74147517",
+          "quantity": 7,
+          "unit": "ml",
+          "weight": null
+        },
+        {
+          "name": "Adidas Footwear - Variant 2",
+          "price": 4243.46,
+          "sku": "SKU65531970",
+          "quantity": 94,
+          "unit": "ml",
+          "weight": null
+        },
+        {
+          "name": "Adidas Footwear - Variant 3",
+          "price": 4587.09,
+          "sku": "SKU2459347",
+          "quantity": 41,
+          "unit": "ml",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "cum",
+        "accusantium",
+        "eaque",
+        "provident",
+        "voluptates"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD12838884",
+      "product_name": "Fossil Watches",
+      "current_price": 4351.51,
+      "original_price": 5373.53,
+      "quantity_value": 5,
+      "quantity_unit": "ml",
+      "category": "Fashion",
+      "subcategory": "Accessories",
+      "brand": "Fossil",
+      "description": "Accusamus quidem autem amet iure dolor placeat. Eos dolorem ea. Nam tenetur unde repellat voluptates minima.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "1 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Fossil Accessories - Variant 1",
+          "price": 4160.73,
+          "sku": "SKU47767206",
+          "quantity": 58,
+          "unit": "ml",
+          "weight": null
+        },
+        {
+          "name": "Fossil Accessories - Variant 2",
+          "price": 4061.96,
+          "sku": "SKU98684628",
+          "quantity": 44,
+          "unit": "ml",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "dolorum",
+        "dolores"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD78559768",
+      "product_name": "Fossil Bags",
+      "current_price": 5293.09,
+      "original_price": 6848.12,
+      "quantity_value": 5,
+      "quantity_unit": "kg",
+      "category": "Fashion",
+      "subcategory": "Accessories",
+      "brand": "Fossil",
+      "description": "Nisi rem nobis ratione explicabo ipsum. Quasi velit ipsa sit aut.\nExcepturi veniam voluptatum tempore. Nisi veritatis eum. Error aliquam dolorum repellat in consequatur.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "6 days",
+      "images": [
+        "product_image_0.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Fossil Accessories - Variant 1",
+          "price": 5087.81,
+          "sku": "SKU2878244",
+          "quantity": 50,
+          "unit": "kg",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "non",
+        "ullam",
+        "nulla",
+        "debitis",
+        "autem"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD54159783",
+      "product_name": "Fossil Jewelry",
+      "current_price": 7386.35,
+      "original_price": 9179.42,
+      "quantity_value": 10,
+      "quantity_unit": "kg",
+      "category": "Fashion",
+      "subcategory": "Accessories",
+      "brand": "Fossil",
+      "description": "Rem rerum alias cum. Deleniti omnis nulla deserunt culpa.\nVoluptate laboriosam rerum eligendi corrupti. Aspernatur voluptate dignissimos vero.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "7 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg",
+        "product_image_3.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Fossil Accessories - Variant 1",
+          "price": 8010.27,
+          "sku": "SKU37273649",
+          "quantity": 54,
+          "unit": "kg",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "quod",
+        "occaecati",
+        "sit",
+        "doloremque",
+        "quae"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD13639551",
+      "product_name": "Zara Shirts",
+      "current_price": 1695.29,
+      "original_price": 2031.55,
+      "quantity_value": 10,
+      "quantity_unit": "ml",
+      "category": "Fashion",
+      "subcategory": "Clothing",
+      "brand": "Zara",
+      "description": "Mollitia ratione reiciendis nesciunt. Deserunt ipsam voluptatibus dolorum ipsam officiis.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "6 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Zara Clothing - Variant 1",
+          "price": 1800.17,
+          "sku": "SKU7379150",
+          "quantity": 85,
+          "unit": "ml",
+          "weight": null
+        },
+        {
+          "name": "Zara Clothing - Variant 2",
+          "price": 1779.06,
+          "sku": "SKU80421253",
+          "quantity": 27,
+          "unit": "ml",
+          "weight": null
+        },
+        {
+          "name": "Zara Clothing - Variant 3",
+          "price": 1577.11,
+          "sku": "SKU82727586",
+          "quantity": 58,
+          "unit": "ml",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "ipsa",
+        "cupiditate",
+        "quisquam",
+        "fugiat"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD12882176",
+      "product_name": "Levi's Dresses",
+      "current_price": 7241.43,
+      "original_price": 8020.86,
+      "quantity_value": 5,
+      "quantity_unit": "grams",
+      "category": "Fashion",
+      "subcategory": "Clothing",
+      "brand": "Levi's",
+      "description": "Quos numquam nam molestias tempora. Repellendus at voluptas aspernatur quae.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "1 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg",
+        "product_image_3.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Levi's Clothing - Variant 1",
+          "price": 6753.12,
+          "sku": "SKU75193087",
+          "quantity": 83,
+          "unit": "grams",
+          "weight": null
+        },
+        {
+          "name": "Levi's Clothing - Variant 2",
+          "price": 6850.58,
+          "sku": "SKU52777163",
+          "quantity": 61,
+          "unit": "grams",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "ex",
+        "error",
+        "veritatis",
+        "asperiores"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD42946702",
+      "product_name": "Puma Sandals",
+      "current_price": 1041.5,
+      "original_price": 1333.68,
+      "quantity_value": 5,
+      "quantity_unit": "liters",
+      "category": "Fashion",
+      "subcategory": "Footwear",
+      "brand": "Puma",
+      "description": "Accusantium molestiae placeat et aliquid tempore. Hic corrupti saepe eius reprehenderit. Deleniti maiores quia esse omnis ut.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "5 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Puma Footwear - Variant 1",
+          "price": 1045.3,
+          "sku": "SKU27069499",
+          "quantity": 54,
+          "unit": "liters",
+          "weight": null
+        },
+        {
+          "name": "Puma Footwear - Variant 2",
+          "price": 1057.39,
+          "sku": "SKU92138966",
+          "quantity": 8,
+          "unit": "liters",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "consequatur",
+        "dolorum"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD50525228",
+      "product_name": "Puma Shoes",
+      "current_price": 3780.84,
+      "original_price": 4828.25,
+      "quantity_value": 50,
+      "quantity_unit": "liters",
+      "category": "Fashion",
+      "subcategory": "Footwear",
+      "brand": "Puma",
+      "description": "Nemo reprehenderit in perspiciatis. Ipsa placeat rem temporibus temporibus.",
+      "emergency_level": "Low",
+      "stock_status": "Out of Stock",
+      "delivery_time": "3 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Puma Footwear - Variant 1",
+          "price": 3467.29,
+          "sku": "SKU45985330",
+          "quantity": 78,
+          "unit": "liters",
+          "weight": null
+        },
+        {
+          "name": "Puma Footwear - Variant 2",
+          "price": 3609.06,
+          "sku": "SKU74979042",
+          "quantity": 21,
+          "unit": "liters",
+          "weight": null
+        },
+        {
+          "name": "Puma Footwear - Variant 3",
+          "price": 4027.16,
+          "sku": "SKU44085055",
+          "quantity": 84,
+          "unit": "liters",
+          "weight": null
+        },
+        {
+          "name": "Puma Footwear - Variant 4",
+          "price": 3670.76,
+          "sku": "SKU81147413",
+          "quantity": 53,
+          "unit": "liters",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "doloribus",
+        "nisi"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD695694",
+      "product_name": "Adidas Sports Shoes",
+      "current_price": 8251.42,
+      "original_price": 9981.7,
+      "quantity_value": 2,
+      "quantity_unit": "pcs",
+      "category": "Fashion",
+      "subcategory": "Footwear",
+      "brand": "Adidas",
+      "description": "Nisi veritatis omnis eius.\nA sint temporibus laudantium architecto quia. Aliquid odio rerum doloremque maxime iste ipsa.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "7 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Adidas Footwear - Variant 1",
+          "price": 8021.45,
+          "sku": "SKU1161813",
+          "quantity": 15,
+          "unit": "pcs",
+          "weight": null
+        },
+        {
+          "name": "Adidas Footwear - Variant 2",
+          "price": 7815.7,
+          "sku": "SKU42464714",
+          "quantity": 69,
+          "unit": "pcs",
+          "weight": null
+        },
+        {
+          "name": "Adidas Footwear - Variant 3",
+          "price": 8887.0,
+          "sku": "SKU14956011",
+          "quantity": 65,
+          "unit": "pcs",
+          "weight": null
+        },
+        {
+          "name": "Adidas Footwear - Variant 4",
+          "price": 7723.19,
+          "sku": "SKU25769176",
+          "quantity": 84,
+          "unit": "pcs",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "explicabo",
+        "totam",
+        "rem",
+        "officia"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD94910443",
+      "product_name": "Titan Watches",
+      "current_price": 5290.76,
+      "original_price": 6872.91,
+      "quantity_value": 100,
+      "quantity_unit": "liters",
+      "category": "Fashion",
+      "subcategory": "Accessories",
+      "brand": "Titan",
+      "description": "Corrupti maiores consequatur culpa. Sint maiores amet doloribus distinctio tenetur dolor architecto.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "2 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Titan Accessories - Variant 1",
+          "price": 4976.06,
+          "sku": "SKU94099381",
+          "quantity": 90,
+          "unit": "liters",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "architecto",
+        "iusto",
+        "eos",
+        "nesciunt"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD60650212",
+      "product_name": "Fossil Bags",
+      "current_price": 3756.91,
+      "original_price": 4323.35,
+      "quantity_value": 2,
+      "quantity_unit": "pcs",
+      "category": "Fashion",
+      "subcategory": "Accessories",
+      "brand": "Fossil",
+      "description": "Temporibus facilis explicabo temporibus ipsa eaque. A nobis explicabo aliquid optio. Incidunt explicabo fugiat magnam libero aliquam aliquid.",
+      "emergency_level": "Low",
+      "stock_status": "Out of Stock",
+      "delivery_time": "5 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg",
+        "product_image_3.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Fossil Accessories - Variant 1",
+          "price": 3963.59,
+          "sku": "SKU13626789",
+          "quantity": 96,
+          "unit": "pcs",
+          "weight": null
+        },
+        {
+          "name": "Fossil Accessories - Variant 2",
+          "price": 3812.57,
+          "sku": "SKU74140587",
+          "quantity": 60,
+          "unit": "pcs",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "autem",
+        "ipsam",
+        "ipsam",
+        "molestias"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD34244237",
+      "product_name": "Titan Watches",
+      "current_price": 8353.27,
+      "original_price": 9837.59,
+      "quantity_value": 100,
+      "quantity_unit": "pcs",
+      "category": "Fashion",
+      "subcategory": "Accessories",
+      "brand": "Titan",
+      "description": "Ex aliquid debitis officiis sunt. Ipsa facere dicta magni molestiae maxime.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "6 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Titan Accessories - Variant 1",
+          "price": 8076.83,
+          "sku": "SKU38845022",
+          "quantity": 77,
+          "unit": "pcs",
+          "weight": null
+        },
+        {
+          "name": "Titan Accessories - Variant 2",
+          "price": 8225.16,
+          "sku": "SKU67882369",
+          "quantity": 56,
+          "unit": "pcs",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "saepe",
+        "minima",
+        "esse",
+        "optio",
+        "sunt"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD61532077",
+      "product_name": "Nike Sports Shoes",
+      "current_price": 2460.29,
+      "original_price": 3086.29,
+      "quantity_value": 1,
+      "quantity_unit": "kg",
+      "category": "Fashion",
+      "subcategory": "Footwear",
+      "brand": "Nike",
+      "description": "Nam aliquid occaecati repellat deleniti. Unde veniam similique natus consequuntur in cupiditate. Inventore veniam voluptate esse.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "1 days",
+      "images": [
+        "product_image_0.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Nike Footwear - Variant 1",
+          "price": 2403.93,
+          "sku": "SKU6099971",
+          "quantity": 49,
+          "unit": "kg",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "saepe",
+        "veritatis",
+        "cumque"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD92326184",
+      "product_name": "Puma Shoes",
+      "current_price": 2509.2,
+      "original_price": 3023.29,
+      "quantity_value": 1,
+      "quantity_unit": "grams",
+      "category": "Fashion",
+      "subcategory": "Footwear",
+      "brand": "Puma",
+      "description": "Cum maiores enim aliquam magnam. Fugiat distinctio repudiandae ab excepturi eum corporis unde. Deserunt accusantium voluptatibus a totam vero.\nIste saepe pariatur laborum quia.",
+      "emergency_level": "Low",
+      "stock_status": "Out of Stock",
+      "delivery_time": "6 days",
+      "images": [
+        "product_image_0.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Puma Footwear - Variant 1",
+          "price": 2731.39,
+          "sku": "SKU32156515",
+          "quantity": 5,
+          "unit": "grams",
+          "weight": null
+        },
+        {
+          "name": "Puma Footwear - Variant 2",
+          "price": 2628.32,
+          "sku": "SKU99759204",
+          "quantity": 36,
+          "unit": "grams",
+          "weight": null
+        },
+        {
+          "name": "Puma Footwear - Variant 3",
+          "price": 2306.4,
+          "sku": "SKU67988492",
+          "quantity": 46,
+          "unit": "grams",
+          "weight": null
+        },
+        {
+          "name": "Puma Footwear - Variant 4",
+          "price": 2468.98,
+          "sku": "SKU99025169",
+          "quantity": 18,
+          "unit": "grams",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "harum",
+        "dignissimos"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD33253268",
+      "product_name": "Puma Sports Shoes",
+      "current_price": 5447.86,
+      "original_price": 6396.83,
+      "quantity_value": 5,
+      "quantity_unit": "kg",
+      "category": "Fashion",
+      "subcategory": "Footwear",
+      "brand": "Puma",
+      "description": "Sed temporibus incidunt molestiae animi ratione. Molestiae reiciendis nihil iste nesciunt rem quibusdam.\nCommodi harum veniam. Iste sint modi necessitatibus quia voluptatibus suscipit.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "5 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Puma Footwear - Variant 1",
+          "price": 5578.24,
+          "sku": "SKU44663252",
+          "quantity": 32,
+          "unit": "kg",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "voluptas",
+        "commodi"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD40744705",
+      "product_name": "Nike Shoes",
+      "current_price": 3675.06,
+      "original_price": 4563.01,
+      "quantity_value": 50,
+      "quantity_unit": "pcs",
+      "category": "Fashion",
+      "subcategory": "Footwear",
+      "brand": "Nike",
+      "description": "Ad maxime impedit ducimus. Qui aliquid incidunt dolor aliquid. Facilis exercitationem eaque veritatis modi sunt. Voluptatem suscipit nulla recusandae exercitationem unde odit.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "1 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg",
+        "product_image_3.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Nike Footwear - Variant 1",
+          "price": 4030.59,
+          "sku": "SKU6566414",
+          "quantity": 51,
+          "unit": "pcs",
+          "weight": null
+        },
+        {
+          "name": "Nike Footwear - Variant 2",
+          "price": 3373.5,
+          "sku": "SKU77152504",
+          "quantity": 36,
+          "unit": "pcs",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "magnam",
+        "aut",
+        "at"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD63725230",
+      "product_name": "Hidesign Watches",
+      "current_price": 7880.29,
+      "original_price": 8734.16,
+      "quantity_value": 2,
+      "quantity_unit": "kg",
+      "category": "Fashion",
+      "subcategory": "Accessories",
+      "brand": "Hidesign",
+      "description": "Deleniti enim molestias laudantium placeat laudantium.\nQuae vero illo tenetur aut. Voluptatem error quod qui.\nUt molestias aspernatur sint autem maxime. Libero eius doloribus ea non omnis.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "3 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Hidesign Accessories - Variant 1",
+          "price": 7716.87,
+          "sku": "SKU52227467",
+          "quantity": 18,
+          "unit": "kg",
+          "weight": null
+        },
+        {
+          "name": "Hidesign Accessories - Variant 2",
+          "price": 8617.87,
+          "sku": "SKU64341243",
+          "quantity": 54,
+          "unit": "kg",
+          "weight": null
+        },
+        {
+          "name": "Hidesign Accessories - Variant 3",
+          "price": 7754.37,
+          "sku": "SKU11198282",
+          "quantity": 44,
+          "unit": "kg",
+          "weight": null
+        },
+        {
+          "name": "Hidesign Accessories - Variant 4",
+          "price": 7113.38,
+          "sku": "SKU94398732",
+          "quantity": 80,
+          "unit": "kg",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "quaerat",
+        "deleniti",
+        "sequi",
+        "reiciendis",
+        "dolorum"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD13427806",
+      "product_name": "Zara Pants",
+      "current_price": 3882.34,
+      "original_price": 4694.69,
+      "quantity_value": 1,
+      "quantity_unit": "pcs",
+      "category": "Fashion",
+      "subcategory": "Clothing",
+      "brand": "Zara",
+      "description": "Facere vel nisi voluptates laudantium. A nesciunt pariatur fugiat officia non facilis. Quos veritatis possimus.\nMagni earum itaque sint. Autem fuga inventore repellat. Voluptatem earum beatae.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "7 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Zara Clothing - Variant 1",
+          "price": 3823.27,
+          "sku": "SKU86840263",
+          "quantity": 27,
+          "unit": "pcs",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "quos",
+        "excepturi"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD86167093",
+      "product_name": "Zara Pants",
+      "current_price": 7448.79,
+      "original_price": 9518.29,
+      "quantity_value": 1,
+      "quantity_unit": "ml",
+      "category": "Fashion",
+      "subcategory": "Clothing",
+      "brand": "Zara",
+      "description": "Porro rerum excepturi dolores. Inventore distinctio sunt facilis.\nEos eius pariatur sit fugit. Dicta eaque corrupti autem dignissimos. Ipsum molestiae occaecati eius reiciendis.",
+      "emergency_level": "Low",
+      "stock_status": "Out of Stock",
+      "delivery_time": "1 days",
+      "images": [
+        "product_image_0.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Zara Clothing - Variant 1",
+          "price": 7293.44,
+          "sku": "SKU73090136",
+          "quantity": 2,
+          "unit": "ml",
+          "weight": null
+        },
+        {
+          "name": "Zara Clothing - Variant 2",
+          "price": 7603.58,
+          "sku": "SKU29199447",
+          "quantity": 88,
+          "unit": "ml",
+          "weight": null
+        },
+        {
+          "name": "Zara Clothing - Variant 3",
+          "price": 8077.66,
+          "sku": "SKU68674007",
+          "quantity": 7,
+          "unit": "ml",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "quaerat",
+        "quibusdam"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD97062725",
+      "product_name": "Fossil Jewelry",
+      "current_price": 4794.36,
+      "original_price": 5336.2,
+      "quantity_value": 10,
+      "quantity_unit": "liters",
+      "category": "Fashion",
+      "subcategory": "Accessories",
+      "brand": "Fossil",
+      "description": "Impedit at eius asperiores quisquam ut aliquid. Et perferendis modi provident dolores aut numquam.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "6 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg",
+        "product_image_3.jpg",
+        "product_image_4.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Fossil Accessories - Variant 1",
+          "price": 4592.02,
+          "sku": "SKU9911132",
+          "quantity": 28,
+          "unit": "liters",
+          "weight": null
+        },
+        {
+          "name": "Fossil Accessories - Variant 2",
+          "price": 4924.67,
+          "sku": "SKU67492553",
+          "quantity": 51,
+          "unit": "liters",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "harum",
+        "impedit"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    },
+    {
+      "product_id": "PROD43080483",
+      "product_name": "Levi's Dresses",
+      "current_price": 3064.36,
+      "original_price": 3776.95,
+      "quantity_value": 10,
+      "quantity_unit": "ml",
+      "category": "Fashion",
+      "subcategory": "Clothing",
+      "brand": "Levi's",
+      "description": "Possimus nam earum. Eligendi nam occaecati culpa illo. Debitis accusantium iusto in tempora nobis.",
+      "emergency_level": "Low",
+      "stock_status": "In Stock",
+      "delivery_time": "1 days",
+      "images": [
+        "product_image_0.jpg",
+        "product_image_1.jpg",
+        "product_image_2.jpg",
+        "product_image_3.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Levi's Clothing - Variant 1",
+          "price": 3061.56,
+          "sku": "SKU27217075",
+          "quantity": 25,
+          "unit": "ml",
+          "weight": null
+        },
+        {
+          "name": "Levi's Clothing - Variant 2",
+          "price": 2758.45,
+          "sku": "SKU69822887",
+          "quantity": 82,
+          "unit": "ml",
+          "weight": null
+        },
+        {
+          "name": "Levi's Clothing - Variant 3",
+          "price": 3189.2,
+          "sku": "SKU16000124",
+          "quantity": 78,
+          "unit": "ml",
+          "weight": null
+        },
+        {
+          "name": "Levi's Clothing - Variant 4",
+          "price": 2936.97,
+          "sku": "SKU59849343",
+          "quantity": 30,
+          "unit": "ml",
+          "weight": null
+        }
+      ],
+      "nutritional_info": {},
+      "tags": [
+        "fugiat",
+        "similique",
+        "minima",
+        "nemo"
+      ],
+      "source_url": null,
+      "is_vegetarian": true,
+      "manufacture_date": null,
+      "expiry_date": null,
+      "fssai_license": null,
+      "country_of_origin": "India"
+    }
+  ]
+}

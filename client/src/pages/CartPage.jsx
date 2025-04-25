@@ -1,278 +1,370 @@
-import React, { useState, useEffect } from 'react';
-import { Clock, Info, Lock, AlertTriangle, ShoppingCart } from 'lucide-react';
-import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useMemo } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useCart } from '../components/contexts/CartContext';
+import { useAuth } from '../components/contexts/AuthContext';
+import { formatPrice } from '../services/api'; // Use consistent price formatting
+import { Loader2, ShoppingCart, Trash2, Plus, Minus, Info, Lock, AlertTriangle, XCircle } from 'lucide-react';
+import { Button } from '../components/ui/button'; // Assuming shadcn/ui
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '../components/ui/card';
+import { Input } from '../components/ui/input';
+import { Alert, AlertDescription, AlertTitle } from '../components/ui/alert';
+import { Separator } from '../components/ui/separator';
+import { useToast } from "../components/ui/usetoast";
+import { Label } from '../components/ui/label';
+
+// Import the getImageUrl utility from the product card or create it here
+const PLACEHOLDER_IMG = '/images/placeholder-200.png';
+
+/**
+ * Extract a valid image URL from product data, handling both 'image' and 'images' fields
+ */
+const getImageUrl = (product) => {
+  // Check for single 'image' field first
+  if (product?.image && typeof product.image === 'string') {
+    return product.image;
+  }
+  
+  const images = product?.images;
+  
+  if (!images || (Array.isArray(images) && images.length === 0)) {
+    return PLACEHOLDER_IMG;
+  }
+  
+  // Handle array of images
+  if (Array.isArray(images)) {
+    // Try to find default image first
+    const defaultImage = images.find(img => img?.isDefault === true);
+    if (defaultImage) {
+      return defaultImage.url || defaultImage.src || 
+        (typeof defaultImage === 'string' ? defaultImage : PLACEHOLDER_IMG);
+    }
+    
+    // Take first image if no default
+    const firstImage = images[0];
+    if (typeof firstImage === 'string') {
+      return firstImage;
+    }
+    return firstImage?.url || firstImage?.src || PLACEHOLDER_IMG;
+  }
+  
+  // Handle single image object
+  if (typeof images === 'object') {
+    return images.url || images.src || PLACEHOLDER_IMG;
+  }
+  
+  // Handle single image string
+  if (typeof images === 'string') {
+    return images;
+  }
+  
+  return PLACEHOLDER_IMG;
+};
 
 const CartPage = () => {
+  const {
+    cart,
+    itemCount,
+    cartTotal,
+    loading: cartLoading,
+    error: cartError,
+    updateCartItem,
+    removeFromCart,
+  } = useCart();
+  const { isAuthenticated } = useAuth();
   const navigate = useNavigate();
-  const [isAuthenticated, setIsAuthenticated] = useState(false); // In production, this would come from auth context
-  const [cartItems, setCartItems] = useState([]);
+  const { toast } = useToast();
+
   const [promoCode, setPromoCode] = useState('');
   const [discount, setDiscount] = useState(0);
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [promoLoading, setPromoLoading] = useState(false);
+  const [promoError, setPromoError] = useState('');
 
-  // Simulated local storage interaction
-  useEffect(() => {
-    const storedCart = localStorage.getItem('cart');
-    if (storedCart) {
-      setCartItems(JSON.parse(storedCart));
-    }
-  }, []);
-
-  // Save cart to localStorage whenever it changes
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cartItems));
-  }, [cartItems]);
-
-  // Calculate totals
-  const itemsTotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  const deliveryCharge = 25;
-  const handlingCharge = 4;
-  const grandTotal = itemsTotal + deliveryCharge + handlingCharge - discount;
-
-  const hasEmergencyItems = cartItems.some(item => item.isEmergency);
-
-  const updateQuantity = (id, change) => {
-    setCartItems(items =>
-      items.map(item => {
-        if (item.id === id) {
-          const newQuantity = item.quantity + change;
-          if (newQuantity < 1) {
-            setError('Minimum quantity is 1');
-            return item;
-          }
-          if (newQuantity > item.stock) {
-            setError(`Only ${item.stock} items available`);
-            return item;
-          }
-          setError('');
-          return { ...item, quantity: newQuantity };
-        }
-        return item;
-      })
-    );
-  };
-
-  const removeItem = (id) => {
-    setCartItems(items => items.filter(item => item.id !== id));
-  };
+  // --- Calculations ---
+  const deliveryCharge = useMemo(() => (cartTotal > 500 ? 0 : 40), [cartTotal]); // Example: Free delivery over 500
+  const handlingCharge = 5; // Example fixed handling charge
+  const grandTotal = cartTotal + deliveryCharge + handlingCharge - discount;
 
   const applyPromoCode = () => {
-    setLoading(true);
-    // Simulate API call
+    setPromoLoading(true);
+    setPromoError('');
+    // Simulate API call - Replace with actual cartAPI.applyCoupon(promoCode)
     setTimeout(() => {
-      if (promoCode.toLowerCase() === 'save10') {
-        setDiscount(itemsTotal * 0.1);
-        setError('Promo code applied successfully!');
+      if (promoCode.toLowerCase() === 'save10' && cartTotal > 0) {
+        const calculatedDiscount = Math.min(cartTotal * 0.1, 50); // Example: 10% off up to 50
+        setDiscount(calculatedDiscount);
+        toast({ title: "Promo Applied", description: `Discount of ${formatPrice(calculatedDiscount)} applied.` });
       } else {
-        setError('Invalid promo code');
+        setPromoError('Invalid or expired promo code.');
         setDiscount(0);
       }
-      setLoading(false);
-    }, 500);
+      setPromoLoading(false);
+    }, 1000);
+  };
+
+  // Clear promo error
+  useEffect(() => {
+    if (promoError) {
+      const timer = setTimeout(() => setPromoError(''), 4000);
+      return () => clearTimeout(timer);
+    }
+  }, [promoError]);
+
+  // Reset discount if cart changes significantly
+  useEffect(() => {
+    setDiscount(0);
+    setPromoCode('');
+    setPromoError('');
+  }, [cartTotal]);
+
+  const handleQuantityChange = (itemId, currentQuantity, change) => {
+    const newQuantity = currentQuantity + change;
+    if (newQuantity >= 1) {
+      updateCartItem(itemId, newQuantity);
+    } else if (newQuantity === 0) {
+      handleRemoveItem(itemId); // Remove if quantity becomes 0
+    }
+    // Add max quantity check if needed (based on item.product.stock)
+  };
+
+  const handleRemoveItem = (itemId) => {
+    removeFromCart(itemId);
+    toast({ title: "Item Removed", description: "Item removed from your cart." });
   };
 
   const handleCheckout = () => {
     if (!isAuthenticated) {
-      // Save current cart state and redirect to login
-      localStorage.setItem('cartState', JSON.stringify({
-        items: cartItems,
-        promoCode,
-        discount
-      }));
-      navigate('/login?redirect=cart');
+      // This shouldn't happen if ProtectedRoute works, but as a fallback:
+      toast({ title: "Login Required", description: "Please log in to proceed to checkout.", variant: "destructive" });
+      navigate('/?showLogin=true'); // Redirect to home/login
       return;
     }
-
-    // Route based on cart contents
-    if (hasEmergencyItems) {
-      navigate('/checkout/emergency');
-    } else {
-      navigate('/checkout/regular');
+    if (itemCount === 0) {
+      toast({ title: "Empty Cart", description: "Cannot checkout with an empty cart.", variant: "destructive" });
+      return;
     }
+    // Navigate to the checkout page
+    navigate('/checkout');
   };
 
-  // Clear error message after 3 seconds
-  useEffect(() => {
-    if (error) {
-      const timer = setTimeout(() => setError(''), 3000);
-      return () => clearTimeout(timer);
-    }
-  }, [error]);
+  // --- Render Logic ---
+  if (cartLoading && !cart.items.length) { // Show loading only on initial load
+    return (
+      <div className="flex items-center justify-center h-[60vh]">
+        <Loader2 className="h-12 w-12 animate-spin text-green-600" />
+        <span className="ml-4 text-gray-600 text-lg">Loading Cart...</span>
+      </div>
+    );
+  }
+
+  if (cartError) {
+    return (
+      <Alert variant="destructive" className="my-6">
+        <AlertTriangle className="h-4 w-4" />
+        <AlertTitle>Error Loading Cart</AlertTitle>
+        <AlertDescription>{cartError}</AlertDescription>
+        {/* Optional: Add a retry button */}
+        {/* <Button variant="outline" size="sm" onClick={fetchCart} className="mt-2">Retry</Button> */}
+      </Alert>
+    );
+  }
 
   return (
-    <div className="max-w-4xl mx-auto p-4">
-      <div className="bg-white rounded-lg shadow-lg p-6">
-        <div className="flex justify-between items-center mb-6">
-          <h1 className="text-2xl font-bold">My Cart</h1>
-          <span className="text-gray-500">{cartItems.length} items</span>
-        </div>
-
-        {hasEmergencyItems && (
-          <Alert className="mb-6 bg-red-50 border-red-200">
-            <AlertTriangle className="text-red-500" />
-            <AlertTitle className="text-red-700">Emergency Items Present</AlertTitle>
-            <AlertDescription className="text-red-600">
-              Your cart contains emergency items. These will be prioritized for delivery.
-            </AlertDescription>
-          </Alert>
-        )}
-
-        <div className="flex items-center gap-2 mb-6 text-gray-600">
-          <Clock size={24} />
-          <div>
-            <div className="font-semibold">
-              {hasEmergencyItems ? 'Priority Delivery in 30 minutes' : 'Delivery in 2-3 hours'}
-            </div>
-            <div className="text-sm">Estimated delivery time</div>
-          </div>
-        </div>
-
-        {cartItems.length === 0 ? (
-          <div className="text-center py-12">
-            <ShoppingCart size={48} className="mx-auto text-gray-400 mb-4" />
-            <p className="text-gray-500">Your cart is empty</p>
-          </div>
-        ) : (
-          <div className="space-y-6">
-            {cartItems.map(item => (
-              <div key={item.id} className="flex gap-4 p-4 border rounded-lg">
-                <img
-                  src={item.image || '/api/placeholder/80/80'}
-                  alt={item.name}
-                  className="w-20 h-20 object-cover rounded"
-                />
-                <div className="flex-1">
-                  <div className="flex justify-between">
-                    <h3 className="font-medium">{item.name}</h3>
-                    {item.isEmergency && (
-                      <span className="px-2 py-1 bg-red-100 text-red-600 text-sm rounded-full">
-                        Emergency
-                      </span>
-                    )}
-                  </div>
-                  <p className="text-gray-500">{item.size}</p>
-                  <p className="text-sm text-gray-500">{item.stock} items available</p>
-                  
-                  <div className="flex justify-between items-center mt-2">
-                    <span className="font-semibold">₹{item.price}</span>
-                    <div className="flex items-center gap-4">
-                      <div className="flex items-center gap-2 bg-green-600 text-white rounded">
-                        <button
-                          onClick={() => updateQuantity(item.id, -1)}
-                          className="px-3 py-1 hover:bg-green-700 rounded-l"
+    <div className="max-w-6xl mx-auto px-2">
+      <h1 className="text-3xl font-bold mb-6 text-gray-800">Your Shopping Cart</h1>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+        {/* Cart Items Section */}
+        <div className="lg:col-span-2">
+          {itemCount === 0 ? (
+            <Card className="text-center py-16">
+              <CardHeader>
+                <ShoppingCart size={56} className="mx-auto text-gray-300 mb-4" />
+                <CardTitle className="text-2xl text-gray-600">Your cart is empty</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-500 mb-6">Looks like you haven't added anything yet.</p>
+                <Button asChild>
+                  <Link to="/products">Start Shopping</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          ) : (
+            <Card>
+              <CardHeader>
+                <CardTitle>Items ({itemCount})</CardTitle>
+              </CardHeader>
+              <CardContent className="p-0">
+                <div className="divide-y divide-gray-100">
+                  {cart.items.map((item) => (
+                    <div key={item._id || item.product?._id} className="flex flex-col sm:flex-row gap-4 p-4 hover:bg-gray-50/50 transition-colors">
+                      <img
+                        src={getImageUrl(item.product)}
+                        alt={item.product?.title || 'Product Image'}
+                        className="w-24 h-24 object-contain rounded border border-gray-100 flex-shrink-0 bg-white"
+                        onError={(e) => { e.target.src = PLACEHOLDER_IMG; }}
+                      />
+                      <div className="flex-1 min-w-0">
+                        <Link
+                          // Prefer slug for user-friendly URLs, fallback to the actual Mongo ID
+                          to={`/product/${item.product?.slug || item.product?._original_id || item.product?._id}`}
+                          className="hover:text-green-700"
                         >
-                          -
-                        </button>
-                        <span className="w-8 text-center">{item.quantity}</span>
-                        <button
-                          onClick={() => updateQuantity(item.id, 1)}
-                          className="px-3 py-1 hover:bg-green-700 rounded-r"
-                        >
-                          +
-                        </button>
+                          <h3 className="font-medium text-base sm:text-lg truncate pr-4" title={item.product?.title}>
+                            {item.product?.title || item.productName || 'Product Name Unavailable'} {/* Use stored productName as fallback */}
+                          </h3>
+                        </Link>
+                        {/* Display variations if they exist */}
+                        {item.variation && typeof item.variation === 'object' && Object.keys(item.variation).length > 0 && (
+                          <p className="text-xs text-gray-500 mt-1">
+                            {Object.entries(item.variation).map(([key, value]) => `${key}: ${value}`).join(', ')}
+                          </p>
+                        )}
+                        <p className="text-sm text-gray-500 mt-1">
+                          Price: {formatPrice(item.price || item.product?.price || 0)}
+                        </p>
+                        {/* Optional: Show stock status */}
+                        {/* <p className="text-xs text-green-600 mt-1">{item.product?.stock} available</p> */}
+                        <div className="flex items-center justify-between mt-3">
+                          {/* Quantity Controls */}
+                          <div className="flex items-center border border-gray-200 rounded">
+                            <Button
+                              variant="ghost"
+                              size="icon"
+                              className="h-8 w-8 rounded-r-none hover:bg-gray-100 text-gray-600 disabled:opacity-50"
+                              onClick={() => handleQuantityChange(item._id, item.quantity, -1)}
+                              disabled={cartLoading}
+                            >
+                              <Minus size={16} />
+                            </Button>
+                            <span className="px-3 text-sm font-medium w-10 text-center">{item.quantity}</span>
+                            <Button
+                              variant="ghost"
+                              size="icon"
+                              className="h-8 w-8 rounded-l-none hover:bg-gray-100 text-gray-600 disabled:opacity-50"
+                              onClick={() => handleQuantityChange(item._id, item.quantity, 1)}
+                              disabled={cartLoading}
+                            >
+                              <Plus size={16} />
+                            </Button>
+                          </div>
+                          {/* Item Total & Remove Button */}
+                          <div className="flex items-center gap-4">
+                            <span className="font-semibold text-base">
+                              {formatPrice((item.price || item.product?.price || 0) * item.quantity)}
+                            </span>
+                            <Button
+                              variant="ghost"
+                              size="icon"
+                              className="text-red-500 hover:text-red-700 hover:bg-red-50 h-8 w-8"
+                              onClick={() => handleRemoveItem(item._id)}
+                              disabled={cartLoading}
+                              aria-label="Remove item"
+                            >
+                              <Trash2 size={18} />
+                            </Button>
+                          </div>
+                        </div>
                       </div>
-                      <button
-                        onClick={() => removeItem(item.id)}
-                        className="text-red-500 hover:text-red-700"
-                      >
-                        Remove
-                      </button>
                     </div>
+                  ))}
+                </div>
+              </CardContent>
+              {/* Optional: Clear Cart Button */}
+              {/* {itemCount > 0 && (
+                <CardFooter className="pt-4 border-t">
+                  <Button variant="outline" className="text-red-600 border-red-300 hover:bg-red-50 hover:text-red-700" onClick={clearCart} disabled={cartLoading}>
+                    <Trash2 size={16} className="mr-2"/> Clear Cart
+                  </Button>
+                </CardFooter>
+              )} */}
+            </Card>
+          )}
+        </div>
+
+        {/* Order Summary Section */}
+        {itemCount > 0 && (
+          <div className="lg:col-span-1">
+            <Card className="sticky top-24"> {/* Sticky summary */}
+              <CardHeader>
+                <CardTitle>Order Summary</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {/* Promo Code */}
+                <div className="space-y-2">
+                  <Label htmlFor="promo">Promo Code</Label>
+                  <div className="flex gap-2">
+                    <Input
+                      id="promo"
+                      type="text"
+                      value={promoCode}
+                      onChange={(e) => setPromoCode(e.target.value)}
+                      placeholder="Enter code (e.g., SAVE10)"
+                      disabled={promoLoading || discount > 0}
+                    />
+                    <Button
+                      onClick={applyPromoCode}
+                      disabled={promoLoading || !promoCode || discount > 0}
+                      variant="outline"
+                    >
+                      {promoLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : 'Apply'}
+                    </Button>
+                  </div>
+                  {promoError && <p className="text-sm text-red-600 flex items-center"><XCircle size={14} className="mr-1"/> {promoError}</p>}
+                </div>
+
+                <Separator />
+
+                {/* Bill Details */}
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Subtotal ({itemCount} items)</span>
+                    <span>{formatPrice(cartTotal)}</span>
+                  </div>
+                  {discount > 0 && (
+                    <div className="flex justify-between text-green-600 font-medium">
+                      <span>Promo Discount</span>
+                      <span>- {formatPrice(discount)}</span>
+                    </div>
+                  )}
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600 flex items-center">
+                      Delivery Charge
+                      <Info size={14} className="ml-1 text-gray-400 cursor-help" title={deliveryCharge === 0 ? "Free delivery on orders over ₹500" : "Standard delivery fee"}/>
+                    </span>
+                    <span>{deliveryCharge === 0 ? <span className="text-green-600">FREE</span> : formatPrice(deliveryCharge)}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600 flex items-center">
+                      Handling Charge
+                      <Info size={14} className="ml-1 text-gray-400 cursor-help" title="Includes packaging and platform fees"/>
+                    </span>
+                    <span>{formatPrice(handlingCharge)}</span>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        )}
 
-        {cartItems.length > 0 && (
-          <>
-            <div className="mt-8">
-              <div className="flex gap-2 mb-4">
-                <input
-                  type="text"
-                  value={promoCode}
-                  onChange={(e) => setPromoCode(e.target.value)}
-                  placeholder="Enter promo code"
-                  className="px-4 py-2 border rounded-md flex-1"
-                  disabled={loading}
-                />
-                <button
-                  onClick={applyPromoCode}
-                  className="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 disabled:bg-gray-400"
-                  disabled={loading}
+                <Separator />
+
+                {/* Grand Total */}
+                <div className="flex justify-between font-bold text-lg">
+                  <span>Grand Total</span>
+                  <span>{formatPrice(grandTotal)}</span>
+                </div>
+              </CardContent>
+              <CardFooter className="flex-col items-stretch space-y-3">
+                <Button
+                  size="lg"
+                  className="w-full"
+                  onClick={handleCheckout}
+                  disabled={cartLoading || itemCount === 0} // Disable if loading or cart empty
                 >
-                  {loading ? 'Applying...' : 'Apply'}
-                </button>
-              </div>
-
-              {error && (
-                <p className={`text-sm ${error.includes('success') ? 'text-green-600' : 'text-red-600'}`}>
-                  {error}
+                  {isAuthenticated ? 'Proceed to Checkout' : 'Login to Checkout'}
+                  {!isAuthenticated && <Lock size={16} className="ml-2"/>}
+                </Button>
+                <p className="text-xs text-gray-500 text-center flex items-center justify-center">
+                  <Lock size={12} className="mr-1" /> Secure Payments
                 </p>
-              )}
-
-              <h2 className="text-lg font-bold mb-4">Bill Details</h2>
-              <div className="space-y-3">
-                <div className="flex justify-between">
-                  <span>Items total</span>
-                  <span>₹{itemsTotal}</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-1">
-                    <span>Delivery charge</span>
-                    <Info size={16} className="text-gray-500" />
-                  </div>
-                  <span>₹{deliveryCharge}</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-1">
-                    <span>Handling charge</span>
-                    <Info size={16} className="text-gray-500" />
-                  </div>
-                  <span>₹{handlingCharge}</span>
-                </div>
-                {discount > 0 && (
-                  <div className="flex justify-between text-green-600">
-                    <span>Discount</span>
-                    <span>-₹{discount}</span>
-                  </div>
-                )}
-              </div>
-              <div className="flex justify-between font-bold mt-4 pt-4 border-t">
-                <span>Grand total</span>
-                <span>₹{grandTotal}</span>
-              </div>
-            </div>
-
-            <div className="mt-6">
-              <h2 className="font-bold mb-2">Cancellation Policy</h2>
-              <p className="text-gray-600 text-sm">
-                Orders cannot be cancelled once packed for delivery. In case of unexpected delays,
-                a refund will be provided according to our refund policy. Emergency orders have
-                stricter cancellation policies.
-              </p>
-            </div>
-
-            <div className="mt-6">
-              <button
-                onClick={handleCheckout}
-                className="w-full py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 flex items-center justify-center gap-2"
-                disabled={cartItems.length === 0}
-              >
-                {!isAuthenticated ? (
-                  <>
-                    Login to Proceed
-                    <Lock size={20} />
-                  </>
-                ) : (
-                  `Proceed to ${hasEmergencyItems ? 'Emergency' : 'Regular'} Checkout`
-                )}
-              </button>
-            </div>
-          </>
+              </CardFooter>
+            </Card>
+          </div>
         )}
       </div>
     </div>

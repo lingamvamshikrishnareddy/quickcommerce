@@ -1,0 +1,9 @@
+2025-01-12 09:45:12,931 - INFO - [product.py:260] - Starting scraping process...
+2025-01-12 09:46:23,013 - WARNING - [product.py:253] - Element not found after 3 attempts: .pagination
+2025-01-12 09:46:29,289 - INFO - [product.py:262] - Found 1 pages to scrape
+2025-01-12 09:51:51,000 - INFO - [product.py:160] - Starting scraping process...
+2025-01-12 09:51:57,797 - INFO - [product.py:173] - Found -1 pages to scrape
+2025-01-12 09:51:57,798 - INFO - [product.py:179] - Scraping completed. Data saved to product_dmart.csv
+2025-01-12 09:52:30,346 - INFO - [tempCodeRunnerFile.py:260] - Starting scraping process...
+2025-01-12 09:53:39,012 - WARNING - [tempCodeRunnerFile.py:253] - Element not found after 3 attempts: .pagination
+2025-01-12 09:53:45,353 - INFO - [tempCodeRunnerFile.py:262] - Found 1 pages to scrape

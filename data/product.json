@@ -1,0 +1,3878 @@
+[
+    {
+      "name": "Onion 1 kg (Pyaz)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 20.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Desi Tomato (Tamatar)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 30.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Red Carrot (Gajar)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 40.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Ginger (Adrak)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Green Chilli (Hari Mirch)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 300
+    },
+    {
+      "name": "Green Peas (Matar)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 120.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 250
+    },
+    {
+      "name": "Green Capsicum (Shimla Mirch)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 60.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 180
+    },
+    {
+      "name": "Potato - New Crop (Aloo)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 25.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 500
+    },
+    {
+      "name": "Hybrid Tomato (Tamatar)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 45.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 300
+    },
+    {
+      "name": "Lemon (Nimbu)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 400
+    },
+    {
+      "name": "Button Mushroom",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "English Cucumber (Kheera)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 50.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "French Beans",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Lady Finger (Bhindi)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 250
+    },
+    {
+      "name": "Green Cucumber (Kheera)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 40.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 300
+    },
+    {
+      "name": "Cabbage (Patta Gobhi)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 30.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Garlic (Lehsun)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Beetroot (Chukandar)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 50.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Sweet Potato (Shakarkandi)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 60.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Bitter Gourd (Karela)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Potato - New Crop + Desi Tomato + Onion - 1 kg Combo",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "combo",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Broad Beans (Sem Phali)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 120.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Baby Potato (Aloo)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 70.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Potato - New Crop + Hybrid Tomato + Onion - Combo",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 110.00,
+      "unit": "combo",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Matar Paneer Combo",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "combo",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 30
+    },
+    {
+      "name": "Colocasia (Arvi)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 60.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Picador Chilli (Achari Mirch)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Corn Cob (Bhutta)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 40.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Raw Turmeric (Kachhi Haldi)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 300.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Baby Onion (Sirka Pyaz)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Ivy Gourd (Kundru)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Tomato Soup - Combo",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 120.00,
+      "unit": "combo",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 30
+    },
+    {
+      "name": "Drumstick (Sahjan)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 60.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Mushroom Soup - Combo",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "combo",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 20
+    },
+    {
+      "name": "Lotus Stem (Kamal Kakdi)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Detox Juice Combo",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "combo",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 30
+    },
+    {
+      "name": "Ginger - Organically grown (Adrak)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Broccoli",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 250.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Coriander Bunch (Dhaniya Patta)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 20.00,
+      "unit": "bunch",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Green Leafy Lettuce - Hydroponically Grown",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Baby Spinach - Hydroponically Grown",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Coriander (Without Roots) (Dhaniya)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 50.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Garlic - Organically grown (Lehsun)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 250.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Sarso Saag Veggie Mix (Chopped Sarso, Methi & Palak)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Organic Onion (Pyaz)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 50.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Chilli - Organically grown (Mirch)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Cherry Tomatoes - Hydroponically Grown",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Green Peas - Organically grown",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 250.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Tomato - Organically grown (Tamatar)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Beetroot - Organically grown (Chukandar)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Broccoli Florets 200g",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "200g",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Mixed Sprouts",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Spinach (Without Roots) (Palak)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 60.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Lemon - Organically grown (Nimbu)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Green Peas (Peeled)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Grated Carrot",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Spinach - Chopped",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Fenugreek Leaves (without Roots) (Methi)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Lady Finger - Organically grown (Bhindi)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Cherry Tomatoes",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Baby Corn - Packet",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "packet",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Garlic Peeled",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 250.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Exotic Vegetable Salad - Hydroponically Grown",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Cabbage - Organically grown (Patta Gobhi)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Green Cucumber - Organically grown (Kheera)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 60.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Hearty Autumn Leafy Veggie Mix - Hydroponically Grown",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Mint Leaves (Without Roots) (Pudina)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 50.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Parsley",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Mojito Combo",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "combo",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Rosemary",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Romaine Lettuce",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "White Onion (Safed Pyaz)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 40.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Drumstick Cut",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Oyster Mushroom",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 250.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Broccoli Soup - Combo",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "combo",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 30
+    },
+    {
+      "name": "Kale Leaves",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Butternut Squash",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Black Carrot",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Chinese Cabbage",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Asparagus Bunch",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 300.00,
+      "unit": "bunch",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Cauliflower (Phool Gobhi)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 50.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Radish (Mooli)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 40.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 250
+    },
+    {
+      "name": "Onion - 1 kg (Pack of 2)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "pack",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Brinjal Bharta (Baingan)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 60.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Bottle Gourd (Lauki)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 30.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Amla (Amla)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Desi Salad Combo",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "combo",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Turnip (Shalgam)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 40.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Small Purple Brinjal (Baingan)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 60.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Pointed Gourd (Parwal)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Sponge Gourd (Tori)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 50.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 250
+    },
+    {
+      "name": "Amla Beetroot & Carrot Juice - Combo",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "combo",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Red Potato (Aloo)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 40.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Raw Papaya (Kacha Papita)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 60.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Green Soup - Combo",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "combo",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 30
+    },
+    {
+      "name": "Halwa Carrot (Gajar)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Raw Banana (Kacha Kela)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 40.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 250
+    },
+    {
+      "name": "Chappan Tinda/ Summer Squash",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 60.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Green Pumpkin (Hara Kaddu)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 40.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Long Purple Brinjal (Baingan)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 60.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Onion (1 kg) + Potato 1 kg + Hybrid Tomato -500 g Combo",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "combo",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Onion (1 kg) + Potato - 1 kg + Desi Tomato - 500 g Combo",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "combo",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Cowpea Beans (Lobia Phali)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Hydroponic Sweet Bell Pepper (Cocktail)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Sweet Corn - Packet",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "packet",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Lettuce Box - Hydroponically Grown",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "box",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Potato - Organically Grown",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 50.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Portion Pumpkin",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 60.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Red Bell Pepper",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Lettuce Mix - Hydroponically Grown",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Fenugreek (Methi) - Chopped",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Snacking Seedless Cucumber - Hydroponically Grown",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Spinach (Palak)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 60.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 250
+    },
+    {
+      "name": "Yellow Bell Pepper",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Pumpkin (Cut)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 50.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Green Moong Sprouts",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Green Capsicum - Organically Grown",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Red Cherry Tomatoes - Hydroponically Grown",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "French Fresh Beans - Organically grown",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Organic Radish",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 60.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Parsley - Hydroponically Grown",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Basil Leaves - Hydroponically Grown",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Spring Onion (Hari Pyaz)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Jackfruit (Cut) (Kathal)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Fenugreek (Methi)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 60.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Salad Box - Hydroponically Grown",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "box",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Rocket leaves/ Arugula - Hydroponically Grown",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Curry Leaves (Kadi Patta)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 50.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Pulao Veggie Mix",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Iceberg Lettuce",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Green Lettuce",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Spinach - Hydroponically Grown (250g)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 50.00,
+      "unit": "250g",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 300
+    },
+    {
+      "name": "Green Zucchini",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Cauliflower - Organically grown (Ful Gobhi)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Organic English Cucumber",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Brown Chana Sprouts",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Chenopodium (Bathua)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Mint Leaves (Pudina)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 50.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 200
+    },
+    {
+      "name": "Yam",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 60.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 250
+    },
+    {
+      "name": "Veggie Salad Mix",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Baby Spinach Hydroponically Grown",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Leek",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Sangria Combo",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "combo",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Basil Leaves + Lemon + Fresh Mint Leaves - without roots Combo",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "combo",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 30
+    },
+    {
+      "name": "Basil Leaves + Lemon + Mint Leaves Bunch - With roots Combo",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "combo",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 30
+    },
+    {
+      "name": "Basil Leaves - Hydroponically Grown + Lemon + Fresh Mint Leaves - without roots Combo",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "combo",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 30
+    },
+    {
+      "name": "Basil Leaves - Hydroponically Grown + Lemon + Mint Leaves Bunch - With roots Combo",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "combo",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 30
+    },
+    {
+      "name": "Mustard Leaves (Sarso Saag)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Lemongrass",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Hara Chana Saag",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Basil Leaves",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Bottle Gourd - Organically Grown",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 60.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Celery",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Bok Choy",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Bitter Gourd - Organically grown (Karela)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Pumpkin Soup - Combo",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 150.00,
+      "unit": "combo",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 30
+    },
+    {
+      "name": "Cremini Mushroom",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Yellow Cherry Tomato",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+      "name": "Gobhi Paratha Filling Mix",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 100.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 100
+    },
+    {
+      "name": "Dill Leaves (Soya)",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 80.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 150
+    },
+    {
+      "name": "Curly Kale Leaves",
+      "category": "Fresh Produce",
+      "subcategory": "Vegetables",
+      "price": 200.00,
+      "unit": "kg",
+      "image": "/api/placeholder/200/200",
+      "status": "active",
+      "stock_count": 50
+    },
+    {
+        "name": "Chinese Combo",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 150.00,
+        "unit": "combo",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 30
+    },
+    {
+        "name": "Onion (1 kg) + Potato - 1 kg + Desi Tomato - 500 g Combo",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 150.00,
+        "unit": "combo",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 50
+      },
+      {
+        "name": "Cowpea Beans (Lobia Phali)",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 100.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 150
+      },
+      {
+        "name": "Hydroponic Sweet Bell Pepper (Cocktail)",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 200.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 100
+      },
+      {
+        "name": "Sweet Corn - Packet",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 100.00,
+        "unit": "packet",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 200
+      },
+      {
+        "name": "Lettuce Box - Hydroponically Grown",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 150.00,
+        "unit": "box",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 100
+      },
+      {
+        "name": "Potato - Organically Grown",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 50.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 150
+      },
+      {
+        "name": "Portion Pumpkin",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 60.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 200
+      },
+      {
+        "name": "Red Bell Pepper",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 200.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 100
+      },
+      {
+        "name": "Lettuce Mix - Hydroponically Grown",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 150.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 100
+      },
+      {
+        "name": "Fenugreek (Methi) - Chopped",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 80.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 150
+      },
+      {
+        "name": "Snacking Seedless Cucumber - Hydroponically Grown",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 100.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 200
+      },
+      {
+        "name": "Spinach (Palak)",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 60.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 250
+      },
+      {
+        "name": "Yellow Bell Pepper",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 200.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 100
+      },
+      {
+        "name": "Pumpkin (Cut)",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 50.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 200
+      },
+      {
+        "name": "Green Moong Sprouts",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 80.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 150
+      },
+      {
+        "name": "Green Capsicum - Organically Grown",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 150.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 100
+      },
+      {
+        "name": "Red Cherry Tomatoes - Hydroponically Grown",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 200.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 50
+      },
+      {
+        "name": "French Fresh Beans - Organically grown",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 150.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 100
+      },
+      {
+        "name": "Organic Radish",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 60.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 150
+      },
+      {
+        "name": "Parsley - Hydroponically Grown",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 100.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 100
+      },
+      {
+        "name": "Basil Leaves - Hydroponically Grown",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 150.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 50
+      },
+      {
+        "name": "Spring Onion (Hari Pyaz)",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 80.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 150
+      },
+      {
+        "name": "Jackfruit (Cut) (Kathal)",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 200.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 100
+      },
+      {
+        "name": "Fenugreek (Methi)",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 60.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 200
+      },
+      {
+        "name": "Salad Box - Hydroponically Grown",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 150.00,
+        "unit": "box",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 100
+      },
+      {
+        "name": "Rocket leaves/ Arugula - Hydroponically Grown",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 200.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 50
+      },
+      {
+        "name": "Curry Leaves (Kadi Patta)",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 50.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 150
+      },
+      {
+        "name": "Pulao Veggie Mix",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 100.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 100
+      },
+      {
+        "name": "Iceberg Lettuce",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 100.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 150
+      },
+      {
+        "name": "Green Lettuce",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 80.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 200
+      },
+      {
+        "name": "Spinach - Hydroponically Grown (250 g)",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 50.00,
+        "unit": "250g",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 300
+      },
+      {
+        "name": "Green Zucchini",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 150.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 100
+      },
+      {
+        "name": "Cauliflower - Organically grown (Ful Gobhi)",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 80.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 150
+      },
+      {
+        "name": "Organic English Cucumber",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 100.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 200
+      },
+      {
+        "name": "Brown Chana Sprouts",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 150.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 100
+      },
+      {
+        "name": "Chenopodium (Bathua)",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 80.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 150
+      },
+      {
+        "name": "Mint Leaves (Pudina)",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 50.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 200
+      },
+      {
+        "name": "Yam",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 60.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 250
+      },
+      {
+        "name": "Veggie Salad Mix",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 150.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 100
+      },
+      {
+        "name": "Baby Spinach Hydroponically Grown",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 200.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 50
+      },
+      {
+        "name": "Leek",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 100.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 150
+      },
+      {
+        "name": "Sangria Combo",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 150.00,
+        "unit": "combo",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 50
+      },
+      {
+        "name": "Basil Leaves + Lemon + Fresh Mint Leaves - without roots Combo",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 200.00,
+        "unit": "combo",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 30
+      },
+      {
+        "name": "Basil Leaves + Lemon + Mint Leaves Bunch - With roots Combo",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 200.00,
+        "unit": "combo",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 30
+      },
+      {
+        "name": "Basil Leaves - Hydroponically Grown + Lemon + Fresh Mint Leaves - without roots Combo",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 200.00,
+        "unit": "combo",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 30
+      },
+      {
+        "name": "Basil Leaves - Hydroponically Grown + Lemon + Mint Leaves Bunch - With roots Combo",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 200.00,
+        "unit": "combo",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 30
+      },
+      {
+        "name": "Mustard Leaves (Sarso Saag)",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 80.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 150
+      },
+      {
+        "name": "Lemongrass",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 100.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 100
+      },
+      {
+        "name": "Hara Chana Saag",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 150.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 50
+      },
+      {
+        "name": "Basil Leaves",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 150.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 50
+      },
+      {
+        "name": "Bottle Gourd - Organically Grown",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 60.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 150
+      },
+      {
+        "name": "Celery",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 100.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 100
+      },
+      {
+        "name": "Bok Choy",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 150.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 50
+      },
+      {
+        "name": "Bitter Gourd - Organically grown (Karela)",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 100.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 100
+      },
+      {
+        "name": "Pumpkin Soup - Combo",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 150.00,
+        "unit": "combo",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 30
+      },
+      {
+        "name": "Cremini Mushroom",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 200.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 50
+      },
+      {
+        "name": "Yellow Cherry Tomato",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 200.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 50
+      },
+      {
+        "name": "Gobhi Paratha Filling Mix",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 100.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 100
+      },
+      {
+        "name": "Dill Leaves (Soya)",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 80.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 150
+      },
+      {
+        "name": "Curly Kale Leaves",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 200.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 50
+      },
+      {
+        "name": "Chinese Combo",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 150.00,
+        "unit": "combo",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 30
+      },
+      {
+        "name": "Thyme",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 100.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 100
+      },
+      {
+        "name": "Thai Ginger",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 150.00,
+        "unit": "kg",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 50
+      },
+      {
+        "name": "Sweet Corn Soup - Combo",
+        "category": "Fresh Produce",
+        "subcategory": "Vegetables",
+        "price": 150.00,
+        "unit": "combo",
+        "image": "/api/placeholder/200/200",
+        "status": "active",
+        "stock_count": 30
+      },
+      
+        {
+          "name": "Apple",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 120.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 200
+        },
+        {
+          "name": "Banana",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 60.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 300
+        },
+        {
+          "name": "Orange",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 80.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 150
+        },
+        {
+          "name": "Grapes",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 150.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 250
+        },
+        {
+          "name": "Mango",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 100.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 200
+        },
+        {
+          "name": "Pineapple",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 80.00,
+          "unit": "each",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 100
+        },
+        {
+          "name": "Watermelon",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 40.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 300
+        },
+        {
+          "name": "Strawberry",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 200.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 150
+        },
+        {
+          "name": "Blueberry",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 300.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 100
+        },
+        {
+          "name": "Kiwi",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 250.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 100
+        },
+        {
+          "name": "Peach",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 180.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 150
+        },
+        {
+          "name": "Pear",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 150.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 200
+        },
+        {
+          "name": "Plum",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 200.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 100
+        },
+        {
+          "name": "Cherry",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 300.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 50
+        },
+        {
+          "name": "Apricot",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 250.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 100
+        },
+        {
+          "name": "Blackberry",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 280.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 100
+        },
+        {
+          "name": "Raspberry",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 300.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 50
+        },
+        {
+          "name": "Coconut",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 50.00,
+          "unit": "each",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 200
+        },
+        {
+          "name": "Pomegranate",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 150.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 150
+        },
+        {
+          "name": "Guava",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 80.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 200
+        },
+        {
+          "name": "Papaya",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 60.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 250
+        },
+        {
+          "name": "Melon",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 100.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 150
+        },
+        {
+          "name": "Lemon",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 80.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 200
+        },
+        {
+          "name": "Lime",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 60.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 250
+        },
+        {
+          "name": "Dragon Fruit",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 250.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 100
+        },
+        {
+          "name": "Passion Fruit",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 300.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 50
+        },
+        {
+          "name": "Star Fruit",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 200.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 100
+        },
+        {
+          "name": "Fig",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 250.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 100
+        },
+        {
+          "name": "Persimmon",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 200.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 100
+        },
+        {
+          "name": "Quince",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 150.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 100
+        },
+        {
+          "name": "Custard Apple",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 180.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 150
+        },
+        {
+          "name": "Lychee",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 250.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 100
+        },
+        {
+          "name": "Longan",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 200.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 100
+        },
+        {
+          "name": "Rambutan",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 250.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 100
+        },
+        {
+          "name": "Mangosteen",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 300.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 50
+        },
+        {
+          "name": "Durian",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 400.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 50
+        },
+        {
+          "name": "Jackfruit",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 150.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 100
+        },
+        {
+          "name": "Soursop",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 200.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 100
+        },
+        {
+          "name": "Sapodilla",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 250.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 100
+        },
+        {
+          "name": "Salak",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 200.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 100
+        },
+        {
+          "name": "Tamarind",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 150.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 150
+        },
+        {
+          "name": "Breadfruit",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 100.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 200
+        },
+        {
+          "name": "Black Jamun",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 120.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 150
+        },
+        {
+          "name": "Sapota (Chiku)",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 100.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 200
+        },
+        {
+          "name": "Dates",
+          "category": "Fresh Produce",
+          "subcategory": "Fruits",
+          "price": 200.00,
+          "unit": "kg",
+          "image": "/api/placeholder/200/200",
+          "status": "active",
+          "stock_count": 100
+        },
+        
+            {
+              "name": "Amul Full Cream Milk",
+              "category": "Dairy & Eggs",
+              "subcategory": "Milk",
+              "price": 68.00,
+              "unit": "liter",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 200
+            },
+            {
+              "name": "Amul Toned Milk",
+              "category": "Dairy & Eggs",
+              "subcategory": "Milk",
+              "price": 64.00,
+              "unit": "liter",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 250
+            },
+            {
+              "name": "Heritage Full Cream Milk",
+              "category": "Dairy & Eggs",
+              "subcategory": "Milk",
+              "price": 66.00,
+              "unit": "liter",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 180
+            },
+            {
+              "name": "Heritage Toned Milk",
+              "category": "Dairy & Eggs",
+              "subcategory": "Milk",
+              "price": 62.00,
+              "unit": "liter",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 200
+            },
+            {
+              "name": "Nandini Good Life Cow Milk",
+              "category": "Dairy & Eggs",
+              "subcategory": "Milk",
+              "price": 65.00,
+              "unit": "liter",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 150
+            },
+            {
+              "name": "Nandini Toned Milk",
+              "category": "Dairy & Eggs",
+              "subcategory": "Milk",
+              "price": 61.00,
+              "unit": "liter",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 180
+            },
+            {
+              "name": "Milky Mist Full Cream Milk",
+              "category": "Dairy & Eggs",
+              "subcategory": "Milk",
+              "price": 70.00,
+              "unit": "liter",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 120
+            },
+            {
+              "name": "Amul Masti Curd",
+              "category": "Dairy & Eggs",
+              "subcategory": "Yogurt & Curd",
+              "price": 40.00,
+              "unit": "400g",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 150
+            },
+            {
+              "name": "Heritage Curd",
+              "category": "Dairy & Eggs",
+              "subcategory": "Yogurt & Curd",
+              "price": 38.00,
+              "unit": "400g",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 130
+            },
+            {
+              "name": "Nandini Curd",
+              "category": "Dairy & Eggs",
+              "subcategory": "Yogurt & Curd",
+              "price": 37.00,
+              "unit": "400g",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 140
+            },
+            {
+              "name": "Milky Mist Greek Yogurt",
+              "category": "Dairy & Eggs",
+              "subcategory": "Yogurt & Curd",
+              "price": 85.00,
+              "unit": "400g",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 100
+            },
+            {
+              "name": "Amul Malai Paneer",
+              "category": "Dairy & Eggs",
+              "subcategory": "Paneer & Tofu",
+              "price": 85.00,
+              "unit": "200g",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 100
+            },
+            {
+              "name": "Heritage Paneer",
+              "category": "Dairy & Eggs",
+              "subcategory": "Paneer & Tofu",
+              "price": 80.00,
+              "unit": "200g",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 90
+            },
+            {
+              "name": "Milky Mist Paneer",
+              "category": "Dairy & Eggs",
+              "subcategory": "Paneer & Tofu",
+              "price": 90.00,
+              "unit": "200g",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 80
+            },
+            {
+              "name": "Amul Butter",
+              "category": "Dairy & Eggs",
+              "subcategory": "Butter & Margarine",
+              "price": 54.00,
+              "unit": "100g",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 200
+            },
+            {
+              "name": "Heritage Butter",
+              "category": "Dairy & Eggs",
+              "subcategory": "Butter & Margarine",
+              "price": 52.00,
+              "unit": "100g",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 150
+            },
+            {
+              "name": "Nandini Butter",
+              "category": "Dairy & Eggs",
+              "subcategory": "Butter & Margarine",
+              "price": 50.00,
+              "unit": "100g",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 130
+            },
+            {
+              "name": "Amul Processed Cheese Block",
+              "category": "Dairy & Eggs",
+              "subcategory": "Cheese",
+              "price": 125.00,
+              "unit": "200g",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 100
+            },
+            {
+              "name": "Amul Cheese Slices",
+              "category": "Dairy & Eggs",
+              "subcategory": "Cheese",
+              "price": 138.00,
+              "unit": "200g",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 120
+            },
+            {
+              "name": "Milky Mist Mozzarella Cheese",
+              "category": "Dairy & Eggs",
+              "subcategory": "Cheese",
+              "price": 145.00,
+              "unit": "200g",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 80
+            },
+            {
+              "name": "Amul Fresh Cream",
+              "category": "Dairy & Eggs",
+              "subcategory": "Cream",
+              "price": 75.00,
+              "unit": "200ml",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 100
+            },
+            {
+              "name": "Heritage Fresh Cream",
+              "category": "Dairy & Eggs",
+              "subcategory": "Cream",
+              "price": 72.00,
+              "unit": "200ml",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 90
+            },
+            {
+              "name": "Milky Mist Whipping Cream",
+              "category": "Dairy & Eggs",
+              "subcategory": "Cream",
+              "price": 185.00,
+              "unit": "250ml",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 60
+            },
+            {
+              "name": "Amul Masti Spiced Buttermilk",
+              "category": "Dairy & Eggs",
+              "subcategory": "Buttermilk",
+              "price": 15.00,
+              "unit": "200ml",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 300
+            },
+            {
+              "name": "Nandini Spiced Buttermilk",
+              "category": "Dairy & Eggs",
+              "subcategory": "Buttermilk",
+              "price": 14.00,
+              "unit": "200ml",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 280
+            },
+            {
+              "name": "Heritage Buttermilk",
+              "category": "Dairy & Eggs",
+              "subcategory": "Buttermilk",
+              "price": 14.50,
+              "unit": "200ml",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 250
+            },
+            {
+              "name": "Amul Kool Badam",
+              "category": "Dairy & Eggs",
+              "subcategory": "Flavored Milk",
+              "price": 25.00,
+              "unit": "200ml",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 200
+            },
+            {
+              "name": "Amul Kool Chocolate",
+              "category": "Dairy & Eggs",
+              "subcategory": "Flavored Milk",
+              "price": 25.00,
+              "unit": "200ml",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 220
+            },
+            {
+              "name": "Nandini Goodlife Chocolate Milk",
+              "category": "Dairy & Eggs",
+              "subcategory": "Flavored Milk",
+              "price": 24.00,
+              "unit": "200ml",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 180
+            },
+            {
+              "name": "Heritage Strawberry Milk",
+              "category": "Dairy & Eggs",
+              "subcategory": "Flavored Milk",
+              "price": 24.50,
+              "unit": "200ml",
+              "image": "/api/placeholder/200/200",
+              "status": "active",
+              "stock_count": 150
+            },
+            
+                {
+                  "name": "Licious Chicken Breast",
+                  "category": "Meat & Seafood",
+                  "subcategory": "Chicken & Poultry",
+                  "price": 269.00,
+                  "unit": "500g",
+                  "image": "/api/placeholder/200/200",
+                  "status": "active",
+                  "stock_count": 100
+                },
+                {
+                  "name": "Licious Premium Mutton Curry Cut",
+                  "category": "Meat & Seafood",
+                  "subcategory": "Mutton & Lamb",
+                  "price": 749.00,
+                  "unit": "500g",
+                  "image": "/api/placeholder/200/200",
+                  "status": "active",
+                  "stock_count": 50
+                },
+                {
+                  "name": "FreshToHome Basa Fish Fillet",
+                  "category": "Meat & Seafood",
+                  "subcategory": "Fish & Seafood",
+                  "price": 399.00,
+                  "unit": "500g",
+                  "image": "/api/placeholder/200/200",
+                  "status": "active",
+                  "stock_count": 75
+                },
+                {
+                  "name": "FreshToHome Tiger Prawns",
+                  "category": "Meat & Seafood",
+                  "subcategory": "Fish & Seafood",
+                  "price": 499.00,
+                  "unit": "250g",
+                  "image": "/api/placeholder/200/200",
+                  "status": "active",
+                  "stock_count": 40
+                },
+                {
+                  "name": "MeatGo Pork Belly Strips",
+                  "category": "Meat & Seafood",
+                  "subcategory": "Pork",
+                  "price": 449.00,
+                  "unit": "500g",
+                  "image": "/api/placeholder/200/200",
+                  "status": "active",
+                  "stock_count": 30
+                },
+                {
+                  "name": "MeatGo Chicken Salami",
+                  "category": "Meat & Seafood",
+                  "subcategory": "Cold Cuts & Sausages",
+                  "price": 199.00,
+                  "unit": "200g",
+                  "image": "/api/placeholder/200/200",
+                  "status": "active",
+                  "stock_count": 60
+                },
+                {
+                  "name": "Licious Chicken Sausages",
+                  "category": "Meat & Seafood",
+                  "subcategory": "Cold Cuts & Sausages",
+                  "price": 299.00,
+                  "unit": "250g",
+                  "image": "/api/placeholder/200/200",
+                  "status": "active",
+                  "stock_count": 80
+                },
+                {
+                  "name": "FreshToHome Rohu Fish Steaks",
+                  "category": "Meat & Seafood",
+                  "subcategory": "Fish & Seafood",
+                  "price": 299.00,
+                  "unit": "500g",
+                  "image": "/api/placeholder/200/200",
+                  "status": "active",
+                  "stock_count": 45
+                },
+                {
+                  "name": "MeatGo Mutton Keema",
+                  "category": "Meat & Seafood",
+                  "subcategory": "Mutton & Lamb",
+                  "price": 599.00,
+                  "unit": "450g",
+                  "image": "/api/placeholder/200/200",
+                  "status": "active",
+                  "stock_count": 35
+                },
+                {
+                  "name": "Licious Plant-Based Chicken",
+                  "category": "Meat & Seafood",
+                  "subcategory": "Plant-based Meat Alternatives",
+                  "price": 349.00,
+                  "unit": "250g",
+                  "image": "/api/placeholder/200/200",
+                  "status": "active",
+                  "stock_count": 40
+                },
+                
+                    {
+                      "name": "Samsung Galaxy S23 Ultra",
+                      "category": "Electronics",
+                      "subcategory": "Smartphones",
+                      "price": 124999.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 30
+                    },
+                    {
+                      "name": "Apple MacBook Air M2",
+                      "category": "Electronics",
+                      "subcategory": "Laptops",
+                      "price": 114900.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 20
+                    },
+                    {
+                      "name": "Sony Bravia XR-55A80L OLED",
+                      "category": "Electronics",
+                      "subcategory": "Smart TVs",
+                      "price": 179990.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 15
+                    },
+                    {
+                      "name": "Levi's 511 Slim Fit Jeans",
+                      "category": "Fashion",
+                      "subcategory": "Men's Fashion",
+                      "price": 2799.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 100
+                    },
+                    {
+                      "name": "Zara Printed Midi Dress",
+                      "category": "Fashion",
+                      "subcategory": "Women's Fashion",
+                      "price": 3990.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 75
+                    },
+                    {
+                      "name": "H&M Kids Cotton T-Shirt",
+                      "category": "Fashion",
+                      "subcategory": "Kids' Fashion",
+                      "price": 399.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 150
+                    },
+                    {
+                      "name": "Prestige Deluxe Plus Pressure Cooker",
+                      "category": "Home & Living",
+                      "subcategory": "Kitchen & Dining",
+                      "price": 1495.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 50
+                    },
+                    {
+                      "name": "Urban Ladder Alberto Sofa",
+                      "category": "Home & Living",
+                      "subcategory": "Furniture",
+                      "price": 32999.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 10
+                    },
+                    {
+                      "name": "The Ordinary Niacinamide Serum",
+                      "category": "Beauty & Personal Care",
+                      "subcategory": "Skincare",
+                      "price": 750.00,
+                      "unit": "30ml",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 100
+                    },
+                    {
+                      "name": "MAC Ruby Woo Lipstick",
+                      "category": "Beauty & Personal Care",
+                      "subcategory": "Makeup",
+                      "price": 1950.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 75
+                    },
+                    {
+                      "name": "Nike Air Zoom Pegasus 39",
+                      "category": "Sports & Fitness",
+                      "subcategory": "Sports Equipment",
+                      "price": 9995.00,
+                      "unit": "pair",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 40
+                    },
+                    {
+                      "name": "Cosco Cricket Ball",
+                      "category": "Sports & Fitness",
+                      "subcategory": "Cricket",
+                      "price": 299.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 100
+                    },
+                    {
+                      "name": "Royal Canin Maxi Adult",
+                      "category": "Pet Supplies",
+                      "subcategory": "Dog Food",
+                      "price": 3799.00,
+                      "unit": "4kg",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 40
+                    },
+                    {
+                      "name": "Whiskas Ocean Fish Cat Food",
+                      "category": "Pet Supplies",
+                      "subcategory": "Cat Food",
+                      "price": 699.00,
+                      "unit": "1.2kg",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 60
+                    },
+                    {
+                      "name": "Pampers Baby Dry Diapers",
+                      "category": "Baby & Kids",
+                      "subcategory": "Baby Care",
+                      "price": 999.00,
+                      "unit": "pack of 50",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 100
+                    },
+                    {
+                      "name": "Fisher-Price Learning Kit",
+                      "category": "Baby & Kids",
+                      "subcategory": "Kids Learning & Education",
+                      "price": 1499.00,
+                      "unit": "set",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 30
+                    },
+                    {
+                      "name": "Castrol MAGNATEC Engine Oil",
+                      "category": "Automotive",
+                      "subcategory": "Car Care",
+                      "price": 849.00,
+                      "unit": "3L",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 50
+                    },
+                    {
+                      "name": "Bosch Wiper Blade",
+                      "category": "Automotive",
+                      "subcategory": "Car Maintenance",
+                      "price": 699.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 75
+                    },
+                    {
+                      "name": "Ikigai: The Japanese Secret",
+                      "category": "Books & Media",
+                      "subcategory": "Books",
+                      "price": 499.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 100
+                    },
+                    {
+                      "name": "Yamaha F310 Acoustic Guitar",
+                      "category": "Books & Media",
+                      "subcategory": "Musical Instruments",
+                      "price": 11990.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 15
+                    },
+                    {
+                      "name": "Tanishq Diamond Stud Earrings",
+                      "category": "Jewelry & Watches",
+                      "subcategory": "Fine Jewelry",
+                      "price": 49999.00,
+                      "unit": "pair",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 10
+                    },
+                    {
+                      "name": "Fossil Gen 6 Smartwatch",
+                      "category": "Jewelry & Watches",
+                      "subcategory": "Watches",
+                      "price": 22995.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 25
+                    },
+                    {
+                      "name": "Parker Vector Fountain Pen",
+                      "category": "Office & Stationery",
+                      "subcategory": "Writing Supplies",
+                      "price": 299.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 200
+                    },
+                    {
+                      "name": "Faber-Castell Color Pencils",
+                      "category": "Office & Stationery",
+                      "subcategory": "Art Supplies",
+                      "price": 199.00,
+                      "unit": "pack of 24",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 150
+                    },
+                    {
+                      "name": "Black & Decker Lawn Mower",
+                      "category": "Garden & Outdoor",
+                      "subcategory": "Garden Tools",
+                      "price": 12999.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 20
+                    },
+                    {
+                      "name": "Weber Original Kettle Grill",
+                      "category": "Garden & Outdoor",
+                      "subcategory": "BBQ & Grills",
+                      "price": 14999.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 15
+                    },
+                    {
+                      "name": "Amazon Echo Dot 5th Gen",
+                      "category": "Smart Home",
+                      "subcategory": "Smart Speakers",
+                      "price": 4999.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 50
+                    },
+                    {
+                      "name": "Philips Hue Starter Kit",
+                      "category": "Smart Home",
+                      "subcategory": "Smart Lighting",
+                      "price": 8999.00,
+                      "unit": "kit",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 30
+                    },
+                    {
+                      "name": "American Tourister Trolley",
+                      "category": "Luggage & Bags",
+                      "subcategory": "Travel Luggage",
+                      "price": 4599.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 40
+                    },
+                    {
+                      "name": "Wildcraft Tempest Backpack",
+                      "category": "Luggage & Bags",
+                      "subcategory": "Bags & Backpacks",
+                      "price": 1999.00,
+                      "unit": "piece",
+                      "image": "/api/placeholder/200/200",
+                      "status": "active",
+                      "stock_count": 75
+                    },
+                        {
+                          "name": "Ikigai: The Japanese Secret",
+                          "category": "Books & Media",
+                          "subcategory": "Books",
+                          "price": 499.00,
+                          "unit": "piece",
+                          "image": "/api/placeholder/200/200",
+                          "status": "active",
+                          "stock_count": 100
+                        },
+                        {
+                          "name": "Yamaha F310 Acoustic Guitar",
+                          "category": "Books & Media",
+                          "subcategory": "Musical Instruments",
+                          "price": 11990.00,
+                          "unit": "piece",
+                          "image": "/api/placeholder/200/200",
+                          "status": "active",
+                          "stock_count": 15
+                        },
+                        
+                            {
+                              "name": "Tanishq Diamond Stud Earrings",
+                              "category": "Jewelry & Watches",
+                              "subcategory": "Fine Jewelry",
+                              "price": 49999.00,
+                              "unit": "pair",
+                              "image": "/api/placeholder/200/200",
+                              "status": "active",
+                              "stock_count": 10
+                            },
+                            {
+                              "name": "Fossil Gen 6 Smartwatch",
+                              "category": "Jewelry & Watches",
+                              "subcategory": "Watches",
+                              "price": 22995.00,
+                              "unit": "piece",
+                              "image": "/api/placeholder/200/200",
+                              "status": "active",
+                              "stock_count": 25
+                            }, 
+                                {
+                                  "name": "Parker Vector Fountain Pen",
+                                  "category": "Office & Stationery",
+                                  "subcategory": "Writing Supplies",
+                                  "price": 299.00,
+                                  "unit": "piece",
+                                  "image": "/api/placeholder/200/200",
+                                  "status": "active",
+                                  "stock_count": 200
+                                },
+                                {
+                                  "name": "Faber-Castell Color Pencils",
+                                  "category": "Office & Stationery",
+                                  "subcategory": "Art Supplies",
+                                  "price": 199.00,
+                                  "unit": "pack of 24",
+                                  "image": "/api/placeholder/200/200",
+                                  "status": "active",
+                                  "stock_count": 150
+                                },
+                                    {
+                                      "name": "Black & Decker Lawn Mower",
+                                      "category": "Garden & Outdoor",
+                                      "subcategory": "Garden Tools",
+                                      "price": 12999.00,
+                                      "unit": "piece",
+                                      "image": "/api/placeholder/200/200",
+                                      "status": "active",
+                                      "stock_count": 20
+                                    },
+                                    {
+                                      "name": "Weber Original Kettle Grill",
+                                      "category": "Garden & Outdoor",
+                                      "subcategory": "BBQ & Grills",
+                                      "price": 14999.00,
+                                      "unit": "piece",
+                                      "image": "/api/placeholder/200/200",
+                                      "status": "active",
+                                      "stock_count": 15
+                                    },
+                                        {
+                                          "name": "Amazon Echo Dot 5th Gen",
+                                          "category": "Smart Home",
+                                          "subcategory": "Smart Speakers",
+                                          "price": 4999.00,
+                                          "unit": "piece",
+                                          "image": "/api/placeholder/200/200",
+                                          "status": "active",
+                                          "stock_count": 50
+                                        },
+                                        {
+                                          "name": "Philips Hue Starter Kit",
+                                          "category": "Smart Home",
+                                          "subcategory": "Smart Lighting",
+                                          "price": 8999.00,
+                                          "unit": "kit",
+                                          "image": "/api/placeholder/200/200",
+                                          "status": "active",
+                                          "stock_count": 30
+                                        },
+                                        
+                                            {
+                                              "name": "Levi's 511 Slim Fit Jeans",
+                                              "category": "Fashion",
+                                              "subcategory": "Men's Fashion",
+                                              "price": 2799.00,
+                                              "unit": "piece",
+                                              "image": "/api/placeholder/200/200",
+                                              "status": "active",
+                                              "stock_count": 100
+                                            },
+                                            {
+                                              "name": "Zara Printed Midi Dress",
+                                              "category": "Fashion",
+                                              "subcategory": "Women's Fashion",
+                                              "price": 3990.00,
+                                              "unit": "piece",
+                                              "image": "/api/placeholder/200/200",
+                                              "status": "active",
+                                              "stock_count": 75
+                                            },
+                                            {
+                                              "name": "H&M Kids Cotton T-Shirt",
+                                              "category": "Fashion",
+                                              "subcategory": "Kids' Fashion",
+                                              "price": 399.00,
+                                              "unit": "piece",
+                                              "image": "/api/placeholder/200/200",
+                                              "status": "active",
+                                              "stock_count": 150
+                                            },
+                                                {
+                                                  "name": "The Ordinary Niacinamide Serum",
+                                                  "category": "Beauty & Personal Care",
+                                                  "subcategory": "Skincare",
+                                                  "price": 750.00,
+                                                  "unit": "30ml",
+                                                  "image": "/api/placeholder/200/200",
+                                                  "status": "active",
+                                                  "stock_count": 100
+                                                },
+                                                {
+                                                  "name": "MAC Ruby Woo Lipstick",
+                                                  "category": "Beauty & Personal Care",
+                                                  "subcategory": "Makeup",
+                                                  "price": 1950.00,
+                                                  "unit": "piece",
+                                                  "image": "/api/placeholder/200/200",
+                                                  "status": "active",
+                                                  "stock_count": 75
+                                                },
+                                                
+                                                    {
+                                                      "name": "Nike Air Zoom Pegasus 39",
+                                                      "category": "Sports & Fitness",
+                                                      "subcategory": "Sports Equipment",
+                                                      "price": 9995.00,
+                                                      "unit": "pair",
+                                                      "image": "/api/placeholder/200/200",
+                                                      "status": "active",
+                                                      "stock_count": 40
+                                                    },
+                                                    {
+                                                      "name": "Cosco Cricket Ball",
+                                                      "category": "Sports & Fitness",
+                                                      "subcategory": "Cricket",
+                                                      "price": 299.00,
+                                                      "unit": "piece",
+                                                      "image": "/api/placeholder/200/200",
+                                                      "status": "active",
+                                                      "stock_count": 100
+                                                    },
+                                                        {
+                                                          "name": "Royal Canin Maxi Adult",
+                                                          "category": "Pet Supplies",
+                                                          "subcategory": "Dog Food",
+                                                          "price": 3799.00,
+                                                          "unit": "4kg",
+                                                          "image": "/api/placeholder/200/200",
+                                                          "status": "active",
+                                                          "stock_count": 40
+                                                        },
+                                                        {
+                                                          "name": "Whiskas Ocean Fish Cat Food",
+                                                          "category": "Pet Supplies",
+                                                          "subcategory": "Cat Food",
+                                                          "price": 699.00,
+                                                          "unit": "1.2kg",
+                                                          "image": "/api/placeholder/200/200",
+                                                          "status": "active",
+                                                          "stock_count": 60
+                                                        },
+                                                        
+                                                            {
+                                                              "name": "Pampers Baby Dry Diapers",
+                                                              "category": "Baby & Kids",
+                                                              "subcategory": "Baby Care",
+                                                              "price": 999.00,
+                                                              "unit": "pack of 50",
+                                                              "image": "/api/placeholder/200/200",
+                                                              "status": "active",
+                                                              "stock_count": 100
+                                                            },
+                                                            {
+                                                              "name": "Fisher-Price Learning Kit",
+                                                              "category": "Baby & Kids",
+                                                              "subcategory": "Kids Learning & Education",
+                                                              "price": 1499.00,
+                                                              "unit": "set",
+                                                              "image": "/api/placeholder/200/200",
+                                                              "status": "active",
+                                                              "stock_count": 30
+                                                            },
+                                                            
+                                                              {
+                                                                  "name": "Castrol MAGNATEC Engine Oil",
+                                                                  "category": "Automotive",
+                                                                  "subcategory": "Car Care",
+                                                                  "price": 849.00,
+                                                                  "unit": "3L",
+                                                                  "image": "/api/placeholder/200/200",
+                                                                  "status": "active",
+                                                                  "stock_count": 50
+                                                                },
+                                                                {
+                                                                  "name": "Bosch Wiper Blade",
+                                                                  "category": "Automotive",
+                                                                  "subcategory": "Car Maintenance",
+                                                                  "price": 699.00,
+                                                                  "unit": "piece",
+                                                                  "image": "/api/placeholder/200/200",
+                                                                  "status": "active",
+                                                                  "stock_count": 75
+                                                                },
+                                                                    {
+                                                                      "name": "Amul Fresh Cream",
+                                                                      "category": "Dairy & Eggs",
+                                                                      "subcategory": "Cream",
+                                                                      "price": 75.00,
+                                                                      "unit": "200ml",
+                                                                      "image": "/api/placeholder/200/200",
+                                                                      "status": "active",
+                                                                      "stock_count": 100
+                                                                    },
+                                                                    {
+                                                                      "name": "Heritage Fresh Cream",
+                                                                      "category": "Dairy & Eggs",
+                                                                      "subcategory": "Cream",
+                                                                      "price": 72.00,
+                                                                      "unit": "200ml",
+                                                                      "image": "/api/placeholder/200/200",
+                                                                      "status": "active",
+                                                                      "stock_count": 90
+                                                                    },
+                                                                    {
+                                                                      "name": "Milky Mist Whipping Cream",
+                                                                      "category": "Dairy & Eggs",
+                                                                      "subcategory": "Cream",
+                                                                      "price": 185.00,
+                                                                      "unit": "250ml",
+                                                                      "image": "/api/placeholder/200/200",
+                                                                      "status": "active",
+                                                                      "stock_count": 60
+                                                                    },
+                                                                    
+                                                                        {
+                                                                          "name": "Amul Masti Spiced Buttermilk",
+                                                                          "category": "Dairy & Eggs",
+                                                                          "subcategory": "Buttermilk",
+                                                                          "price": 15.00,
+                                                                          "unit": "200ml",
+                                                                          "image": "/api/placeholder/200/200",
+                                                                          "status": "active",
+                                                                          "stock_count": 300
+                                                                        },
+                                                                        {
+                                                                          "name": "Nandini Spiced Buttermilk",
+                                                                          "category": "Dairy & Eggs",
+                                                                          "subcategory": "Buttermilk",
+                                                                          "price": 14.00,
+                                                                          "unit": "200ml",
+                                                                          "image": "/api/placeholder/200/200",
+                                                                          "status": "active",
+                                                                          "stock_count": 280
+                                                                        },
+                                                                        {
+                                                                          "name": "Heritage Buttermilk",
+                                                                          "category": "Dairy & Eggs",
+                                                                          "subcategory": "Buttermilk",
+                                                                          "price": 14.50,
+                                                                          "unit": "200ml",
+                                                                          "image": "/api/placeholder/200/200",
+                                                                          "status": "active",
+                                                                          "stock_count": 250
+                                                                        },
+                                                                            {
+                                                                              "name": "Amul Kool Badam",
+                                                                              "category": "Dairy & Eggs",
+                                                                              "subcategory": "Flavored Milk",
+                                                                              "price": 25.00,
+                                                                              "unit": "200ml",
+                                                                              "image": "/api/placeholder/200/200",
+                                                                              "status": "active",
+                                                                              "stock_count": 200
+                                                                            },
+                                                                            {
+                                                                              "name": "Amul Kool Chocolate",
+                                                                              "category": "Dairy & Eggs",
+                                                                              "subcategory": "Flavored Milk",
+                                                                              "price": 25.00,
+                                                                              "unit": "200ml",
+                                                                              "image": "/api/placeholder/200/200",
+                                                                              "status": "active",
+                                                                              "stock_count": 220
+                                                                            },
+                                                                            {
+                                                                              "name": "Nandini Goodlife Chocolate Milk",
+                                                                              "category": "Dairy & Eggs",
+                                                                              "subcategory": "Flavored Milk",
+                                                                              "price": 24.00,
+                                                                              "unit": "200ml",
+                                                                              "image": "/api/placeholder/200/200",
+                                                                              "status": "active",
+                                                                              "stock_count": 180
+                                                                            },
+                                                                            {
+                                                                              "name": "Heritage Strawberry Milk",
+                                                                              "category": "Dairy & Eggs",
+                                                                              "subcategory": "Flavored Milk",
+                                                                              "price": 24.50,
+                                                                              "unit": "200ml",
+                                                                              "image": "/api/placeholder/200/200",
+                                                                              "status": "active",
+                                                                              "stock_count": 150
+                                                                            },
+                                                                            
+                                                                                {
+                                                                                  "name": "Licious Chicken Breast",
+                                                                                  "category": "Meat & Seafood",
+                                                                                  "subcategory": "Chicken & Poultry",
+                                                                                  "price": 269.00,
+                                                                                  "unit": "500g",
+                                                                                  "image": "/api/placeholder/200/200",
+                                                                                  "status": "active",
+                                                                                  "stock_count": 100
+                                                                                },
+                                                                                {
+                                                                                  "name": "Licious Premium Mutton Curry Cut",
+                                                                                  "category": "Meat & Seafood",
+                                                                                  "subcategory": "Mutton & Lamb",
+                                                                                  "price": 749.00,
+                                                                                  "unit": "500g",
+                                                                                  "image": "/api/placeholder/200/200",
+                                                                                  "status": "active",
+                                                                                  "stock_count": 50
+                                                                                },
+                                                                                {
+                                                                                  "name": "FreshToHome Basa Fish Fillet",
+                                                                                  "category": "Meat & Seafood",
+                                                                                  "subcategory": "Fish & Seafood",
+                                                                                  "price": 399.00,
+                                                                                  "unit": "500g",
+                                                                                  "image": "/api/placeholder/200/200",
+                                                                                  "status": "active",
+                                                                                  "stock_count": 75
+                                                                                },
+                                                                                {
+                                                                                  "name": "FreshToHome Tiger Prawns",
+                                                                                  "category": "Meat & Seafood",
+                                                                                  "subcategory": "Fish & Seafood",
+                                                                                  "price": 499.00,
+                                                                                  "unit": "250g",
+                                                                                  "image": "/api/placeholder/200/200",
+                                                                                  "status": "active",
+                                                                                  "stock_count": 40
+                                                                                },
+                                                                                {
+                                                                                  "name": "MeatGo Pork Belly Strips",
+                                                                                  "category": "Meat & Seafood",
+                                                                                  "subcategory": "Pork",
+                                                                                  "price": 449.00,
+                                                                                  "unit": "500g",
+                                                                                  "image": "/api/placeholder/200/200",
+                                                                                  "status": "active",
+                                                                                  "stock_count": 30
+                                                                                },
+                                                                                {
+                                                                                  "name": "MeatGo Chicken Salami",
+                                                                                  "category": "Meat & Seafood",
+                                                                                  "subcategory": "Cold Cuts & Sausages",
+                                                                                  "price": 199.00,
+                                                                                  "unit": "200g",
+                                                                                  "image": "/api/placeholder/200/200",
+                                                                                  "status": "active",
+                                                                                  "stock_count": 60
+                                                                                },
+                                                                                {
+                                                                                  "name": "Licious Chicken Sausages",
+                                                                                  "category": "Meat & Seafood",
+                                                                                  "subcategory": "Cold Cuts & Sausages",
+                                                                                  "price": 299.00,
+                                                                                  "unit": "250g",
+                                                                                  "image": "/api/placeholder/200/200",
+                                                                                  "status": "active",
+                                                                                  "stock_count": 80
+                                                                                },
+                                                                                {
+                                                                                  "name": "FreshToHome Rohu Fish Steaks",
+                                                                                  "category": "Meat & Seafood",
+                                                                                  "subcategory": "Fish & Seafood",
+                                                                                  "price": 299.00,
+                                                                                  "unit": "500g",
+                                                                                  "image": "/api/placeholder/200/200",
+                                                                                  "status": "active",
+                                                                                  "stock_count": 45
+                                                                                },
+                                                                                {
+                                                                                  "name": "MeatGo Mutton Keema",
+                                                                                  "category": "Meat & Seafood",
+                                                                                  "subcategory": "Mutton & Lamb",
+                                                                                  "price": 599.00,
+                                                                                  "unit": "450g",
+                                                                                  "image": "/api/placeholder/200/200",
+                                                                                  "status": "active",
+                                                                                  "stock_count": 35
+                                                                                },
+                                                                                {
+                                                                                  "name": "Licious Plant-Based Chicken",
+                                                                                  "category": "Meat & Seafood",
+                                                                                  "subcategory": "Plant-based Meat Alternatives",
+                                                                                  "price": 349.00,
+                                                                                  "unit": "250g",
+                                                                                  "image": "/api/placeholder/200/200",
+                                                                                  "status": "active",
+                                                                                  "stock_count": 40
+                                                                                }
+                                                                            ]
+                                                                              
+                                                                              
+                                                                          
+                                                                      
+                                                                      
+                                                                  
+                                                              
+                                                              
+                                                          
+                                                      
+                                                  
+                                              
+                                          
+                                      
+                                  
+                              
+                          
+                      
+                  
+              
+          
+      
+      
+      
+  

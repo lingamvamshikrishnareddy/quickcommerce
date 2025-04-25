@@ -1,0 +1,17 @@
+# Ignore everything by default
+*
+
+# But include client and server folders
+!client/
+!server/
+
+# Inside client/server, ignore their node_modules
+client/node_modules/
+server/node_modules/
+
+# Optional: Ignore logs, OS junk, and editor settings
+*.log
+.DS_Store
+.env
+*.env
+.vscode/

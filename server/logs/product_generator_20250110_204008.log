@@ -1,0 +1,62 @@
+2025-01-10 20:40:08,819 - INFO - [MainThread] - Logging setup completed
+2025-01-10 20:40:08,821 - INFO - [MainThread] - Initializing IndianProductDataEnhancer...
+2025-01-10 20:40:08,822 - INFO - [MainThread] - Initialized with 5 base URLs
+2025-01-10 20:40:08,823 - INFO - [MainThread] - Created output directory: generated_products
+2025-01-10 20:40:08,823 - INFO - [MainThread] - Initialized 2 product categories
+2025-01-10 20:40:08,824 - INFO - [MainThread] - Starting product generation at 20250110_204008
+2025-01-10 20:40:08,824 - INFO - [MainThread] - Starting generation for 2 categories
+2025-01-10 20:40:08,826 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Organic India Fresh Fruits
+2025-01-10 20:40:08,830 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Hidesign Jewelry
+2025-01-10 20:40:08,850 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: 24 Mantra Organic Organic Produce
+2025-01-10 20:40:08,851 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Hidesign Bags
+2025-01-10 20:40:08,852 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Tata Sampann Rice
+2025-01-10 20:40:08,853 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Nike Sports Shoes
+2025-01-10 20:40:08,857 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Nike Sandals
+2025-01-10 20:40:08,857 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Organic India Fresh Vegetables
+2025-01-10 20:40:08,858 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Adidas Shoes
+2025-01-10 20:40:08,859 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Organic India Fresh Fruits
+2025-01-10 20:40:08,859 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Fossil Watches
+2025-01-10 20:40:08,860 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Nestle Butter
+2025-01-10 20:40:08,860 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Fossil Bags
+2025-01-10 20:40:08,861 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Organic India Fresh Fruits
+2025-01-10 20:40:08,861 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Fossil Jewelry
+2025-01-10 20:40:08,862 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Nestle Butter
+2025-01-10 20:40:08,863 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Zara Shirts
+2025-01-10 20:40:08,864 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Levi's Dresses
+2025-01-10 20:40:08,865 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Britannia Curd
+2025-01-10 20:40:08,865 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Puma Sandals
+2025-01-10 20:40:08,866 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Britannia Ghee
+2025-01-10 20:40:08,866 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Puma Shoes
+2025-01-10 20:40:08,867 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Organic India Fresh Vegetables
+2025-01-10 20:40:08,867 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Adidas Sports Shoes
+2025-01-10 20:40:08,867 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Organic India Fresh Vegetables
+2025-01-10 20:40:08,868 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Titan Watches
+2025-01-10 20:40:08,868 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Organic India Fresh Vegetables
+2025-01-10 20:40:08,869 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Fossil Bags
+2025-01-10 20:40:08,870 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Titan Watches
+2025-01-10 20:40:08,871 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Nestle Butter
+2025-01-10 20:40:08,871 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Nike Sports Shoes
+2025-01-10 20:40:08,872 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Fortune Atta & Flours
+2025-01-10 20:40:08,873 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Puma Shoes
+2025-01-10 20:40:08,873 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Fresho Organic Produce
+2025-01-10 20:40:08,874 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Nestle Ghee
+2025-01-10 20:40:08,876 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Britannia Paneer
+2025-01-10 20:40:08,878 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Aashirvaad Atta & Flours
+2025-01-10 20:40:08,879 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Puma Sports Shoes
+2025-01-10 20:40:08,879 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Fortune Rice
+2025-01-10 20:40:08,880 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Nike Shoes
+2025-01-10 20:40:08,880 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Tata Sampann Rice
+2025-01-10 20:40:08,881 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Hidesign Watches
+2025-01-10 20:40:08,881 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Organic India Organic Produce
+2025-01-10 20:40:08,882 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Zara Pants
+2025-01-10 20:40:08,883 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Organic India Organic Produce
+2025-01-10 20:40:08,884 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Organic India Organic Produce
+2025-01-10 20:40:08,885 - DEBUG - [ThreadPoolExecutor-0_0] - Generated product: Amul Paneer
+2025-01-10 20:40:08,886 - INFO - [MainThread] - Generated 25 products for category
+2025-01-10 20:40:08,886 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Zara Pants
+2025-01-10 20:40:08,887 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Fossil Jewelry
+2025-01-10 20:40:08,887 - DEBUG - [ThreadPoolExecutor-0_1] - Generated product: Levi's Dresses
+2025-01-10 20:40:08,888 - INFO - [MainThread] - Generated 25 products for category
+2025-01-10 20:40:08,903 - INFO - [MainThread] - Successfully saved 50 products to JSON: generated_products\indian_products_20250110_204008.json
+2025-01-10 20:40:09,291 - INFO - [MainThread] - Successfully saved 50 products to Excel: generated_products\indian_products_20250110_204008.xlsx
+2025-01-10 20:40:09,294 - INFO - [MainThread] - Product generation completed successfully

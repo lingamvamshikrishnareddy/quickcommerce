@@ -1,0 +1,13 @@
+2025-01-10 20:44:07,131 - INFO - [MainThread] - Logging setup completed
+2025-01-10 20:44:07,132 - INFO - [MainThread] - Initializing IndianProductDataEnhancer...
+2025-01-10 20:44:07,134 - INFO - [MainThread] - Created output directory: d:\Projects\QuickCommerce\server\generated_products
+2025-01-10 20:44:07,135 - INFO - [MainThread] - Initialized with 5 base URLs
+2025-01-10 20:44:07,136 - CRITICAL - [MainThread] - Critical error in main execution: 'IndianProductDataEnhancer' object has no attribute 'initialize_categories'
+Traceback (most recent call last):
+  File "d:\Projects\QuickCommerce\server\product.py", line 213, in main
+    generator = IndianProductDataEnhancer(max_threads=12)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Projects\QuickCommerce\server\product.py", line 89, in __init__
+    self.categories = self.initialize_categories()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'IndianProductDataEnhancer' object has no attribute 'initialize_categories'
