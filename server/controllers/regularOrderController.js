@@ -6,7 +6,7 @@ const Delivery = require('../models/delivery');
 const mongoose = require('mongoose');
 const PaymentController = require('./paymentController'); // Import the class
 const paymentControllerInstance = new PaymentController(); // Create an instance ONCE
-const DeliveryController = require('./DeliveryController'); // Keep if needed elsewhere
+const DeliveryController = require('./deliveryController'); // Keep if needed elsewhere
 
 class OrderController {
 
