@@ -1,5 +1,5 @@
 const axios = require('axios');
-const Location = require('../models/location');
+const Location = require('../models/Location');
 const mongoose = require('mongoose');
 
 /**
