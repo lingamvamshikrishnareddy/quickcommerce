@@ -1,6 +1,6 @@
-const Subscription = require('../models/Subscription');
+const Subscription = require('../models/subscription');
 const User = require('../models/User');
-const Product = require('../models/Product');
+const Product = require('../models/product');
 const mongoose = require('mongoose');
 
 class SubscriptionController {
