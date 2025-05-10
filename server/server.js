@@ -1,8 +1,7 @@
-// server.js
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const cors = require('cors'); // Make sure cors is required
+const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const compression = require('compression');
@@ -16,7 +15,7 @@ dotenv.config();
 // Import Routes
 const authRoutes = require('./routes/authRoutes');
 const cartRoutes = require('./routes/cartRoutes');
-const categoryRoutes = require('./routes/categoryRoutes'); // Correct path assumed
+const categoryRoutes = require('./routes/categoryRoutes');
 const deliveryRoutes = require('./routes/deliveryRoutes');
 const paymentRoutes = require('./routes/paymentRoutes');
 const productRoutes = require('./routes/productRoutes');
@@ -25,78 +24,130 @@ const subscriptionRoutes = require('./routes/subscriptionRoutes');
 const userRoutes = require('./routes/userRoutes');
 const locationRoutes = require('./routes/locationRoutes');
 const supportRoutes = require('./routes/supportRoutes.js');
+
 // Create Express App
 const app = express();
 
-// --- START CORS DEBUGGING ---
-// Apply CORS Middleware FIRST
-console.log('BACKEND: Applying permissive CORS settings for debugging...');
+// CORS configuration
+const allowedOrigins = [
+  'https://quickcommerce-qn1h.vercel.app',  // Production frontend URL
+  'http://localhost:3000',                  // Local development frontend URL
+  /^https:\/\/quickcommerce-.*\.vercel\.app$/  // Any Vercel preview deployments
+];
+
+// CORS middleware with proper configuration
 app.use(cors({
-  origin: '*', // Allow ALL origins (DEBUGGING ONLY!)
+  origin: function(origin, callback) {
+    if(!origin) return callback(null, true);
+
+    const allowed = allowedOrigins.some(allowedOrigin => {
+      return typeof allowedOrigin === 'string'
+        ? allowedOrigin === origin
+        : allowedOrigin.test(origin);
+    });
+
+    if (allowed) {
+      callback(null, true);
+    } else {
+      console.warn(`CORS rejected origin: ${origin}`);
+      callback(null, true); // Still allow it but log it (for debugging)
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', '*'], // Allow all headers
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+  maxAge: 86400 // CORS preflight cache time (24 hours)
 }));
-// Optional: Handle preflight requests explicitly for all routes
-app.options('*', cors()); // Enable pre-flight across-the-board
-console.log('BACKEND: CORS setup complete.');
-// --- END CORS DEBUGGING ---
 
+// Handle preflight requests properly
+app.options('*', cors());
 
-// Security Middleware (Generally place after CORS, but check Helmet docs if issues arise)
-app.use(helmet());
+// Security Middleware
+app.use(helmet({
+  contentSecurityPolicy: false // Disable CSP for simpler deployment
+}));
 app.use(mongoSanitize());
 app.use(xss());
 app.use(hpp());
 
-// Rate Limiting
+// Adjusted rate limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 200, // Increased limit slightly for debugging
-  message: 'Too many requests from this IP, please try again later'
+  max: 300, // Increased limit for shared IP scenarios
+  message: 'Too many requests from this IP, please try again later',
+  standardHeaders: true,
+  legacyHeaders: false,
+  skip: (req) => req.path === '/api/ping'
 });
-// Apply limiter *after* CORS and essential middleware, but *before* routes
-// Only apply to API routes if desired, applying globally for now
-app.use(limiter);
-console.log('BACKEND: Rate limiting applied.');
 
+// Apply rate limiting to API routes only
+app.use('/api', limiter);
 
-// Compression
+// Compression to reduce payload size
 app.use(compression());
 
 // Body Parser Middleware
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
-console.log('BACKEND: Body parsers applied.');
 
+// Enhanced Database Connection
+const connectWithRetry = () => {
+  const dbOptions = {
+    serverSelectionTimeoutMS: 15000,
+    socketTimeoutMS: 45000,
+    connectTimeoutMS: 30000
+  };
 
-// Database Connection
-mongoose.connect(process.env.MONGODB_URI, {
-  // useNewUrlParser: true, // Deprecated
-  // useUnifiedTopology: true, // Deprecated
-  serverSelectionTimeoutMS: 10000 // Increased timeout slightly
-})
-.then(() => console.log('MongoDB Connected Successfully'))
-.catch(err => {
-    console.error('!!!!!!!!!! MongoDB Connection Error !!!!!!!!!!:', err);
-    // Consider exiting if DB connection fails on startup
-    // process.exit(1);
+  mongoose.connect(process.env.MONGODB_URI, dbOptions)
+    .then(() => console.log('MongoDB Connected Successfully'))
+    .catch(err => {
+      console.error('!!!!!!!!!! MongoDB Connection Error !!!!!!!!!! :', err);
+      console.log('Retrying MongoDB connection in 5 seconds...');
+      setTimeout(connectWithRetry, 5000);
+    });
+};
+
+// Initial connection attempt
+connectWithRetry();
+
+// Handle MongoDB connection events properly
+mongoose.connection.on('connected', () => {
+  console.log('Mongoose connected to DB');
 });
 
-// --- START SIMPLE PING ROUTE ---
-// Add this *before* your main API routes
-app.get('/api/ping', (req, res) => {
-  console.log(`BACKEND: Received request to /api/ping from origin: ${req.headers.origin}`);
+mongoose.connection.on('error', (err) => {
+  console.error('Mongoose connection error:', err);
+});
+
+mongoose.connection.on('disconnected', () => {
+  console.log('Mongoose disconnected');
+});
+
+// Enhanced ping route with database check
+app.get('/api/ping', async (req, res) => {
+  console.log(`BACKEND: Received ping request from origin: ${req.headers.origin}`);
+
+  let dbStatus = 'unknown';
+
+  if (mongoose.connection.readyState === 1) {
+    dbStatus = 'connected';
+  } else if (mongoose.connection.readyState === 2) {
+    dbStatus = 'connecting';
+  } else {
+    dbStatus = 'disconnected';
+  }
+
   res.status(200).json({
     message: 'pong',
     timestamp: new Date().toISOString(),
-    status: 'Backend is alive!'
+    status: 'Backend is alive!',
+    db_status: dbStatus,
+    environment: process.env.NODE_ENV || 'development',
+    server_uptime: Math.floor(process.uptime()) + ' seconds'
   });
 });
-console.log('BACKEND: /api/ping route configured.');
-// --- END SIMPLE PING ROUTE ---
 
 // Route Middleware
-console.log('BACKEND: Configuring API routes...');
 app.use('/api/auth', authRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/categories', categoryRoutes);
@@ -106,41 +157,70 @@ app.use('/api/products', productRoutes);
 app.use('/api/orders', regularOrderRoutes);
 app.use('/api/subscriptions', subscriptionRoutes);
 app.use('/api/users', userRoutes);
-app.use('/api/location',locationRoutes); 
+app.use('/api/location', locationRoutes);
 app.use('/api/support', supportRoutes);
-console.log('BACKEND: API routes configured.');
-
 
 // Global Error Handler
 app.use((err, req, res, next) => {
   console.error("!!!!!!!!!! GLOBAL ERROR HANDLER CATCH !!!!!!!!!!");
+  console.error(`Error on ${req.method} ${req.originalUrl}:`, err.message);
   console.error(err.stack);
-  res.status(err.statusCode || 500).json({
+
+  const statusCode = err.statusCode || 500;
+  const errorResponse = {
     message: err.message || 'Something went wrong!',
-    error: process.env.NODE_ENV === 'production' ? {} : err.stack
-  });
+    status: 'error',
+    path: req.originalUrl,
+    timestamp: new Date().toISOString()
+  };
+
+  if (process.env.NODE_ENV !== 'production') {
+    errorResponse.stack = err.stack;
+  }
+
+  res.status(statusCode).json(errorResponse);
 });
 
-// 404 Handler (Place this last)
+// 404 Handler with better logging
 app.use((req, res, next) => {
   console.log(`BACKEND: 404 - Route Not Found: ${req.method} ${req.originalUrl}`);
   res.status(404).json({
-    message: `Route Not Found - Cannot ${req.method} ${req.originalUrl}`
+    message: `Route Not Found - Cannot ${req.method} ${req.originalUrl}`,
+    status: 'error',
+    timestamp: new Date().toISOString()
   });
 });
 
 // Server Configuration
 const PORT = process.env.PORT || 5000;
-const server = app.listen(PORT, '0.0.0.0', () => { // Listen on all interfaces
+const server = app.listen(PORT, '0.0.0.0', () => {
   console.log(`\n✅ ✅ ✅ Server running on port ${PORT} ✅ ✅ ✅`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
-  // Log the specific origins allowed by CORS (based on our debug setting)
-  console.log(`CORS Allowed Origins: * (DEBUGGING)`);
-  console.log(`Frontend expected at: http://localhost:3000 (Ensure this matches browser)`);
   console.log(`\n🚀 Backend Ready! Waiting for connections...`);
 });
 
-// Graceful Shutdown & Unhandled Rejections (keep as is)
-// ...
+// Graceful shutdown handling
+process.on('SIGTERM', () => {
+  console.log('SIGTERM received, shutting down gracefully');
+  server.close(() => {
+    console.log('Process terminated');
+    mongoose.connection.close(false, () => {
+      console.log('MongoDB connection closed');
+      process.exit(0);
+    });
+  });
+});
 
-module.exports = app; // Keep if needed for tests
+// Handle uncaught exceptions and rejections
+process.on('uncaughtException', (err) => {
+  console.error('UNCAUGHT EXCEPTION:', err);
+  if (process.env.NODE_ENV !== 'production') {
+    process.exit(1);
+  }
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('UNHANDLED REJECTION:', reason);
+});
+
+module.exports = app;
