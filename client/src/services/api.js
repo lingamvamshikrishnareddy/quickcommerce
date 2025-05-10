@@ -11,11 +11,13 @@ export const USER_KEY = 'userProfile';
  */
 class APIService {
   constructor() {
-    this.baseURL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
-    this.timeout = 15000; // 15 seconds
+    // Use environment variable with proper fallback to deployed URL
+    this.baseURL = process.env.REACT_APP_API_URL || 'https://quickcommerce-backend-d31q.onrender.com/api';
+    this.timeout = 20000; // Increased to 20 seconds for Render free tier
 
     console.log("API Base URL:", this.baseURL);
 
+    // Create Axios instance with enhanced retry logic
     this.api = axios.create({
       baseURL: this.baseURL,
       timeout: this.timeout,
@@ -24,6 +26,11 @@ class APIService {
       },
     });
 
+    // Initialize retry counters for specific endpoints
+    this.retryCounters = {};
+    this.maxRetries = 3;
+
+    // Add request interceptor for auth tokens
     this.api.interceptors.request.use(
       async (config) => {
         const accessToken = localStorage.getItem(ACCESS_TOKEN_KEY);
@@ -51,22 +58,54 @@ class APIService {
       }
     );
 
+    // Add response interceptor with enhanced retry logic
     this.api.interceptors.response.use(
       response => response,
       async error => {
         const { config, response } = error;
-        
-        // If rate limited (429)
-        if (response && response.status === 429 && !config._isRetry) {
-          config._isRetry = true;
-          
-          // Wait for 2 seconds before retrying
-          await new Promise(resolve => setTimeout(resolve, 2000));
-          
-          // Retry the request
-          return api(config);
+
+        // Skip retry for specific error types
+        if (!config || !config.url || config._isRetryComplete) {
+          return Promise.reject(error);
         }
-        
+
+        const endpoint = config.url;
+
+        // Initialize retry counter for this endpoint if not exists
+        if (!this.retryCounters[endpoint]) {
+          this.retryCounters[endpoint] = 0;
+        }
+
+        // Check if retry is needed and possible
+        const shouldRetry = (
+          this.retryCounters[endpoint] < this.maxRetries &&
+          (!response || response.status === 429 || response.status >= 500 || response.status === 0)
+        );
+
+        if (shouldRetry) {
+          this.retryCounters[endpoint]++;
+
+          // Exponential backoff - wait longer for each retry
+          const delay = Math.min(1000 * (2 ** this.retryCounters[endpoint]), 10000);
+          console.log(`Retrying ${endpoint} (${this.retryCounters[endpoint]}/${this.maxRetries}) after ${delay}ms...`);
+
+          // Wait before retrying
+          await new Promise(resolve => setTimeout(resolve, delay));
+
+          // Reset counter if we've reached max retries
+          if (this.retryCounters[endpoint] >= this.maxRetries) {
+            console.log(`Max retries (${this.maxRetries}) reached for ${endpoint}`);
+            config._isRetryComplete = true;
+            this.retryCounters[endpoint] = 0;
+          }
+
+          // Retry the request
+          return this.api(config);
+        }
+
+        // Reset counter after all retries exhausted
+        this.retryCounters[endpoint] = 0;
+
         return Promise.reject(error);
       }
     );
@@ -118,6 +157,35 @@ class APIService {
     console.log("Auth tokens cleared.");
   }
 
+  // Added: new method to check if backend is awake or needs wakeup
+  async pingBackend() {
+    try {
+      // Create a new instance for ping to avoid interceptors
+      const pingApi = axios.create({
+        baseURL: this.baseURL,
+        timeout: 5000 // Short timeout just for ping
+      });
+
+      console.log("Pinging backend to wake it up...");
+      const startTime = Date.now();
+      const response = await pingApi.get('/ping');
+      const responseTime = Date.now() - startTime;
+
+      console.log(`Backend responded in ${responseTime}ms:`, response.data);
+      return {
+        success: true,
+        responseTime,
+        message: response.data?.message || 'Backend is awake'
+      };
+    } catch (error) {
+      console.warn("Backend ping failed:", error.message);
+      return {
+        success: false,
+        message: 'Backend may be starting up, please wait a moment'
+      };
+    }
+  }
+
   handleApiError(error) {
     let message = 'An unknown error occurred.';
     let details = null;
@@ -128,11 +196,11 @@ class APIService {
       console.error(`API Error Response (${error.response.status}):`, message, error.response.data);
     } else if (error.request) {
       if (error.message.toLowerCase().includes('timeout')) {
-        message = `Request Timeout (${this.timeout / 1000}s). The server took too long to respond.`;
+        message = `Request Timeout (${this.timeout / 1000}s). Our server might be waking up - please try again in a moment.`;
       } else if (error.message.toLowerCase().includes('network error')) {
-        message = 'Network Error. Please check your connection and ensure the server is reachable.';
+        message = 'Network Error. Please check your connection or try again in a moment as our server wakes up.';
       } else {
-        message = 'No response received from server. Check network or server status.';
+        message = 'No response received from server. The server might be starting up - please try again in a moment.';
       }
       console.error('API Request Error (No Response):', error.message, error.request);
     } else {
@@ -169,7 +237,54 @@ const apiService = new APIService();
 export const api = apiService.api;
 export const calculateDiscount = apiService.calculateDiscount;
 export const clearAuthTokens = apiService.clearAuthTokens;
+export const pingBackend = () => apiService.pingBackend();
 
+// The rest of the API services remain largely the same with small adjustments for error handling
+
+// Modified categoryAPI and productAPI to handle backend wake-up
+export const categoryAPI = {
+  getAll: async (params = {}) => {
+    // Try to wake up backend first
+    await apiService.pingBackend();
+    return api.get('/categories', { params });
+  },
+  getAllCategories: async (params = {}) => {
+    // Try to wake up backend first
+    await apiService.pingBackend();
+    return api.get('/categories', { params });
+  },
+  getById: (id) => api.get(`/categories/${id}`),
+  getCategoryBySlug: (slug) => api.get(`/categories/slug/${slug}`),
+  getSubCategories: (categorySlug) => api.get(`/categories/slug/${categorySlug}/subcategories`),
+  getFeaturedCategories: async (params = {}) => {
+    // Try to wake up backend first
+    await apiService.pingBackend();
+    return api.get('/categories/featured', { params });
+  },
+};
+
+export const productAPI = {
+  getProducts: async (params = {}) => {
+    // Log params for debugging
+    console.log("API call params:", params);
+
+    // Try to wake up backend first
+    await apiService.pingBackend();
+
+    return api.get('/products', { params });
+  },
+  getById: (id) => api.get(`/products/${id}`),
+  getBySlug: (slug) => api.get(`/products/slug/${slug}`),
+  search: (params = {}) => api.get('/products/search', { params }),
+  addProductReview: (productId, reviewData) => api.post(`/products/${productId}/reviews`, reviewData),
+  getFeaturedProducts: async (params = {}) => {
+    // Try to wake up backend first
+    await apiService.pingBackend();
+    return api.get('/products/featured', { params });
+  },
+};
+
+// Rest of the API services remain the same
 export const authAPI = {
   login: async (email, password) => {
     const response = await api.post('/auth/login', { email, password });
@@ -220,36 +335,6 @@ export const authAPI = {
   },
 };
 
-// Update productAPI and categoryAPI in your API service file
-export const categoryAPI = {
-  // Keep existing functions
-  getAll: (params = {}) => api.get('/categories', { params }),
-  getAllCategories: (params = {}) => api.get('/categories', { params }),
-  getById: (id) => api.get(`/categories/${id}`),
-  
-  // Ensure this matches your route
-  getCategoryBySlug: (slug) => api.get(`/categories/slug/${slug}`),
-  
-  getSubCategories: (categorySlug) => api.get(`/categories/slug/${categorySlug}/subcategories`),
-  getFeaturedCategories: (params = {}) => api.get('/categories/featured', { params }),
-};
-
-export const productAPI = {
-  getProducts: (params = {}) => {
-    // Log params for debugging
-    console.log("API call params:", params);
-    return api.get('/products', { params });
-  },
-  getById: (id) => api.get(`/products/${id}`),
-  getBySlug: (slug) => api.get(`/products/slug/${slug}`),
-  search: (params = {}) => api.get('/products/search', { params }),
-  addProductReview: (productId, reviewData) => api.post(`/products/${productId}/reviews`, reviewData),
-  getFeaturedProducts: (params = {}) => api.get('/products/featured', { params }),
-  
-};
-
-// services/api.js - Cart API methods
-
 export const cartAPI = {
   getCart: async () => {
     try {
@@ -265,30 +350,30 @@ export const cartAPI = {
       if (error.response && error.response.status === 404) {
         return { items: [], total: 0 };
       }
-      
+
       // Extract error message if available
       if (error.response?.data?.message) {
         throw new Error(error.response.data.message);
       }
-      
+
       console.error("Error fetching cart:", error);
       throw error;
     }
   },
-  
+
   addItem: async (productId, quantity = 1, variation = null) => {
     try {
       if (!productId) {
         throw new Error("Product ID is required");
       }
-      
+
       const response = await api.post('/cart/items', { productId, quantity, variation });
       console.log("Add to cart response:", response);
-      
+
       if (!response.data.success) {
         throw new Error(response.data.message || "Failed to add item to cart");
       }
-      
+
       return response;
     } catch (error) {
       if (error.response) {
@@ -299,15 +384,15 @@ export const cartAPI = {
       throw error;
     }
   },
-  
+
   updateItem: async (itemId, quantity) => {
     try {
       const response = await api.put(`/cart/items/${itemId}`, { quantity });
-      
+
       if (!response.data.success) {
         throw new Error(response.data.message || "Failed to update cart item");
       }
-      
+
       return response;
     } catch (error) {
       if (error.response) {
@@ -317,15 +402,15 @@ export const cartAPI = {
       throw error;
     }
   },
-  
+
   removeItem: async (itemId) => {
     try {
       const response = await api.delete(`/cart/items/${itemId}`);
-      
+
       if (!response.data.success) {
         throw new Error(response.data.message || "Failed to remove item from cart");
       }
-      
+
       return response;
     } catch (error) {
       if (error.response) {
@@ -335,15 +420,15 @@ export const cartAPI = {
       throw error;
     }
   },
-  
+
   clearCart: async () => {
     try {
       const response = await api.delete('/cart');
-      
+
       if (!response.data.success) {
         throw new Error(response.data.message || "Failed to clear cart");
       }
-      
+
       return response;
     } catch (error) {
       if (error.response) {
@@ -353,15 +438,15 @@ export const cartAPI = {
       throw error;
     }
   },
-  
+
   applyCoupon: async (code) => {
     try {
       const response = await api.post('/cart/apply-coupon', { code });
-      
+
       if (!response.data.success) {
         throw new Error(response.data.message || "Failed to apply coupon");
       }
-      
+
       return response;
     } catch (error) {
       if (error.response) {
@@ -389,7 +474,7 @@ export const orderAPI = {
   getUserOrders: async (params = {}) => {
     try {
       // Make sure params are properly formatted
-      const response = await api.get('/orders/my', { 
+      const response = await api.get('/orders/my', {
         params: {
           page: params.page || 1,
           limit: params.limit || 10,
@@ -397,7 +482,7 @@ export const orderAPI = {
           sort: params.sort
         }
       });
-      
+
       return response.data;
     } catch (error) {
       console.error("[API Layer] Error fetching user orders:", error);
@@ -417,8 +502,6 @@ export const orderAPI = {
   cancelOrder: (orderId) => api.delete(`/orders/${orderId}`),
 };
 
-// In payment api
-// This function handles payment verification
 export const paymentAPI = {
   verifyPayment: async (verificationData) => {
     console.log("[API Layer] Sending verifyPayment request:", verificationData);
@@ -436,7 +519,6 @@ export const paymentAPI = {
       throw error.response?.data || error;
     }
   }
-  // Add other payment related functions here if needed inside paymentAPI
 };
 
 export const deliveryAPI = {
@@ -445,9 +527,6 @@ export const deliveryAPI = {
   verifyOTP: (deliveryId, otp) => api.post(`/delivery/${deliveryId}/verify-otp`, { otp }),
   updateLocation: (deliveryId, latitude, longitude) => api.put(`/delivery/${deliveryId}/location`, { latitude, longitude }),
 };
-
-
-
 
 export const userAPI = {
   getProfile: () => api.get('/user/profile'),
@@ -466,22 +545,15 @@ export const formatPrice = (amount) => {
   }).format(amount || 0);
 };
 
-// Replace the second locationAPI declaration with this
-// Around line 425 in paste-2.txt where the second declaration starts
-// This should replace everything from "export const locationAPI = {" to the end of that object
-// api.js - Geolocation Utilities
-
-// In api.js, update the detectUserLocation function
-
 export const detectUserLocation = async () => {
   try {
     if (!navigator.geolocation) {
       throw new Error('Geolocation is not supported by your browser');
     }
-    
+
     // Get coordinates using browser geolocation API
     const position = await new Promise((resolve, reject) => {
-      navigator.geolocation.getCurrentPosition(resolve, 
+      navigator.geolocation.getCurrentPosition(resolve,
         (error) => {
           // Enhanced error handling based on error codes
           if (error.code === 1) {
@@ -493,7 +565,7 @@ export const detectUserLocation = async () => {
           } else {
             reject(error);
           }
-        }, 
+        },
         {
           timeout: 10000,
           maximumAge: 60000,
@@ -501,17 +573,17 @@ export const detectUserLocation = async () => {
         }
       );
     });
-    
+
     const { latitude, longitude } = position.coords;
     console.log('Detected coordinates:', latitude, longitude);
-    
+
     // Get address from coordinates using the location API
     const response = await locationAPI.reverseGeocode(latitude, longitude);
-    
+
     if (!response?.data?.address) {
       throw new Error('Unable to determine address from coordinates');
     }
-    
+
     return {
       coords: { latitude, longitude },
       address: response.data.address
@@ -527,13 +599,6 @@ export const detectUserLocation = async () => {
     };
   }
 };
-/**
- * Handle auto detection of user location with loading state management
- * @param {Function} setLoadingState - Function to update loading state
- * @param {Function} setLocationState - Function to update location state
- * @param {Function} onSuccess - Optional callback for successful location detection
- * @returns {Promise} Promise that resolves when the operation completes
- */
 
 export const handleAutoDetectLocation = async (setLoadingState, setLocationState, onSuccess = null) => {
   try {
@@ -541,39 +606,39 @@ export const handleAutoDetectLocation = async (setLoadingState, setLocationState
     if (typeof setLoadingState === 'function') {
       setLoadingState(true);
     }
-    
+
     const locationData = await detectUserLocation();
-    
+
     // Check if there was an error in location detection
     if (locationData.error) {
       // Handle error case
       const errorMessage = locationData.error;
-      
+
       // Update location state with error
       if (typeof setLocationState === 'function') {
-        setLocationState(prev => ({ 
-          ...prev, 
+        setLocationState(prev => ({
+          ...prev,
           error: errorMessage,
-          loading: false 
+          loading: false
         }));
       }
-      
+
       // Show user friendly message instead of throwing
       console.error('Location detection issue:', errorMessage);
-      
+
       // Ask user to enter location manually instead of throwing error
       return { error: errorMessage };
     }
-    
+
     // Extract a friendly display name from the address components
     const address = locationData.address;
-    const displayName = address.components?.suburb || 
-                       address.components?.city_district || 
-                       address.components?.city || 
-                       address.components?.county || 
-                       (address.formatted ? address.formatted.split(',')[0] : null) || 
+    const displayName = address.components?.suburb ||
+                       address.components?.city_district ||
+                       address.components?.city ||
+                       address.components?.county ||
+                       (address.formatted ? address.formatted.split(',')[0] : null) ||
                        'Current Location';
-    
+
     // Create the location state update
     const locationUpdate = {
       display: displayName,
@@ -581,31 +646,31 @@ export const handleAutoDetectLocation = async (setLoadingState, setLocationState
       coords: locationData.coords,
       error: null
     };
-    
+
     // Update location state if the function was provided
     if (typeof setLocationState === 'function') {
       setLocationState(locationUpdate);
     }
-    
+
     // Call success callback if provided
     if (onSuccess && typeof onSuccess === 'function') {
       onSuccess(locationUpdate);
     }
-    
+
     return locationUpdate;
   } catch (error) {
     console.error('Auto-detect location error:', error);
-    
+
     // Error message is already formatted in detectUserLocation
     let errorMessage = error.message || 'Unable to detect your location.';
-    
+
     const errorState = { error: errorMessage };
-    
+
     // Update location state if the function was provided
     if (typeof setLocationState === 'function') {
       setLocationState(prev => ({ ...prev, ...errorState, loading: false }));
     }
-    
+
     // Return error object instead of throwing
     return errorState;
   } finally {
@@ -616,14 +681,12 @@ export const handleAutoDetectLocation = async (setLoadingState, setLocationState
   }
 };
 
-
-
 export const locationAPI = {
   reverseGeocode: (latitude, longitude) => api.get('/location/geocode', { params: { latitude, longitude } }),
   saveUserAddress: (addressData) => api.post('/location/addresses', addressData),
   getUserAddresses: () => api.get('/location/addresses'),
   deleteUserAddress: (locationId) => api.delete(`/location/addresses/${locationId}`),
-  
+
   // Add these new methods
   getLocationSuggestions: (query) => api.get('/location/suggestions', { params: { query } }),
   checkDeliverability: async (postalCode) => {
@@ -636,7 +699,6 @@ export const locationAPI = {
     }
   }
 }
-
 
 export const handleSubmit = async (formData) => {
   try {
@@ -660,7 +722,5 @@ export const handleSubmit = async (formData) => {
     alert('Server error. Try again later.');
   }
 };
-
-
 
 export default apiService;
