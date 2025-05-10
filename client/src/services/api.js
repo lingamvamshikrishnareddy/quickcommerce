@@ -12,7 +12,7 @@ export const USER_KEY = 'userProfile';
 class APIService {
   constructor() {
     // Use environment variable with proper fallback to deployed URL
-    this.baseURL = process.env.REACT_APP_API_URL || 'https://quickcommerce-backend-d31q.onrender.com/api';
+    this.baseURL = 'https://quickcommerce-backend-d31q.onrender.com/api';
     this.timeout = 20000; // Increased to 20 seconds for Render free tier
 
     console.log("API Base URL:", this.baseURL);
