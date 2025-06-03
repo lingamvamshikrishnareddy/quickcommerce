@@ -2,11 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-  
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
+@layer base {
+  /* You can add base styles here if needed */
+  /* For example, if you had global font settings or body backgrounds */
+}
+
+@layer components {
+  /* Definition for .hero-pattern using radial gradients */
+  .hero-pattern {
+    background-image:
+      radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 2px, transparent 2px);
+    background-size: 30px 30px;
   }
+
+  /* Definition for .fruits-pattern using radial gradients */
+  .fruits-pattern {
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(255,255,255,0.2) 3px, transparent 3px),
+      radial-gradient(circle at 80% 20%, rgba(255,255,255,0.15) 2px, transparent 2px);
+    background-size: 40px 40px;
+  }
+
   .animate-fadeIn {
     animation: fadeIn 0.3s ease-out forwards;
   }
+}
+
+@layer utilities {
+  /* You can add custom utilities here if needed */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/*
+  IMPORTANT:
+  Make sure there are NO other lines in this file (src/styles/index.css) that look like:
+  - background: url('/images/pattern.svg');
+  - background-image: url('/images/pattern.svg');
+  - background: url('/images/fruits-pattern.svg');
+  - background-image: url('/images/fruits-pattern.svg');
+  - Or any other direct url() references to these .svg files.
+
+  The errors specifically point to lines 5 and 6 of your index.css.
+  The content above is structured to avoid such issues.
+  If you had other custom CSS, please add it carefully, ensuring no problematic url() calls are reintroduced.
+*/
