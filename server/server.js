@@ -30,6 +30,7 @@ const app = express();
 
 // CORS configuration
 const allowedOrigins = [
+  'https://www.setcart.in',
   'https://quickcommerce-qn1h.vercel.app',  // Production frontend URL
   'http://localhost:3000',                  // Local development frontend URL
   /^https:\/\/quickcommerce-.*\.vercel\.app$/  // Any Vercel preview deployments
