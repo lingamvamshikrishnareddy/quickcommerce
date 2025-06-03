@@ -1,76 +1,160 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, Outlet, useLocation } from 'react-router-dom';
 import { AuthProvider, useAuth } from './components/contexts/AuthContext';
-import { CartProvider } from './components/contexts/CartContext'; // Import CartProvider
+import { CartProvider } from './components/contexts/CartContext';
 
 // Import Pages
 import HomePage from './pages/HomePage';
+import AboutUsPage from './pages/AboutusPage'; // New About Us page
 import CategoryPage from './pages/CategoryPage';
-import ProductPage from './pages/RegularProductPage'; // Renamed from RegularProductPage
+import ProductPage from './pages/RegularProductPage';
 import ProductListPage from './pages/ProductListPage'; 
 import CartPage from './pages/CartPage';
-import CheckoutPage from './pages/RegularCheckoutPage'; // Using the component name from the file
+import CheckoutPage from './pages/RegularCheckoutPage';
 import OrderConfirmationPage from './pages/OrderConfirmationPage';
 import UserProfilePage from './pages/UserProfilePage';
 import OrderHistoryPage from './pages/OrderHistoryPage';
 import DeliveryTrackingPage from './pages/DeliveryTrackingPage';
-import SubscriptionPage from './pages/SubscriptionPage'; // Keep if needed
+import SubscriptionPage from './pages/SubscriptionPage';
 import ContactSupportPage from './pages/ContactSupportPage';
 
 // Import Layout Components
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
-import { Toaster } from "./components/ui/toaster"; // Assuming using shadcn/ui toaster for notifications
-import { useToast } from "./components/ui/usetoast"; // Toast hook
+import { Toaster } from "./components/ui/toaster";
+import { useToast } from "./components/ui/usetoast";
 
-// --- Protected Route Component ---
+// --- Enhanced Loading Component ---
+const LoadingSpinner = ({ message = "Loading..." }) => {
+  return (
+    <div className="flex items-center justify-center h-[60vh]">
+      <div className="text-center">
+        <div className="relative">
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-gray-200 border-t-blue-600 mx-auto"></div>
+          <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-blue-300 animate-spin" style={{animationDirection: 'reverse', animationDuration: '1.5s'}}></div>
+        </div>
+        <p className="mt-4 text-gray-600 font-medium">{message}</p>
+        <div className="mt-2 flex justify-center space-x-1">
+          <div className="h-2 w-2 bg-blue-600 rounded-full animate-bounce" style={{animationDelay: '0ms'}}></div>
+          <div className="h-2 w-2 bg-blue-600 rounded-full animate-bounce" style={{animationDelay: '150ms'}}></div>
+          <div className="h-2 w-2 bg-blue-600 rounded-full animate-bounce" style={{animationDelay: '300ms'}}></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// --- Enhanced Error Boundary Component ---
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
+            <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+            </div>
+            <h2 className="text-xl font-bold text-gray-900 mb-2">Oops! Something went wrong</h2>
+            <p className="text-gray-600 mb-4">We're sorry, but something unexpected happened.</p>
+            <button 
+              onClick={() => window.location.reload()} 
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+            >
+              Refresh Page
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+// --- Enhanced Protected Route Component ---
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated, loading } = useAuth();
   const location = useLocation();
   const { toast } = useToast();
 
   useEffect(() => {
-      if (!loading && !isAuthenticated) {
-           toast({
-               title: "Authentication Required",
-               description: "Please log in to access this page.",
-               variant: "destructive",
-           });
-      }
+    if (!loading && !isAuthenticated) {
+      toast({
+        title: "Authentication Required",
+        description: "Please log in to access this page.",
+        variant: "destructive",
+      });
+    }
   }, [loading, isAuthenticated, toast]);
 
-
   if (loading) {
-    return (
-      <div className="flex items-center justify-center h-[60vh]">
-             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
-        <span className="ml-4 text-gray-600">Loading...</span>
-      </div>
-    );
+    return <LoadingSpinner message="Authenticating..." />;
   }
 
   if (!isAuthenticated) {
-    // Redirect them to the /login page, but save the current location they were
-    // trying to go to when they were redirected. This allows us to send them
-    // along to that page after they login, which is a nicer user experience
-    // than dropping them off on the home page.
     return <Navigate to="/?showLogin=true" state={{ from: location }} replace />;
-    // Using query param to suggest showing login dialog on redirect
   }
 
   return children;
 };
 
-// --- Main App Layout ---
+// --- Enhanced 404 Page Component ---
+const NotFoundPage = () => {
+  return (
+    <div className="min-h-[60vh] flex items-center justify-center px-4">
+      <div className="max-w-md w-full text-center">
+        <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+          <span className="text-4xl text-gray-400">404</span>
+        </div>
+        <h1 className="text-2xl font-bold text-gray-900 mb-2">Page Not Found</h1>
+        <p className="text-gray-600 mb-6">Sorry, we couldn't find the page you're looking for.</p>
+        <div className="space-y-2">
+          <button 
+            onClick={() => window.history.back()} 
+            className="w-full bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+          >
+            Go Back
+          </button>
+          <a 
+            href="/" 
+            className="block w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+          >
+            Go to Homepage
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// --- Enhanced App Layout ---
 const AppLayout = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Header />
-      <main className="flex-grow container mx-auto px-4 py-6 md:py-8">
-        {/* Outlet renders the matched child route element */}
-        <Outlet />
+      <main className="flex-grow">
+        <Suspense fallback={<LoadingSpinner message="Loading page..." />}>
+          <div className="container mx-auto px-4 py-6 md:py-8">
+            <Outlet />
+          </div>
+        </Suspense>
       </main>
-       <Toaster /> {/* Add Toaster here */}
+      <Toaster />
       <Footer />
     </div>
   );
@@ -79,66 +163,99 @@ const AppLayout = () => {
 // --- Main App Component ---
 const App = () => {
   return (
-    <Router>
-      <AuthProvider>
-        {/* CartProvider depends on AuthProvider for isAuthenticated */}
-        <CartProvider>
-          <Routes>
-            <Route element={<AppLayout />}> {/* Main layout wraps these routes */}
-              {/* Public Routes */}
-              <Route path="/" element={<HomePage />} />
-              <Route path="/categories" element={<CategoryPage />} />
-              {/* Removed ProductListPage references */}
-              <Route path="/categories/:slug" element={<CategoryPage />} /> {/* Changed to CategoryPage */}
-               {/* Route for listing products (e.g., by category) */}
-              <Route path="products" element={<ProductListPage />} /> {/* Changed to CategoryPage */}
-              <Route path="/products/:slug" element={<ProductPage />} /> {/* Single product */}
+    <ErrorBoundary>
+      <Router>
+        <AuthProvider>
+          <CartProvider>
+            <Routes>
+              <Route element={<AppLayout />}>
+                {/* Public Routes */}
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutUsPage />} />
+                <Route path="/categories" element={<CategoryPage />} />
+                <Route path="/categories/:slug" element={<CategoryPage />} />
+                <Route path="/products" element={<ProductListPage />} />
+                <Route path="/products/:slug" element={<ProductPage />} />
+                <Route path="/support" element={<ContactSupportPage />} />
 
-              {/* Authentication might happen via dialogs on HomePage or dedicated /login /signup pages */}
-               {/* <Route path="/login" element={<LoginPage />} /> */}
-               {/* <Route path="/register" element={<RegisterPage />} /> */}
+                {/* Authentication Routes (if using dedicated pages) */}
+                {/* <Route path="/login" element={<LoginPage />} /> */}
+                {/* <Route path="/register" element={<RegisterPage />} /> */}
 
+                {/* Protected Routes */}
+                <Route
+                  path="/cart"
+                  element={
+                    <ProtectedRoute>
+                      <CartPage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/checkout"
+                  element={
+                    <ProtectedRoute>
+                      <CheckoutPage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/order-confirmation/:orderId"
+                  element={
+                    <ProtectedRoute>
+                      <OrderConfirmationPage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/profile"
+                  element={
+                    <ProtectedRoute>
+                      <UserProfilePage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/orders"
+                  element={
+                    <ProtectedRoute>
+                      <OrderHistoryPage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/orders/:orderId"
+                  element={
+                    <ProtectedRoute>
+                      <OrderHistoryPage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/delivery/:orderId/track"
+                  element={
+                    <ProtectedRoute>
+                      <DeliveryTrackingPage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/subscription"
+                  element={
+                    <ProtectedRoute>
+                      <SubscriptionPage />
+                    </ProtectedRoute>
+                  }
+                />
 
-              {/* Protected Routes */}
-              <Route
-                path="/cart"
-                element={<ProtectedRoute><CartPage /></ProtectedRoute>}
-              />
-              <Route
-                path="/checkout"
-                element={<ProtectedRoute><CheckoutPage /></ProtectedRoute>}
-              />
-              {/* <Route path="/checkout/emergency" element={<ProtectedRoute><EmergencyCheckoutPage /></ProtectedRoute>} /> */}
-              <Route
-                path="/order-confirmation/:orderId" // Pass orderId to confirmation page
-                element={<ProtectedRoute><OrderConfirmationPage /></ProtectedRoute>}
-              />
-               <Route
-                path="/profile"
-                element={<ProtectedRoute><UserProfilePage /></ProtectedRoute>}
-              />
-               <Route
-                path="/orders" // User's order history
-                element={<ProtectedRoute><OrderHistoryPage /></ProtectedRoute>}
-              />
-               <Route
-                path="/orders/:orderId" // View single order details (could reuse OrderHistoryPage logic)
-                element={<ProtectedRoute><OrderHistoryPage /></ProtectedRoute>} // Or a dedicated OrderDetailPage
-              />
-               <Route
-                path="/delivery/:orderId/track" // Delivery tracking page
-                element={<ProtectedRoute><DeliveryTrackingPage /></ProtectedRoute>}
-
-              />
-              {/* <Route path="/subscription" element={<ProtectedRoute><SubscriptionPage /></ProtectedRoute>} /> */}
-              <Route path="/support" element={<ContactSupportPage />} />
-              {/* Catch-all for 404 */}
-              <Route path="*" element={<Navigate to="/" replace />} /> {/* Or a dedicated 404 component */}
-            </Route>
-          </Routes>
-        </CartProvider>
-      </AuthProvider>
-    </Router>
+                {/* 404 Route */}
+                <Route path="*" element={<NotFoundPage />} />
+              </Route>
+            </Routes>
+          </CartProvider>
+        </AuthProvider>
+      </Router>
+    </ErrorBoundary>
   );
 };
 
