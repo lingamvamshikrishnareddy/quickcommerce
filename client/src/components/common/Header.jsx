@@ -73,21 +73,17 @@ const LocationModal = ({ isOpen, onClose, onLocationSelect }) => {
       error: null
     };
 
-    // Save to user's saved addresses if authenticated (assuming useAuth can be accessed or passed)
-    // For simplicity, this part might need adjustment based on where AuthContext is available
-    // or if locationAPI.saveUserAddress handles auth internally.
     try {
-      await locationAPI.saveUserAddress({ // This API might need auth token
+      await locationAPI.saveUserAddress({ 
         type: 'delivery',
         latitude: location.geometry.lat,
         longitude: location.geometry.lng,
         address: location.formatted,
         label: locationData.display,
-        isDefault: false // Or manage this based on user preferences
+        isDefault: false 
       });
     } catch (error) {
       console.error('Error saving address:', error);
-      // Non-critical error, proceed with location selection
     }
 
     onLocationSelect(locationData);
@@ -110,7 +106,7 @@ const LocationModal = ({ isOpen, onClose, onLocationSelect }) => {
     
     const locationData = {
       display: `${manualAddress.city}${manualAddress.state ? `, ${manualAddress.state}` : ''}`,
-      coords: null, // Geocoding can happen on backend or if explicitly requested
+      coords: null, 
       fullAddress: {
         formatted: formattedAddress,
         components: {
@@ -127,7 +123,7 @@ const LocationModal = ({ isOpen, onClose, onLocationSelect }) => {
     try {
       await locationAPI.saveUserAddress({
         type: 'delivery',
-        latitude: 0, // Placeholder, backend might geocode
+        latitude: 0, 
         longitude: 0,
         address: formattedAddress,
         label: locationData.display,
@@ -136,7 +132,7 @@ const LocationModal = ({ isOpen, onClose, onLocationSelect }) => {
       toast({
         title: "Address Saved",
         description: "Your delivery address has been saved.",
-        variant: "success" // Using success variant
+        variant: "success" 
       });
     } catch (error) {
       console.error('Error saving manual address:', error);
@@ -154,7 +150,7 @@ const LocationModal = ({ isOpen, onClose, onLocationSelect }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[60] p-4"> {/* Increased z-index */}
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[60] p-4">
       <motion.div 
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -171,7 +167,6 @@ const LocationModal = ({ isOpen, onClose, onLocationSelect }) => {
         </div>
 
         <div className="p-6 flex-grow overflow-y-auto">
-          {/* Tab Navigation */}
           <div className="flex mb-4 border-b">
             <button
               onClick={() => setActiveTab('search')}
@@ -222,7 +217,7 @@ const LocationModal = ({ isOpen, onClose, onLocationSelect }) => {
                 <div className="space-y-2 max-h-60 overflow-y-auto pr-1">
                   {suggestions.map((location, index) => (
                     <button
-                      key={location.properties?.place_id || index} // Use a stable key
+                      key={location.properties?.place_id || index} 
                       onClick={() => handleLocationSelectInternal(location)}
                       className="w-full text-left p-3 border border-gray-200 rounded-lg hover:bg-green-50 hover:border-green-400 transition-all duration-150"
                     >
@@ -291,7 +286,6 @@ const LocationModal = ({ isOpen, onClose, onLocationSelect }) => {
 const Header = () => {
   const { user, logout, isAuthenticated } = useAuth();
   const { itemCount } = useCart();
-  // const location = useLocation(); // location from react-router-dom, not used directly in this logic
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const { toast } = useToast();
@@ -312,7 +306,6 @@ const Header = () => {
   const [isForgotPasswordOpen, setIsForgotPasswordOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Open login dialog if ?showLogin=true is in URL
   useEffect(() => {
     if (searchParams.get('showLogin') === 'true' && !isAuthenticated) {
       setIsLoginDialogOpen(true);
@@ -321,14 +314,12 @@ const Header = () => {
     }
   }, [searchParams, setSearchParams, isAuthenticated]);
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close menus on click outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (!event.target.closest('.user-menu-container') && !event.target.closest('.mobile-menu-button')) {
@@ -342,7 +333,6 @@ const Header = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Load saved location from localStorage on mount
   useEffect(() => {
     const savedLocation = localStorage.getItem('userDeliveryLocation');
     if (savedLocation) {
@@ -358,14 +348,12 @@ const Header = () => {
     }
   }, []);
 
-  // Save location to localStorage whenever it changes
   useEffect(() => {
     if (userLocation.display !== 'Select Location' && !userLocation.error && !userLocation.loading) {
       localStorage.setItem('userDeliveryLocation', JSON.stringify(userLocation));
     }
   }, [userLocation]);
 
-  // Logout handler
   const handleLogout = async () => {
     try {
       await logout();
@@ -405,7 +393,6 @@ const Header = () => {
       }
     } catch (error) {
       console.error('Error checking deliverability:', error);
-      // Silently fail for now, or show a generic error if critical
     }
   }, [toast]);
 
@@ -413,29 +400,27 @@ const Header = () => {
     setUserLocation(prev => ({ ...prev, loading: true, error: null }));
 
     handleAutoDetectLocation(
-      (loading) => { // setLoadingCallback
-        // This callback might not be strictly necessary if setUserLocation is managed carefully
-        // For now, we ensure loading is false when detection process ends (success or error)
+      (loading) => { 
         if (loading === false) {
           setUserLocation(prev => ({ ...prev, loading: false }));
         }
       },
-      (locationData) => { // setLocationCallback (handles intermediate updates and final error state)
+      (locationData) => { 
         if (locationData) {
           setUserLocation(prev => ({
             ...prev,
             display: locationData.display,
             coords: locationData.coords,
             fullAddress: locationData.fullAddress,
-            error: locationData.error, // Error from handleAutoDetectLocation is set here
-            loading: false // Ensure loading is false after processing
+            error: locationData.error, 
+            loading: false 
           }));
         } else {
-           setUserLocation(prev => ({ ...prev, loading: false })); // Ensure loading is false if no data
+           setUserLocation(prev => ({ ...prev, loading: false })); 
         }
       },
-      (locationData) => { // successCallback (only if no error from handleAutoDetectLocation)
-        if (!locationData.error) { // Redundant check, successCallback implies no error
+      (locationData) => { 
+        if (!locationData.error) { 
           toast({
             title: "Location Set",
             description: `Delivery location updated to ${locationData.display}.`
@@ -444,9 +429,7 @@ const Header = () => {
         }
       }
     ).then(result => {
-      // This .then() primarily handles the case where handleAutoDetectLocation itself resolves
-      // The actual location data and error state should be set by the callbacks above.
-      if (result && result.error) { // If handleAutoDetectLocation promise resolves with an error object
+      if (result && result.error) { 
         toast({
           title: "Location Detection Failed",
           description: "Could not auto-detect. Please select your location manually.",
@@ -455,19 +438,18 @@ const Header = () => {
             altText: "Select Manually",
             onClick: () => {
               setIsLocationModalOpen(true);
-              setIsMenuOpen(false); // Close mobile menu if open
+              setIsMenuOpen(false); 
             }
           }
         });
       }
-      // Ensure loading is false, though callbacks should handle this
       setUserLocation(prev => ({ ...prev, loading: false }));
-    }).catch(error => { // Catch errors from the handleAutoDetectLocation promise itself
+    }).catch(error => { 
       console.error('Unhandled location detection error:', error);
       setUserLocation(prev => ({
         ...prev,
         loading: false,
-        error: 'Location not available' // Generic error
+        error: 'Location not available' 
       }));
       toast({
         title: "Location Error",
@@ -477,14 +459,13 @@ const Header = () => {
             altText: "Select Manually",
             onClick: () => {
               setIsLocationModalOpen(true);
-              setIsMenuOpen(false); // Close mobile menu if open
+              setIsMenuOpen(false); 
             }
           }
       });
     });
   }, [toast, checkDeliverability]);
 
-  // Auto-detect location on first visit if no location is set
   useEffect(() => {
     const hasTriedDetection = localStorage.getItem('locationDetectionAttempted');
     
@@ -496,15 +477,14 @@ const Header = () => {
       localStorage.setItem('locationDetectionAttempted', 'true');
       handleLocationClick();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [userLocation.display, userLocation.loading, userLocation.error, handleLocationClick]); // Add all dependencies
+  }, [userLocation.display, userLocation.loading, userLocation.error, handleLocationClick]);
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       navigate(`/products?search=${encodeURIComponent(searchQuery.trim())}`);
       setSearchQuery('');
-      setIsMenuOpen(false); // Close mobile menu after search
+      setIsMenuOpen(false); 
     }
   };
 
@@ -517,154 +497,69 @@ const Header = () => {
     });
   }, [checkDeliverability, toast]);
 
-  // Toggle dialog functions
   const openLoginDialog = () => { setIsSignUpDialogOpen(false); setIsForgotPasswordOpen(false); setIsLoginDialogOpen(true); setIsMenuOpen(false); };
   const openSignUpDialog = () => { setIsLoginDialogOpen(false); setIsForgotPasswordOpen(false); setIsSignUpDialogOpen(true); setIsMenuOpen(false); };
   const openForgotDialog = () => { setIsLoginDialogOpen(false); setIsSignUpDialogOpen(false); setIsForgotPasswordOpen(true); };
 
   return (
     <>
-      {/* Top Delivery Promise Bar */}
       <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white py-2 text-xs md:text-sm shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 md:gap-x-8">
-            <div className="flex items-center space-x-1.5">
-              <Clock className="h-3.5 w-3.5 md:h-4 md:w-4" />
-              <span className="font-medium">Delivery in minutes</span>
-            </div>
-            <div className="hidden sm:flex items-center space-x-1.5">
-              <Shield className="h-3.5 w-3.5 md:h-4 md:w-4" />
-              <span className="font-medium">100% Quality Assured</span>
-            </div>
-            <div className="flex items-center space-x-1.5">
-              <Bike className="h-3.5 w-3.5 md:h-4 md:w-4" />
-              <span className="font-medium">Free Delivery Available</span>
-            </div>
+            <div className="flex items-center space-x-1.5"> <Clock className="h-3.5 w-3.5 md:h-4 md:w-4" /> <span className="font-medium">Delivery in minutes</span> </div>
+            <div className="hidden sm:flex items-center space-x-1.5"> <Shield className="h-3.5 w-3.5 md:h-4 md:w-4" /> <span className="font-medium">100% Quality Assured</span> </div>
+            <div className="flex items-center space-x-1.5"> <Bike className="h-3.5 w-3.5 md:h-4 md:w-4" /> <span className="font-medium">Free Delivery Available</span> </div>
           </div>
         </div>
       </div>
 
-      {/* Main Header */}
-      <header
-        className={`bg-white ${isScrolled ? 'shadow-md' : 'shadow-sm'} sticky top-0 z-50 transition-shadow duration-300`}
-      >
+      <header className={`bg-white ${isScrolled ? 'shadow-md' : 'shadow-sm'} sticky top-0 z-50 transition-shadow duration-300`} >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            {/* Logo */}
             <Link to="/" className="flex-shrink-0 flex items-center group">
               <div className="flex items-center space-x-2">
-                <img 
-                  className="h-8 w-8 transition-transform duration-300 group-hover:scale-105" 
-                  src="/logo.png" 
-                  alt="QuickCommerce Logo" 
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    const fallback = e.target.nextElementSibling;
-                    if (fallback && fallback.style) {
-                      fallback.style.display = 'block';
-                    }
-                  }}
-                />
-                <ShoppingCart 
-                  className="h-8 w-8 text-green-500 transition-transform duration-300 group-hover:scale-105" 
-                  style={{ display: 'none' }}
-                  aria-hidden="true"
-                />
-                <span className="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">
-                  QuickCommerce {/* Or your brand name */}
-                </span>
+                <img className="h-8 w-8 transition-transform duration-300 group-hover:scale-105" src="/logo.png" alt="QuickCommerce Logo" onError={(e) => { e.target.style.display = 'none'; const fallback = e.target.nextElementSibling; if (fallback && fallback.style) { fallback.style.display = 'block'; } }} />
+                <ShoppingCart className="h-8 w-8 text-green-500 transition-transform duration-300 group-hover:scale-105" style={{ display: 'none' }} aria-hidden="true" />
+                <span className="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors"> SetCart </span>
               </div>
             </Link>
 
-            {/* Location Selector - Desktop */}
             <div className="hidden md:flex items-center ml-6">
-              <button
-                onClick={() => userLocation.error || userLocation.display === 'Select Location' ? setIsLocationModalOpen(true) : handleLocationClick()}
-                disabled={userLocation.loading}
-                className="flex items-center space-x-2 text-gray-700 hover:text-green-600 min-w-[180px] lg:min-w-[220px] transition-colors duration-200 group disabled:opacity-70 disabled:cursor-wait p-2 rounded-md hover:bg-gray-50"
-              >
-                <MapPin className={`h-5 w-5 flex-shrink-0 ${
-                  userLocation.loading 
-                    ? 'text-yellow-500 animate-pulse' 
-                    : userLocation.error || userLocation.display === 'Select Location'
-                      ? 'text-red-500' 
-                      : 'text-green-500'
-                } transition-colors group-hover:text-green-600`} />
+              <button onClick={() => userLocation.error || userLocation.display === 'Select Location' ? setIsLocationModalOpen(true) : handleLocationClick()} disabled={userLocation.loading} className="flex items-center space-x-2 text-gray-700 hover:text-green-600 min-w-[180px] lg:min-w-[220px] transition-colors duration-200 group disabled:opacity-70 disabled:cursor-wait p-2 rounded-md hover:bg-gray-50" >
+                <MapPin className={`h-5 w-5 flex-shrink-0 ${ userLocation.loading ? 'text-yellow-500 animate-pulse' : userLocation.error || userLocation.display === 'Select Location' ? 'text-red-500' : 'text-green-500' } transition-colors group-hover:text-green-600`} />
                 <div className="text-left overflow-hidden">
                   <div className="text-xs text-gray-500 group-hover:text-gray-600">Delivery Location</div>
-                  <div className="text-sm font-medium truncate max-w-[150px] lg:max-w-[180px]">
-                    {userLocation.loading ? 'Detecting...' : userLocation.display}
-                  </div>
-                  {(userLocation.error || userLocation.display === 'Select Location') && !userLocation.loading && (
-                    <div className="text-xs text-blue-500 group-hover:text-blue-600 truncate max-w-[150px] lg:max-w-[180px]">
-                      Click to set manually
-                    </div>
-                  )}
+                  <div className="text-sm font-medium truncate max-w-[150px] lg:max-w-[180px]"> {userLocation.loading ? 'Detecting...' : userLocation.display} </div>
+                  {(userLocation.error || userLocation.display === 'Select Location') && !userLocation.loading && ( <div className="text-xs text-blue-500 group-hover:text-blue-600 truncate max-w-[150px] lg:max-w-[180px]"> Click to set manually </div> )}
                 </div>
-                {userLocation.error || userLocation.display === 'Select Location' ? (
-                  <Plus className="h-4 w-4 ml-auto text-blue-500 group-hover:text-green-500" />
-                ) : (
-                  <ChevronDown className="h-4 w-4 ml-auto text-gray-400 group-hover:text-green-500" />
-                )}
+                {userLocation.error || userLocation.display === 'Select Location' ? ( <Plus className="h-4 w-4 ml-auto text-blue-500 group-hover:text-green-500" /> ) : ( <ChevronDown className="h-4 w-4 ml-auto text-gray-400 group-hover:text-green-500" /> )}
               </button>
             </div>
 
-            {/* Search Bar - Desktop */}
             <form onSubmit={handleSearch} className="hidden md:flex flex-grow max-w-xl mx-4 lg:mx-8">
               <div className="relative w-full">
-                <input
-                  type="search"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search groceries, essentials..."
-                  className="w-full pl-4 pr-10 py-2 rounded-lg bg-gray-100 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 placeholder-gray-400"
-                />
-                <button
-                  type="submit"
-                  className="absolute right-0 top-0 h-full px-3 text-gray-400 hover:text-green-600 transition-colors duration-200 flex items-center"
-                  aria-label="Search"
-                >
-                  <Search className="h-5 w-5" />
-                </button>
+                <input type="search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search groceries, essentials..." className="w-full pl-4 pr-10 py-2 rounded-lg bg-gray-100 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 placeholder-gray-400" />
+                <button type="submit" className="absolute right-0 top-0 h-full px-3 text-gray-400 hover:text-green-600 transition-colors duration-200 flex items-center" aria-label="Search"> <Search className="h-5 w-5" /> </button>
               </div>
             </form>
 
-            {/* Right Side Actions - Desktop */}
             <div className="hidden md:flex items-center space-x-5 lg:space-x-6">
-              <Link
-                to="/cart"
-                className="relative flex items-center text-gray-700 hover:text-green-600 transition-colors duration-200 group"
-              >
+              <Link to="/cart" className="relative flex items-center text-gray-700 hover:text-green-600 transition-colors duration-200 group" >
                 <ShoppingCart className="h-6 w-6 group-hover:scale-110 transition-transform" />
-                {itemCount > 0 && (
-                  <span className="absolute -top-2 -right-2.5 bg-green-500 text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center animate-bounce">
-                    {itemCount}
-                  </span>
-                )}
+                {itemCount > 0 && ( <span className="absolute -top-2 -right-2.5 bg-green-500 text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center animate-bounce"> {itemCount} </span> )}
                 <span className="ml-2 hidden lg:inline">Cart</span>
               </Link>
 
               {isAuthenticated && user ? (
                 <div className="relative user-menu-container">
-                  <button
-                    onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
-                    className="flex items-center space-x-1 text-gray-700 hover:text-green-600 transition-colors duration-200"
-                  >
+                  <button onClick={() => setIsUserMenuOpen(!isUserMenuOpen)} className="flex items-center space-x-1 text-gray-700 hover:text-green-600 transition-colors duration-200" >
                     <User className="h-5 w-5" />
-                    <span className="text-sm font-medium hidden lg:inline truncate max-w-[100px]">
-                      {user.name || user.email?.split('@')[0] || 'Account'}
-                    </span>
+                    <span className="text-sm font-medium hidden lg:inline truncate max-w-[100px]"> {user.name || user.email?.split('@')[0] || 'Account'} </span>
                     <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isUserMenuOpen ? 'rotate-180' : ''}`} />
                   </button>
                   <AnimatePresence>
                     {isUserMenuOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
-                      >
+                      <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.2 }} className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" >
                         <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                           <Link to="/profile" className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors duration-150" role="menuitem" onClick={() => setIsUserMenuOpen(false)}> <User className="h-4 w-4 mr-3 text-gray-400" /> My Account </Link>
                           <Link to="/orders" className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors duration-150" role="menuitem" onClick={() => setIsUserMenuOpen(false)}> <Package className="h-4 w-4 mr-3 text-gray-400" /> My Orders </Link>
@@ -682,7 +577,6 @@ const Header = () => {
               )}
             </div>
 
-            {/* Mobile Menu Button */}
             <div className="md:hidden flex items-center">
               <Link to="/cart" className="relative p-2 mr-2 text-gray-700 hover:text-green-600">
                 <ShoppingCart className="h-6 w-6" />
@@ -695,16 +589,9 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Menu Content */}
         <AnimatePresence>
           {isMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="md:hidden bg-white border-t border-gray-100 shadow-lg mobile-menu-content overflow-hidden"
-            >
+            <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3, ease: "easeInOut" }} className="md:hidden bg-white border-t border-gray-100 shadow-lg mobile-menu-content overflow-hidden" >
               <div className="px-4 pt-4 pb-5 space-y-4">
                 <form onSubmit={handleSearch} className="mb-3">
                   <div className="relative">
@@ -713,41 +600,14 @@ const Header = () => {
                   </div>
                 </form>
 
-                <button
-                  onClick={() => {
-                    if (userLocation.error || userLocation.display === 'Select Location') {
-                      setIsLocationModalOpen(true);
-                    } else {
-                      handleLocationClick();
-                    }
-                    setIsMenuOpen(false); // Close menu after action
-                  }}
-                  disabled={userLocation.loading}
-                  className="flex items-center space-x-2 w-full px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors duration-200 group disabled:opacity-70 disabled:cursor-wait"
-                >
-                  <MapPin className={`h-5 w-5 flex-shrink-0 ${
-                    userLocation.loading 
-                      ? 'text-yellow-500 animate-pulse' 
-                      : userLocation.error || userLocation.display === 'Select Location'
-                        ? 'text-red-500' 
-                        : 'text-green-500'
-                  } transition-colors group-hover:text-green-600`} />
+                <button onClick={() => { if (userLocation.error || userLocation.display === 'Select Location') { setIsLocationModalOpen(true); } else { handleLocationClick(); } setIsMenuOpen(false); }} disabled={userLocation.loading} className="flex items-center space-x-2 w-full px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors duration-200 group disabled:opacity-70 disabled:cursor-wait" >
+                  <MapPin className={`h-5 w-5 flex-shrink-0 ${ userLocation.loading ? 'text-yellow-500 animate-pulse' : userLocation.error || userLocation.display === 'Select Location' ? 'text-red-500' : 'text-green-500' } transition-colors group-hover:text-green-600`} />
                   <div className="text-left overflow-hidden flex-grow">
                     <div className="text-xs text-gray-500 group-hover:text-gray-600">Delivery Location</div>
-                    <div className="text-sm font-medium truncate">
-                      {userLocation.loading ? 'Detecting...' : userLocation.display}
-                    </div>
-                    {(userLocation.error || userLocation.display === 'Select Location') && !userLocation.loading && (
-                      <div className="text-xs text-blue-500 group-hover:text-blue-600 truncate">
-                        Click to set manually
-                      </div>
-                    )}
+                    <div className="text-sm font-medium truncate"> {userLocation.loading ? 'Detecting...' : userLocation.display} </div>
+                    {(userLocation.error || userLocation.display === 'Select Location') && !userLocation.loading && ( <div className="text-xs text-blue-500 group-hover:text-blue-600 truncate"> Click to set manually </div> )}
                   </div>
-                  {userLocation.error || userLocation.display === 'Select Location' ? (
-                    <Plus className="h-4 w-4 ml-auto text-blue-500 group-hover:text-green-500" />
-                  ) : (
-                    <ChevronDown className="h-4 w-4 ml-auto text-gray-400 group-hover:text-green-500" />
-                  )}
+                  {userLocation.error || userLocation.display === 'Select Location' ? ( <Plus className="h-4 w-4 ml-auto text-blue-500 group-hover:text-green-500" /> ) : ( <ChevronDown className="h-4 w-4 ml-auto text-gray-400 group-hover:text-green-500" /> )}
                 </button>
 
                 {isAuthenticated && user ? (
@@ -769,12 +629,10 @@ const Header = () => {
         </AnimatePresence>
       </header>
 
-      {/* Auth Dialogs */}
       <LoginDialog isOpen={isLoginDialogOpen} onClose={() => setIsLoginDialogOpen(false)} onSuccess={() => {setIsLoginDialogOpen(false); toast({ title: "Login Successful", description: "Welcome back!" });}} onForgotPassword={openForgotDialog} onSignUpInstead={openSignUpDialog} />
       <SignUpDialog isOpen={isSignUpDialogOpen} onClose={() => setIsSignUpDialogOpen(false)} onSuccess={() => {setIsSignUpDialogOpen(false); toast({ title: "Sign Up Successful", description: "Welcome! Please log in." }); openLoginDialog();}} onLoginInstead={openLoginDialog} />
       <ForgotPasswordDialog isOpen={isForgotPasswordOpen} onClose={() => setIsForgotPasswordOpen(false)} onLoginInstead={openLoginDialog} />
       
-      {/* Location Modal */}
       <LocationModal
         isOpen={isLocationModalOpen}
         onClose={() => setIsLocationModalOpen(false)}
