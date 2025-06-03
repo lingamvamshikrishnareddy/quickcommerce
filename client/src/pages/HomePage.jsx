@@ -336,7 +336,8 @@ const HomePage = () => {
         {/* Hero Banner with enhanced design */}
         <section className="bg-gradient-to-r from-purple-600 via-purple-700 to-indigo-600 text-white py-12 sm:py-16 md:py-20 mb-8 shadow-lg relative overflow-hidden">
           {/* Background pattern */}
-          <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10"></div>
+          {/* MODIFIED LINE BELOW */}
+          <div className="absolute inset-0 hero-pattern opacity-10"></div>
           
           <div className="container mx-auto px-4 text-center relative z-10">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-3 sm:mb-4 drop-shadow-lg leading-tight">
@@ -461,7 +462,8 @@ const HomePage = () => {
         <section className="container mx-auto px-4 mb-10 sm:mb-12">
           <div className="bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 rounded-xl shadow-xl overflow-hidden relative">
             {/* Background decoration */}
-            <div className="absolute inset-0 bg-[url('/images/fruits-pattern.svg')] opacity-20"></div>
+            {/* MODIFIED LINE BELOW */}
+            <div className="absolute inset-0 fruits-pattern opacity-20"></div>
             
             <div className="p-6 sm:p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
               <div className="text-white text-center md:text-left flex-1">
