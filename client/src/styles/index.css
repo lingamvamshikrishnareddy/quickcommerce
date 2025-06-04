@@ -37,17 +37,3 @@
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
-/*
-  IMPORTANT:
-  Make sure there are NO other lines in this file (src/styles/index.css) that look like:
-  - background: url('/images/pattern.svg');
-  - background-image: url('/images/pattern.svg');
-  - background: url('/images/fruits-pattern.svg');
-  - background-image: url('/images/fruits-pattern.svg');
-  - Or any other direct url() references to these .svg files.
-
-  The errors specifically point to lines 5 and 6 of your index.css.
-  The content above is structured to avoid such issues.
-  If you had other custom CSS, please add it carefully, ensuring no problematic url() calls are reintroduced.
-*/
