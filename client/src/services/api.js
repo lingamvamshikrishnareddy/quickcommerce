@@ -545,160 +545,91 @@ export const formatPrice = (amount) => {
   }).format(amount || 0);
 };
 
-export const detectUserLocation = async () => {
-  try {
-    if (!navigator.geolocation) {
-      throw new Error('Geolocation is not supported by your browser');
-    }
-
-    // Get coordinates using browser geolocation API
-    const position = await new Promise((resolve, reject) => {
-      navigator.geolocation.getCurrentPosition(resolve,
-        (error) => {
-          // Enhanced error handling based on error codes
-          if (error.code === 1) {
-            reject(new Error('Location permission denied. Please enable it in your browser settings.'));
-          } else if (error.code === 2) {
-            reject(new Error('Location service is currently unavailable.'));
-          } else if (error.code === 3) {
-            reject(new Error('Location detection timed out. Please try again.'));
-          } else {
-            reject(error);
-          }
-        },
-        {
-          timeout: 10000,
-          maximumAge: 60000,
-          enableHighAccuracy: true
-        }
-      );
-    });
-
-    const { latitude, longitude } = position.coords;
-    console.log('Detected coordinates:', latitude, longitude);
-
-    // Get address from coordinates using the location API
-    const response = await locationAPI.reverseGeocode(latitude, longitude);
-
-    if (!response?.data?.address) {
-      throw new Error('Unable to determine address from coordinates');
-    }
-
-    return {
-      coords: { latitude, longitude },
-      address: response.data.address
-    };
-  } catch (error) {
-    console.error('Error detecting user location:', error);
-    // Instead of just throwing the error, return a default location or null
-    // and let the calling code handle it appropriately
-    return {
-      error: error.message,
-      coords: null,
-      address: null
-    };
+const detectUserLocation = async () => {
+  if (!navigator.geolocation) {
+    throw new Error('Geolocation is not supported by your browser.');
   }
+
+  const position = await new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(
+      resolve,
+      (error) => {
+        if (error.code === 1) reject(new Error('Location permission denied. Please enable it in your browser settings.'));
+        else if (error.code === 2) reject(new Error('Unable to determine location. Please try again or enter manually.'));
+        else reject(new Error('Location detection timed out. Please try again.'));
+      },
+      { timeout: 10000, enableHighAccuracy: true }
+    );
+  });
+
+  const { latitude, longitude } = position.coords;
+
+  const response = await locationAPI.reverseGeocode(latitude, longitude);
+
+  if (!response?.data?.address) {
+    throw new Error('Could not find address details for your location.');
+  }
+
+  return {
+    coords: { latitude, longitude },
+    address: response.data.address
+  };
 };
 
-export const handleAutoDetectLocation = async (setLoadingState, setLocationState, onSuccess = null) => {
+/**
+ * REFACTORED: A simplified and decoupled function to handle auto-detection.
+ * It's now a standard async function that returns data or throws an error,
+ * leaving state management to the calling component.
+ */
+export const handleAutoDetectLocation = async () => {
   try {
-    // Set loading state if the function was provided
-    if (typeof setLoadingState === 'function') {
-      setLoadingState(true);
-    }
-
     const locationData = await detectUserLocation();
 
-    // Check if there was an error in location detection
-    if (locationData.error) {
-      // Handle error case
-      const errorMessage = locationData.error;
-
-      // Update location state with error
-      if (typeof setLocationState === 'function') {
-        setLocationState(prev => ({
-          ...prev,
-          error: errorMessage,
-          loading: false
-        }));
-      }
-
-      // Show user friendly message instead of throwing
-      console.error('Location detection issue:', errorMessage);
-
-      // Ask user to enter location manually instead of throwing error
-      return { error: errorMessage };
-    }
-
-    // Extract a friendly display name from the address components
     const address = locationData.address;
-    const displayName = address.components?.suburb ||
-                       address.components?.city_district ||
-                       address.components?.city ||
-                       address.components?.county ||
-                       (address.formatted ? address.formatted.split(',')[0] : null) ||
-                       'Current Location';
+    const displayName = 
+      address.components?.suburb ||
+      address.components?.city_district ||
+      address.components?.city ||
+      address.components?.county ||
+      (address.formatted ? address.formatted.split(',')[0] : 'Current Location');
 
-    // Create the location state update
-    const locationUpdate = {
+    return {
       display: displayName,
       fullAddress: address,
       coords: locationData.coords,
-      error: null
     };
-
-    // Update location state if the function was provided
-    if (typeof setLocationState === 'function') {
-      setLocationState(locationUpdate);
-    }
-
-    // Call success callback if provided
-    if (onSuccess && typeof onSuccess === 'function') {
-      onSuccess(locationUpdate);
-    }
-
-    return locationUpdate;
   } catch (error) {
     console.error('Auto-detect location error:', error);
-
-    // Error message is already formatted in detectUserLocation
-    let errorMessage = error.message || 'Unable to detect your location.';
-
-    const errorState = { error: errorMessage };
-
-    // Update location state if the function was provided
-    if (typeof setLocationState === 'function') {
-      setLocationState(prev => ({ ...prev, ...errorState, loading: false }));
-    }
-
-    // Return error object instead of throwing
-    return errorState;
-  } finally {
-    // Set loading to false if the function was provided
-    if (typeof setLoadingState === 'function') {
-      setLoadingState(false);
-    }
+    // Re-throw the specific error message from detectUserLocation or a default one
+    throw new Error(error.message || 'An unexpected error occurred while detecting your location.');
   }
 };
 
+
 export const locationAPI = {
   reverseGeocode: (latitude, longitude) => api.get('/location/geocode', { params: { latitude, longitude } }),
+  
   saveUserAddress: (addressData) => api.post('/location/addresses', addressData),
+  
   getUserAddresses: () => api.get('/location/addresses'),
+  
   deleteUserAddress: (locationId) => api.delete(`/location/addresses/${locationId}`),
-
-  // Add these new methods
+  
   getLocationSuggestions: (query) => api.get('/location/suggestions', { params: { query } }),
+  
   checkDeliverability: async (postalCode) => {
     try {
       const response = await api.get('/location/check-deliverability', { params: { postalCode } });
       return response.data.isDeliverable;
     } catch (error) {
       console.error('Deliverability check error:', error);
-      return false; // Default to not deliverable on error
+      // On error, we assume it's not deliverable to be safe.
+      return false; 
     }
   }
-}
+};
+
+
 
 export const handleSubmit = async (formData) => {
   try {
