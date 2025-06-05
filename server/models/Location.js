@@ -1,9 +1,5 @@
 const mongoose = require('mongoose');
 
-/**
- * Location Schema
- * Stores user's saved locations like home, work, etc.
- */
 const locationSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
@@ -12,7 +8,8 @@ const locationSchema = new mongoose.Schema({
   },
   type: {
     type: String,
-    enum: ['current', 'home', 'work', 'other'],
+    // FIXED: Added 'delivery' to the list of allowed types to match the frontend.
+    enum: ['delivery', 'current', 'home', 'work', 'other'],
     required: true
   },
   latitude: {
@@ -39,25 +36,13 @@ const locationSchema = new mongoose.Schema({
   isDefault: {
     type: Boolean,
     default: false
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now
-  },
-  updatedAt: {
-    type: Date,
-    default: Date.now
   }
+}, {
+  timestamps: true // Use mongoose timestamps for createdAt/updatedAt
 });
 
-// Create geospatial index
-locationSchema.index({ longitude: 1, latitude: 1 }, { type: '2dsphere' });
-
-// Update timestamp middleware
-locationSchema.pre('save', function(next) {
-  this.updatedAt = Date.now();
-  next();
-});
+locationSchema.index({ user: 1 });
+locationSchema.index({ "location": "2dsphere" });
 
 // Add virtual for GeoJSON Point representation
 locationSchema.virtual('location').get(function() {
