@@ -48,7 +48,7 @@ const LoadingSpinner = ({ message = "Loading..." }) => {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false, error: null };
+    this.state = { hasError: false, error: null, errorInfo: null };
   }
 
   static getDerivedStateFromError(error) {
@@ -56,14 +56,27 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary:', error);
+    console.error('Component stack:', errorInfo.componentStack);
+    console.error('Error stack:', error.stack);
+    
+    // Log more details about the error
+    if (error.message && error.message.includes('object with keys')) {
+      console.error('This is likely a React Error #31 - you are trying to render an object directly in JSX');
+      console.error('Look for places where you might be rendering objects like: {altText, onClick} directly');
+    }
+    
+    this.setState({
+      error,
+      errorInfo
+    });
   }
 
   render() {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
+          <div className="max-w-lg w-full bg-white rounded-lg shadow-lg p-6 text-center">
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
@@ -71,12 +84,31 @@ class ErrorBoundary extends React.Component {
             </div>
             <h2 className="text-xl font-bold text-gray-900 mb-2">Oops! Something went wrong</h2>
             <p className="text-gray-600 mb-4">We're sorry, but something unexpected happened.</p>
-            <button 
-              onClick={() => window.location.reload()} 
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
-            >
-              Refresh Page
-            </button>
+            
+            {/* Show error details in development */}
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded text-left text-sm">
+                <strong className="text-red-800">Error:</strong>
+                <p className="text-red-700 font-mono text-xs mt-1">
+                  {this.state.error.message}
+                </p>
+              </div>
+            )}
+            
+            <div className="space-y-2">
+              <button 
+                onClick={() => this.setState({ hasError: false, error: null, errorInfo: null })} 
+                className="w-full bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+              >
+                Try Again
+              </button>
+              <button 
+                onClick={() => window.location.reload()} 
+                className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+              >
+                Refresh Page
+              </button>
+            </div>
           </div>
         </div>
       );
@@ -142,26 +174,64 @@ const NotFoundPage = () => {
   );
 };
 
+// --- Safe Component Wrapper ---
+const SafeComponent = ({ component: Component, fallback = null, ...props }) => {
+  try {
+    if (!Component) {
+      console.error('Component is undefined or null');
+      return fallback || <div>Component not found</div>;
+    }
+    return <Component {...props} />;
+  } catch (error) {
+    console.error('Error rendering component:', error);
+    return fallback || <div>Error loading component</div>;
+  }
+};
+
 // --- Enhanced App Layout ---
 const AppLayout = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
-      <Header />
+      <ErrorBoundary>
+        <Header />
+      </ErrorBoundary>
       <main className="flex-grow">
         <Suspense fallback={<LoadingSpinner message="Loading page..." />}>
           <div className="container mx-auto px-4 py-6 md:py-8">
-            <Outlet />
+            <ErrorBoundary>
+              <Outlet />
+            </ErrorBoundary>
           </div>
         </Suspense>
       </main>
       <Toaster />
-      <Footer />
+      <ErrorBoundary>
+        <Footer />
+      </ErrorBoundary>
     </div>
   );
 };
 
 // --- Main App Component ---
 const App = () => {
+  // Handle location permission error gracefully
+  useEffect(() => {
+    // Override console.error to catch location errors and handle them gracefully
+    const originalError = console.error;
+    console.error = (...args) => {
+      const message = args.join(' ');
+      if (message.includes('Location permission denied')) {
+        console.warn('Location access denied - continuing without location services');
+        return;
+      }
+      originalError.apply(console, args);
+    };
+
+    return () => {
+      console.error = originalError;
+    };
+  }, []);
+
   return (
     <ErrorBoundary>
       <Router>
@@ -170,24 +240,20 @@ const App = () => {
             <Routes>
               <Route element={<AppLayout />}>
                 {/* Public Routes */}
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutUsPage />} />
-                <Route path="/categories" element={<CategoryPage />} />
-                <Route path="/categories/:slug" element={<CategoryPage />} />
-                <Route path="/products" element={<ProductListPage />} />
-                <Route path="/products/:slug" element={<ProductPage />} />
-                <Route path="/support" element={<ContactSupportPage />} />
-
-                {/* Authentication Routes (if using dedicated pages) */}
-                {/* <Route path="/login" element={<LoginPage />} /> */}
-                {/* <Route path="/register" element={<RegisterPage />} /> */}
+                <Route path="/" element={<SafeComponent component={HomePage} />} />
+                <Route path="/about" element={<SafeComponent component={AboutUsPage} />} />
+                <Route path="/categories" element={<SafeComponent component={CategoryPage} />} />
+                <Route path="/categories/:slug" element={<SafeComponent component={CategoryPage} />} />
+                <Route path="/products" element={<SafeComponent component={ProductListPage} />} />
+                <Route path="/products/:slug" element={<SafeComponent component={ProductPage} />} />
+                <Route path="/support" element={<SafeComponent component={ContactSupportPage} />} />
 
                 {/* Protected Routes */}
                 <Route
                   path="/cart"
                   element={
                     <ProtectedRoute>
-                      <CartPage />
+                      <SafeComponent component={CartPage} />
                     </ProtectedRoute>
                   }
                 />
@@ -195,7 +261,7 @@ const App = () => {
                   path="/checkout"
                   element={
                     <ProtectedRoute>
-                      <CheckoutPage />
+                      <SafeComponent component={CheckoutPage} />
                     </ProtectedRoute>
                   }
                 />
@@ -203,7 +269,7 @@ const App = () => {
                   path="/order-confirmation/:orderId"
                   element={
                     <ProtectedRoute>
-                      <OrderConfirmationPage />
+                      <SafeComponent component={OrderConfirmationPage} />
                     </ProtectedRoute>
                   }
                 />
@@ -211,7 +277,7 @@ const App = () => {
                   path="/profile"
                   element={
                     <ProtectedRoute>
-                      <UserProfilePage />
+                      <SafeComponent component={UserProfilePage} />
                     </ProtectedRoute>
                   }
                 />
@@ -219,7 +285,7 @@ const App = () => {
                   path="/orders"
                   element={
                     <ProtectedRoute>
-                      <OrderHistoryPage />
+                      <SafeComponent component={OrderHistoryPage} />
                     </ProtectedRoute>
                   }
                 />
@@ -227,7 +293,7 @@ const App = () => {
                   path="/orders/:orderId"
                   element={
                     <ProtectedRoute>
-                      <OrderHistoryPage />
+                      <SafeComponent component={OrderHistoryPage} />
                     </ProtectedRoute>
                   }
                 />
@@ -235,7 +301,7 @@ const App = () => {
                   path="/delivery/:orderId/track"
                   element={
                     <ProtectedRoute>
-                      <DeliveryTrackingPage />
+                      <SafeComponent component={DeliveryTrackingPage} />
                     </ProtectedRoute>
                   }
                 />
@@ -243,7 +309,7 @@ const App = () => {
                   path="/subscription"
                   element={
                     <ProtectedRoute>
-                      <SubscriptionPage />
+                      <SafeComponent component={SubscriptionPage} />
                     </ProtectedRoute>
                   }
                 />
