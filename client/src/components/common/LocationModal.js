@@ -1,6 +1,7 @@
+// LocationModal.jsx - Fixed version
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, MapPin, X, Plus } from 'lucide-react';
+import { Search, MapPin, X, Plus, AlertCircle, Loader2 } from 'lucide-react';
 import { useToast } from "../ui/usetoast";
 import { locationAPI } from '../../services/api';
 
@@ -8,6 +9,7 @@ const LocationModal = ({ isOpen, onClose, onLocationSelect }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [searchLoading, setSearchLoading] = useState(false);
   const [manualAddress, setManualAddress] = useState({
     street: '',
     city: '',
@@ -16,48 +18,103 @@ const LocationModal = ({ isOpen, onClose, onLocationSelect }) => {
     country: 'India'
   });
   const [activeTab, setActiveTab] = useState('search');
+  const [error, setError] = useState('');
   const { toast } = useToast();
 
+  // Reset state when modal opens
   useEffect(() => {
     if (isOpen) {
       setSearchQuery('');
       setSuggestions([]);
-      setManualAddress({ street: '', city: '', state: '', postalCode: '', country: 'India' });
+      setError('');
+      setManualAddress({ 
+        street: '', 
+        city: '', 
+        state: '', 
+        postalCode: '', 
+        country: 'India' 
+      });
       setActiveTab('search');
+      setLoading(false);
+      setSearchLoading(false);
     }
   }, [isOpen]);
 
+  // Debounced search function
   const searchLocations = useCallback(async (query) => {
-    if (query.length < 2) {
+    if (!query || query.length < 2) {
       setSuggestions([]);
+      setSearchLoading(false);
       return;
     }
-    setLoading(true);
+
+    setSearchLoading(true);
+    setError('');
+
     try {
       const response = await locationAPI.getLocationSuggestions(query);
-      setSuggestions(response.data || []);
+      
+      if (response.data?.success) {
+        setSuggestions(response.data.data || []);
+      } else {
+        setSuggestions(response.data || []);
+      }
+      
+      if ((!response.data?.data || response.data.data.length === 0) && 
+          (!response.data || response.data.length === 0)) {
+        setError('No locations found. Try a different search term.');
+      }
     } catch (error) {
       console.error('Error fetching location suggestions:', error);
+      setError('Unable to search locations. Please check your connection and try again.');
+      setSuggestions([]);
       toast({
         title: "Search Error",
         description: "Unable to search locations. Please try again.",
         variant: "destructive"
       });
-      setSuggestions([]);
     } finally {
-      setLoading(false);
+      setSearchLoading(false);
     }
   }, [toast]);
 
+  // Debounce search input
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      if (searchQuery.trim()) {
+        searchLocations(searchQuery.trim());
+      }
+    }, 500);
+
+    return () => clearTimeout(timeoutId);
+  }, [searchQuery, searchLocations]);
+
   const handleLocationSelectInternal = async (location) => {
+    if (!location || !location.geometry) {
+      toast({
+        title: "Invalid Location",
+        description: "Please select a valid location.",
+        variant: "destructive"
+      });
+      return;
+    }
+
     setLoading(true);
+    setError('');
+
+    // Create location data object
     const locationData = {
       display: location.components?.suburb || 
                location.components?.city_district || 
                location.components?.city || 
-               location.formatted.split(',')[0] || 
+               location.components?.town ||
+               location.components?.village ||
+               location.formatted?.split(',')[0]?.trim() || 
                'Selected Location',
-      coords: { latitude: location.geometry.lat, longitude: location.geometry.lng },
+      coords: { 
+        latitude: location.geometry.lat, 
+        longitude: location.geometry.lng 
+      },
       fullAddress: {
         formatted: location.formatted,
         components: location.components
@@ -65,20 +122,33 @@ const LocationModal = ({ isOpen, onClose, onLocationSelect }) => {
     };
 
     try {
+      // Save the address to backend
       await locationAPI.saveUserAddress({ 
         type: 'delivery',
         latitude: location.geometry.lat,
         longitude: location.geometry.lng,
         address: location.formatted,
         label: locationData.display,
+        isDefault: false
       });
+
+      // Success - call parent callback and close modal
       onLocationSelect(locationData);
       onClose();
+      
+      toast({
+        title: "Location Set",
+        description: `Delivery location set to ${locationData.display}`,
+        variant: "default"
+      });
+
     } catch (error) {
       console.error('Error saving address:', error);
+      setError(error.message || 'Could not save this address. Please try again.');
+      
       toast({
         title: "Save Error",
-        description: "Could not save this address for future use. Please try again.",
+        description: error.message || "Could not save this address. Please try again.",
         variant: "destructive"
       });
     } finally {
@@ -88,7 +158,10 @@ const LocationModal = ({ isOpen, onClose, onLocationSelect }) => {
 
   const handleManualSubmit = async (e) => {
     e.preventDefault();
-    if (!manualAddress.street || !manualAddress.city || !manualAddress.postalCode) {
+    
+    // Validate required fields
+    if (!manualAddress.street.trim() || !manualAddress.city.trim() || !manualAddress.postalCode.trim()) {
+      setError('Please fill in all required fields (Street, City, and Postal Code).');
       toast({
         title: "Incomplete Address",
         description: "Please fill in all required fields.",
@@ -96,38 +169,67 @@ const LocationModal = ({ isOpen, onClose, onLocationSelect }) => {
       });
       return;
     }
+
+    // Validate postal code format for India
+    const postalCodePattern = /^[1-9][0-9]{5}$/;
+    if (!postalCodePattern.test(manualAddress.postalCode.trim())) {
+      setError('Please enter a valid 6-digit postal code.');
+      toast({
+        title: "Invalid Postal Code",
+        description: "Please enter a valid 6-digit postal code.",
+        variant: "destructive"
+      });
+      return;
+    }
+
     setLoading(true);
-    const formattedAddress = `${manualAddress.street}, ${manualAddress.city}, ${manualAddress.state}, ${manualAddress.postalCode}, ${manualAddress.country}`;
+    setError('');
+
+    const formattedAddress = `${manualAddress.street.trim()}, ${manualAddress.city.trim()}${manualAddress.state.trim() ? `, ${manualAddress.state.trim()}` : ''}, ${manualAddress.postalCode.trim()}, ${manualAddress.country}`;
+    
     const locationData = {
-      display: `${manualAddress.city}${manualAddress.state ? `, ${manualAddress.state}` : ''}`,
-      coords: { latitude: 0, longitude: 0 }, // NOTE: Manual entry uses placeholder coords.
+      display: `${manualAddress.city.trim()}${manualAddress.state.trim() ? `, ${manualAddress.state.trim()}` : ''}`,
+      coords: { latitude: 0, longitude: 0 }, // Placeholder coordinates for manual entry
       fullAddress: {
         formatted: formattedAddress,
         components: {
-          road: manualAddress.street,
-          city: manualAddress.city,
-          state: manualAddress.state,
-          postcode: manualAddress.postalCode,
+          road: manualAddress.street.trim(),
+          city: manualAddress.city.trim(),
+          state: manualAddress.state.trim(),
+          postcode: manualAddress.postalCode.trim(),
           country: manualAddress.country
         }
       },
     };
 
     try {
+      // Save manual address
       await locationAPI.saveUserAddress({
         type: 'delivery',
-        latitude: 0, 
+        latitude: 0, // Placeholder - you might want to geocode this later
         longitude: 0,
         address: formattedAddress,
         label: locationData.display,
+        isDefault: false
       });
+
+      // Success
       onLocationSelect(locationData);
       onClose();
+      
+      toast({
+        title: "Address Saved",
+        description: `Delivery location set to ${locationData.display}`,
+        variant: "default"
+      });
+
     } catch (error) {
       console.error('Error saving manual address:', error);
+      setError(error.message || 'Could not save this address. Please ensure you are logged in and try again.');
+      
       toast({
         title: "Save Error",
-        description: "Could not save this address. Please ensure you are logged in and try again.",
+        description: error.message || "Could not save this address. Please ensure you are logged in and try again.",
         variant: "destructive"
       });
     } finally {
@@ -135,7 +237,26 @@ const LocationModal = ({ isOpen, onClose, onLocationSelect }) => {
     }
   };
 
+  const handleInputChange = (field, value) => {
+    setManualAddress(prev => ({ ...prev, [field]: value }));
+    setError(''); // Clear error when user starts typing
+  };
+
   if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[60] p-4">
+      <AnimatePresence>
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.9 }}
+          className="bg-white rounded-lg max-w-md w-full max-h-[90vh] overflow-hidden flex flex-col"
+        >
+          {/* Header */}
+          <div className="p-6 border-b bg-gray-50">
+            <div className="flex justify-between items-center">
+              <h2 className="text-xl font-semibold text-gray-800">Select Delivery Location</h2>
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[60] p-4">
