@@ -546,52 +546,80 @@ export const formatPrice = (amount) => {
 };
 
 const detectUserLocation = async () => {
+  // Check if geolocation is supported
   if (!navigator.geolocation) {
-    throw new Error('Geolocation is not supported by your browser.');
+    throw new Error('Geolocation is not supported by your browser. Please enter your location manually.');
   }
 
-  const position = await new Promise((resolve, reject) => {
-    navigator.geolocation.getCurrentPosition(
-      resolve,
-      (error) => {
-        if (error.code === 1) reject(new Error('Location permission denied. Please enable it in your browser settings.'));
-        else if (error.code === 2) reject(new Error('Unable to determine location. Please try again or enter manually.'));
-        else reject(new Error('Location detection timed out. Please try again.'));
-      },
-      { timeout: 10000, enableHighAccuracy: true }
-    );
-  });
+  try {
+    // Get user's current position with proper options
+    const position = await new Promise((resolve, reject) => {
+      navigator.geolocation.getCurrentPosition(
+        resolve,
+        (error) => {
+          let errorMessage;
+          switch (error.code) {
+            case error.PERMISSION_DENIED:
+              errorMessage = 'Location access denied. Please enable location permission in your browser and try again.';
+              break;
+            case error.POSITION_UNAVAILABLE:
+              errorMessage = 'Location information unavailable. Please check your internet connection or enter location manually.';
+              break;
+            case error.TIMEOUT:
+              errorMessage = 'Location request timed out. Please try again or enter location manually.';
+              break;
+            default:
+              errorMessage = 'An unknown error occurred while detecting location. Please try again.';
+              break;
+          }
+          reject(new Error(errorMessage));
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 15000, // Increased timeout
+          maximumAge: 300000 // Cache for 5 minutes
+        }
+      );
+    });
 
-  const { latitude, longitude } = position.coords;
+    const { latitude, longitude } = position.coords;
+    
+    // Call reverse geocoding API
+    const response = await locationAPI.reverseGeocode(latitude, longitude);
+    
+    if (!response?.data?.success || !response.data.address) {
+      throw new Error('Could not find address details for your location. Please enter manually.');
+    }
 
-  const response = await locationAPI.reverseGeocode(latitude, longitude);
-
-  if (!response?.data?.address) {
-    throw new Error('Could not find address details for your location.');
+    return {
+      coords: { latitude, longitude },
+      address: response.data.address
+    };
+  } catch (error) {
+    console.error('Location detection error:', error);
+    throw error;
   }
-
-  return {
-    coords: { latitude, longitude },
-    address: response.data.address
-  };
 };
 
 /**
- * REFACTORED: A simplified and decoupled function to handle auto-detection.
- * It's now a standard async function that returns data or throws an error,
- * leaving state management to the calling component.
+ * Main function to handle auto-detection with proper error handling
  */
 export const handleAutoDetectLocation = async () => {
   try {
     const locationData = await detectUserLocation();
-
     const address = locationData.address;
+    
+    // Extract display name with fallback chain
     const displayName = 
       address.components?.suburb ||
       address.components?.city_district ||
       address.components?.city ||
+      address.components?.town ||
+      address.components?.village ||
       address.components?.county ||
-      (address.formatted ? address.formatted.split(',')[0] : 'Current Location');
+      address.components?.state ||
+      (address.formatted ? address.formatted.split(',')[0]?.trim() : null) ||
+      'Current Location';
 
     return {
       display: displayName,
@@ -600,31 +628,95 @@ export const handleAutoDetectLocation = async () => {
     };
   } catch (error) {
     console.error('Auto-detect location error:', error);
-    // Re-throw the specific error message from detectUserLocation or a default one
-    throw new Error(error.message || 'An unexpected error occurred while detecting your location.');
+    throw error; // Re-throw to let the component handle it
   }
 };
 
-
+// Fixed location API object
 export const locationAPI = {
-  reverseGeocode: (latitude, longitude) => api.get('/location/geocode', { params: { latitude, longitude } }),
+  // Reverse geocoding
+  reverseGeocode: async (latitude, longitude) => {
+    try {
+      const response = await api.get('/location/geocode', { 
+        params: { latitude, longitude } 
+      });
+      return response;
+    } catch (error) {
+      console.error('Reverse geocoding error:', error);
+      throw new Error('Failed to get address from coordinates');
+    }
+  },
   
-  saveUserAddress: (addressData) => api.post('/location/addresses', addressData),
+  // Save user address with better error handling
+  saveUserAddress: async (addressData) => {
+    try {
+      const response = await api.post('/location/addresses', addressData);
+      return response;
+    } catch (error) {
+      console.error('Save address error:', error);
+      if (error.response?.status === 401) {
+        throw new Error('Please log in to save your address');
+      } else if (error.response?.status === 400) {
+        throw new Error(error.response.data?.message || 'Invalid address data');
+      } else {
+        throw new Error('Failed to save address. Please try again.');
+      }
+    }
+  },
   
-  getUserAddresses: () => api.get('/location/addresses'),
+  // Get user addresses
+  getUserAddresses: async () => {
+    try {
+      const response = await api.get('/location/addresses');
+      return response;
+    } catch (error) {
+      console.error('Get addresses error:', error);
+      if (error.response?.status === 401) {
+        throw new Error('Please log in to view your addresses');
+      }
+      throw new Error('Failed to load addresses');
+    }
+  },
   
-  deleteUserAddress: (locationId) => api.delete(`/location/addresses/${locationId}`),
+  // Delete user address
+  deleteUserAddress: async (locationId) => {
+    try {
+      const response = await api.delete(`/location/addresses/${locationId}`);
+      return response;
+    } catch (error) {
+      console.error('Delete address error:', error);
+      throw new Error('Failed to delete address');
+    }
+  },
   
-  getLocationSuggestions: (query) => api.get('/location/suggestions', { params: { query } }),
+  // Get location suggestions with better error handling
+  getLocationSuggestions: async (query) => {
+    try {
+      if (!query || query.length < 2) {
+        return { data: [] };
+      }
+      const response = await api.get('/location/suggestions', { 
+        params: { query: query.trim() } 
+      });
+      return response;
+    } catch (error) {
+      console.error('Location suggestions error:', error);
+      return { data: [] }; // Return empty array on error
+    }
+  },
   
+  // Check deliverability with better error handling
   checkDeliverability: async (postalCode) => {
     try {
-      const response = await api.get('/location/check-deliverability', { params: { postalCode } });
-      return response.data.isDeliverable;
+      if (!postalCode) return false;
+      
+      const response = await api.get('/location/check-deliverability', { 
+        params: { postalCode: postalCode.toString().trim() } 
+      });
+      return response.data?.isDeliverable || false;
     } catch (error) {
       console.error('Deliverability check error:', error);
-      // On error, we assume it's not deliverable to be safe.
-      return false; 
+      return false; // Default to not deliverable on error
     }
   }
 };
