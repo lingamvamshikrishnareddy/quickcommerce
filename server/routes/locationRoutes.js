@@ -1,29 +1,18 @@
-// locationRoutes.js
-
 const express = require('express');
 const router = express.Router();
 const locationController = require('../controllers/locationController');
-const { protect } = require('../middleware/authMiddleware'); // Assuming you have auth middleware
+const { protect } = require('../middleware/authMiddleware');
 
-/**
- * Location Routes
- * All routes are protected except the geocoding endpoints
- */
-
-// Public geocoding routes
+// Public routes - accessible without login
 router.get('/geocode', locationController.reverseGeocode);
 router.get('/suggestions', locationController.getLocationSuggestions);
 router.get('/check-deliverability', locationController.checkDeliverability);
 
-// All routes below this line require authentication
+// Protected routes - require user to be logged in
 router.use(protect);
 
-// User location management routes
 router.get('/addresses', locationController.getUserAddresses);
 router.post('/addresses', locationController.saveUserAddress);
 router.delete('/addresses/:locationId', locationController.deleteUserAddress);
-
-// Optional: Find nearby services route if you implement it
-// router.get('/nearby', locationController.findNearbyServices);
 
 module.exports = router;
