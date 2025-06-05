@@ -126,39 +126,44 @@ const Header = () => {
   }, [toast]);
 
   // REFACTORED: Simplified auto-detection logic using try/catch
-  const handleLocationClick = useCallback(async () => {
-    setUserLocation(prev => ({ ...prev, loading: true, error: null }));
-    try {
-      const locationData = await handleAutoDetectLocation(); // Simplified API call
-      setUserLocation({
-        display: locationData.display,
-        coords: locationData.coords,
-        fullAddress: locationData.fullAddress,
-        error: null,
-        loading: false,
-      });
-      toast({
-        title: "Location Set",
-        description: `Delivery location updated to ${locationData.display}.`
-      });
-      checkDeliverability(locationData);
-    } catch (error) {
-      console.error('Location detection failed:', error.message);
-      setUserLocation(prev => ({ ...prev, loading: false, error: error.message }));
-      toast({
-        title: "Location Detection Failed",
-        description: error.message || "Could not auto-detect. Please select your location manually.",
-        variant: "warning",
-        action: {
-          altText: "Select Manually",
-          onClick: () => {
-            setIsLocationModalOpen(true);
-            setIsMenuOpen(false); 
-          }
-        }
-      });
-    }
-  }, [toast, checkDeliverability]);
+  // Fix for the toast action in handleLocationClick function
+// Replace lines 121-132 in your Header.jsx file
+
+const handleLocationClick = useCallback(async () => {
+  setUserLocation(prev => ({ ...prev, loading: true, error: null }));
+  try {
+    const locationData = await handleAutoDetectLocation(); // Simplified API call
+    setUserLocation({
+      display: locationData.display,
+      coords: locationData.coords,
+      fullAddress: locationData.fullAddress,
+      error: null,
+      loading: false,
+    });
+    toast({
+      title: "Location Set",
+      description: `Delivery location updated to ${locationData.display}.`
+    });
+    checkDeliverability(locationData);
+  } catch (error) {
+    console.error('Location detection failed:', error.message);
+    setUserLocation(prev => ({ ...prev, loading: false, error: error.message }));
+    
+    // ✅ FIXED: Remove the action object that was causing React Error #31
+    toast({
+      title: "Location Detection Failed",
+      description: error.message || "Could not auto-detect. Please select your location manually.",
+      variant: "warning"
+      // Removed the problematic action object
+    });
+    
+    // Instead, show the location modal automatically after a brief delay
+    setTimeout(() => {
+      setIsLocationModalOpen(true);
+      setIsMenuOpen(false);
+    }, 2000); // Show modal after 2 seconds
+  }
+}, [toast, checkDeliverability]);
 
   // Effect to attempt auto-detection once on first visit
   useEffect(() => {
